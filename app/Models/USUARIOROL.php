@@ -1,55 +1,37 @@
 <?php
 
-/**
- * Created by Reliese Model.
- */
-
 namespace App\Models;
 
-use Carbon\Carbon;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-/**
- * Class USUARIOROL
- * 
- * @property int $id
- * @property int|null $id_usuario
- * @property int|null $id_rol
- * @property Carbon $fecha_asignacion
- * @property bool|null $activo
- * 
- * @property USUARIO|null $u_s_u_a_r_i_o
- * @property ROLE|null $r_o_l_e
- *
- * @package App\Models
- */
-class USUARIOROL extends Model
+class UsuarioRol extends Model
 {
-	protected $connection = 'mysql';
-	protected $table = 'USUARIO_ROL';
-	public $timestamps = false;
+    protected $table = 'USUARIO_ROL';
+    public $timestamps = false;
 
-	protected $casts = [
-		'id_usuario' => 'int',
-		'id_rol' => 'int',
-		'fecha_asignacion' => 'datetime',
-		'activo' => 'bool'
-	];
+    protected $fillable = [
+        'id_usuario',
+        'id_rol',
+        'fecha_asignacion',
+        'activo'
+    ];
 
-	protected $fillable = [
-		'id_usuario',
-		'id_rol',
-		'fecha_asignacion',
-		'activo'
-	];
+    protected $casts = [
+        'id_usuario' => 'int',
+        'id_rol' => 'int',
+        'fecha_asignacion' => 'datetime',
+        'activo' => 'bool'
+    ];
 
-	public function u_s_u_a_r_i_o()
-	{
-		return $this->belongsTo(USUARIO::class, 'id_usuario');
-	}
+    public function usuario(): BelongsTo
+    {
+        return $this->belongsTo(Usuario::class, 'id_usuario');
+    }
 
-	public function r_o_l_e()
-	{
-		return $this->belongsTo(ROLE::class, 'id_rol');
-	}
+    public function rol(): BelongsTo
+    {
+        return $this->belongsTo(Rol::class, 'id_rol');
+    }
 }
