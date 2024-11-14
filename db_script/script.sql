@@ -2,8 +2,8 @@
 -- Este script es meramente descriptivo e instructivo para describir el diseño de la base de datos, no tiene ningún efecto real sobre la aplicación
 
 
-create database sisportafolio;
-use sisportafolio;
+create database dbportafolio;
+use dbportafolio;
 
 CREATE TABLE MALLA_CURRICULAR (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -102,7 +102,7 @@ CREATE TABLE PORTAFOLIO_CURSO (
     id_curso_semestre INT,
     codigo_curso_semestre VARCHAR(50),
     formato VARCHAR(50),
-    estado VARCHAR(50),
+    estado enum("Observado", "Completado", "Pendiente"),
     tipo VARCHAR(50),
     fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP,		
     fecha_actualizacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
