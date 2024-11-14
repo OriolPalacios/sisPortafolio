@@ -1,51 +1,32 @@
 <?php
 
-/**
- * Created by Reliese Model.
- */
-
 namespace App\Models;
 
-use Carbon\Carbon;
-use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
-/**
- * Class MALLACURRICULAR
- * 
- * @property int $id
- * @property string $nombre_carrera
- * @property string $facultad
- * @property int $duracion_semestres
- * @property Carbon $anio_vigencia
- * @property bool|null $activo
- * 
- * @property Collection|CURSO[] $c_u_r_s_o_s
- *
- * @package App\Models
- */
-class MALLACURRICULAR extends Model
+class MallaCurricular extends Model
 {
-	protected $connection = 'mysql';
-	protected $table = 'MALLA_CURRICULAR';
-	public $timestamps = false;
+    protected $table = 'MALLA_CURRICULAR';
+    public $timestamps = false;
 
-	protected $casts = [
-		'duracion_semestres' => 'int',
-		'anio_vigencia' => 'datetime',
-		'activo' => 'bool'
-	];
+    protected $fillable = [
+        'nombre_carrera',
+        'facultad',
+        'duracion_semestres',
+        'anio_vigencia',
+        'activo'
+    ];
 
-	protected $fillable = [
-		'nombre_carrera',
-		'facultad',
-		'duracion_semestres',
-		'anio_vigencia',
-		'activo'
-	];
+    protected $casts = [
+        'duracion_semestres' => 'int',
+        'anio_vigencia' => 'datetime',
+        'activo' => 'bool'
+    ];
 
-	public function c_u_r_s_o_s()
-	{
-		return $this->hasMany(CURSO::class, 'id_malla');
-	}
+    public function cursos(): HasMany
+    {
+        return $this->hasMany(Curso::class, 'id_malla');
+    }
 }

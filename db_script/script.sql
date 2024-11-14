@@ -2,8 +2,8 @@
 -- Este script es meramente descriptivo e instructivo para describir el diseño de la base de datos, no tiene ningún efecto real sobre la aplicación
 
 
-create database sisportafolio;
-use sisportafolio;
+create database dbportafolio;
+use dbportafolio;
 
 CREATE TABLE MALLA_CURRICULAR (
     id INT AUTO_INCREMENT PRIMARY KEY,
