@@ -37,6 +37,7 @@ CREATE TABLE SEMESTRE (
 
 CREATE TABLE CURSO_SEMESTRE (
     id INT auto_increment primary key,
+    carrera VARCHAR(255),
     id_curso INT,
     id_semestre INT,
     activo BOOLEAN DEFAULT TRUE,
@@ -102,7 +103,7 @@ CREATE TABLE PORTAFOLIO_CURSO (
     id_curso_semestre INT,
     codigo_curso_semestre VARCHAR(50),
     formato VARCHAR(50),
-    estado enum("Observado", "Completado", "Pendiente"),
+    estado enum("Observado", "Completado", "Pendiente"), -- potencialmente cambiable a Completo, Incompleto y Observado
     tipo VARCHAR(50),
     fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP,		
     fecha_actualizacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
@@ -119,29 +120,46 @@ CREATE TABLE EVALUACION_Teorico (
     caratula TEXT,
     carga_academica TEXT,
     filosofia TEXT,
-    cv TEXT,
+    cv TEXT,    
     silabo TEXT,
     avance_por_sesiones TEXT,
     registro_entrega_silabo TEXT,
-    asistencia_alumnos TEXT,
+    asistencia_alumnos TEXT,    
     evidencia_actividades_ensenianza TEXT,
+    relacion_estudiantes TEXT,
+    -- evaluacion de entrada
     evaluacion_entrada TEXT,
     informe_resultado_evaluacion_entrada TEXT,
     resolucion_evaluacion_entrada TEXT,
-    enunciados_primera_parcial TEXT,
+    -- resolucion de las parciales
     resolucion_primera_parcial TEXT,
-    enunciados_segunda_parcial TEXT,
     resolucion_segunda_parcial TEXT,
-    enunciados_tercera_parcial TEXT,
     resolucion_tercera_parcial TEXT,
+    resolucion_sustitutorio TEXT,
+    -- enunciados de las parciales
+    enunciados_primera_parcial TEXT,
+    enunciados_segunda_parcial TEXT,
+    enunciados_tercera_parcial TEXT,
+    enunciados_sustitutorio TEXT,
+    -- asistencia a las parciales
     asistencia_resolucion_primera_parcial TEXT,
-    asistencia_resolucion_segunda_parcial TEXT,
+    asistencia_resolucion_segunda_parcial TEXT, 
     asistencia_resolucion_tercera_parcial TEXT,
-    registro_ingreso_notas TEXT,
-    rubrica_proyecto TEXT,
-    asignacion_proyectos_individuales_o_grupales TEXT,
-    informe_entrega_final_proyectos TEXT,
-    otras_evaluaciones TEXT,
+    -- registro de ingreso de notas
+    registro_ingreso_notas_primera_parcial TEXT,
+    registro_ingreso_notas_segunda_parcial TEXT,
+    registro_ingreso_notas_tercera_parcial TEXT,
+    registro_ingreso_notas_sustiturio TEXT,
+    -- min max mean
+    min_max_mean_notas_primera_parcial TEXT,
+    min_max_mean_notas_segunda_parcial TEXT,
+    min_max_mean_notas_tercera_parcial TEXT,
+    -- proyectos (opcional)
+    rubrica_proyecto TEXT NULL,
+    asignacion_proyectos_individuales_o_grupales TEXT NULL,
+    informe_entrega_final_proyectos TEXT NULL,
+    otras_evaluaciones TEXT NULL,
+    -- cierre del portafolio
     cierre_portafolio TEXT,
     fecha_de_revision DATE,
     FOREIGN KEY (id_revisor_usuario) REFERENCES USUARIO(id) ON DELETE CASCADE,
@@ -154,7 +172,7 @@ CREATE TABLE EVALUACION_Practico (
     id INT AUTO_INCREMENT PRIMARY KEY,
     id_revisor_usuario INT,
     id_docente_usuario INT,
-    id_portafolio INT,
+    id_portafolio_curso INT,
     caratula TEXT,
     carga_academica TEXT,
     filosofia TEXT,
@@ -162,19 +180,23 @@ CREATE TABLE EVALUACION_Practico (
     plan_sesiones TEXT,
     asistencia_alumnos TEXT,
     evidencia_actividades_ensenianza TEXT,
-    registro_notas_practicas TEXT,
-    proyecto_individual_grupal TEXT,
+    relacion_estudiantes TEXT,
+    -- registro de notas
+    registro_notas_practicas_primera_parcial TEXT,
+    registro_notas_practicas_segunda_parcial TEXT,
+    proyecto_individual_grupal TEXT NULL,
     fecha_de_revision DATE,
     FOREIGN KEY (id_revisor_usuario) REFERENCES USUARIO(id) ON DELETE CASCADE,
     FOREIGN KEY (id_docente_usuario) REFERENCES USUARIO(id) ON DELETE CASCADE,
-    FOREIGN KEY (id_portafolio) REFERENCES PORTAFOLIO_CURSO(id) ON DELETE CASCADE
+    FOREIGN KEY (id_portafolio_curso) REFERENCES PORTAFOLIO_CURSO(id) ON DELETE CASCADE
 );
 
 
 CREATE TABLE OBSERVACIONES (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    id_portafolio INT,
+    id_portafolio_curso INT,
     observacion TEXT,
     fecha_observacion DATE,
-    FOREIGN KEY (id_portafolio) REFERENCES PORTAFOLIO_CURSO(id) ON DELETE CASCADE
+    FOREIGN KEY (id_portafolio_curso) REFERENCES PORTAFOLIO_CURSO(id) ON DELETE CASCADE
 );
+
