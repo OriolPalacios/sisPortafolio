@@ -1,458 +1,458 @@
 use dbportafolio;
 INSERT INTO MALLA_CURRICULAR (nombre_carrera, facultad, duracion_semestres, anio_vigencia, activo)
 VALUES
--- Facultad de Arquitectura y Artes Plásticas
-('Arquitectura', 'Facultad de Arquitectura y Artes Plásticas', 3, '2017-01-01', TRUE),
-('Arquitectura', 'Facultad de Arquitectura y Artes Plásticas', 3, '2024-06-14', TRUE),
+-- Facultad de Arquitectura y Artes Plasticas
+('Arquitectura', 'Facultad de Arquitectura y Artes Plasticas', 3, '2017-01-01', TRUE),
+('Arquitectura', 'Facultad de Arquitectura y Artes Plasticas', 3, '2024-06-14', TRUE),
 
 -- Facultad de Ciencias Contables y Financieras
 ('Contabilidad', 'Facultad de Ciencias Contables y Financieras', 3, '2017-01-01', TRUE),
 ('Contabilidad', 'Facultad de Ciencias Contables y Financieras', 3, '2024-06-14', TRUE),
 
--- Facultad de Derecho y Ciencias Políticas
-('Derecho', 'Facultad de Derecho y Ciencias Políticas', 3, '2017-01-01', TRUE),
-('Derecho', 'Facultad de Derecho y Ciencias Políticas', 3, '2024-06-14', TRUE),
+-- Facultad de Derecho y Ciencias Politicas
+('Derecho', 'Facultad de Derecho y Ciencias Politicas', 3, '2017-01-01', TRUE),
+('Derecho', 'Facultad de Derecho y Ciencias Politicas', 3, '2024-06-14', TRUE),
 
--- Facultad de Enfermería
-('Enfermería', 'Facultad de Enfermería', 3, '2017-01-01', TRUE),
-('Enfermería', 'Facultad de Enfermería', 3, '2024-06-14', TRUE),
+-- Facultad de Enfermeria
+('Enfermeria', 'Facultad de Enfermeria', 3, '2017-01-01', TRUE),
+('Enfermeria', 'Facultad de Enfermeria', 3, '2024-06-14', TRUE),
 
--- Facultad de Ingeniería de Procesos
-('Ingeniería Química', 'Facultad de Ingeniería de Procesos', 3, '2017-01-01', TRUE),
-('Ingeniería Química', 'Facultad de Ingeniería de Procesos', 3, '2024-06-14', TRUE),
-('Ingeniería Petroquímica', 'Facultad de Ingeniería de Procesos', 3, '2017-01-01', TRUE),
-('Ingeniería Petroquímica', 'Facultad de Ingeniería de Procesos', 3, '2024-06-14', TRUE),
+-- Facultad de Ingenieria de Procesos
+('Ingenieria Quimica', 'Facultad de Ingenieria de Procesos', 3, '2017-01-01', TRUE),
+('Ingenieria Quimica', 'Facultad de Ingenieria de Procesos', 3, '2024-06-14', TRUE),
+('Ingenieria Petroquimica', 'Facultad de Ingenieria de Procesos', 3, '2017-01-01', TRUE),
+('Ingenieria Petroquimica', 'Facultad de Ingenieria de Procesos', 3, '2024-06-14', TRUE),
 
--- Facultad de Agronomía y Zootecnia
-('Agronomía', 'Facultad de Agronomía y Zootecnia', 3, '2017-01-01', TRUE),
-('Agronomía', 'Facultad de Agronomía y Zootecnia', 3, '2024-06-14', TRUE),
-('Zootecnia', 'Facultad de Agronomía y Zootecnia', 3, '2017-01-01', TRUE),
-('Zootecnia', 'Facultad de Agronomía y Zootecnia', 3, '2024-06-14', TRUE),
+-- Facultad de Agronomia y Zootecnia
+('Agronomia', 'Facultad de Agronomia y Zootecnia', 3, '2017-01-01', TRUE),
+('Agronomia', 'Facultad de Agronomia y Zootecnia', 3, '2024-06-14', TRUE),
+('Zootecnia', 'Facultad de Agronomia y Zootecnia', 3, '2017-01-01', TRUE),
+('Zootecnia', 'Facultad de Agronomia y Zootecnia', 3, '2024-06-14', TRUE),
 
--- Facultad de Administración y Turismo
-('Turismo', 'Facultad de Administración y Turismo', 3, '2017-01-01', TRUE),
-('Turismo', 'Facultad de Administración y Turismo', 3, '2024-06-14', TRUE),
+-- Facultad de Administracion y Turismo
+('Turismo', 'Facultad de Administracion y Turismo', 3, '2017-01-01', TRUE),
+('Turismo', 'Facultad de Administracion y Turismo', 3, '2024-06-14', TRUE),
 
--- Facultad de Ciencias Biológicas
-('Biología', 'Facultad de Ciencias Biológicas', 3, '2017-01-01', TRUE),
-('Biología', 'Facultad de Ciencias Biológicas', 3, '2024-06-14', TRUE),
+-- Facultad de Ciencias Biologicas
+('Biologia', 'Facultad de Ciencias Biologicas', 3, '2017-01-01', TRUE),
+('Biologia', 'Facultad de Ciencias Biologicas', 3, '2024-06-14', TRUE),
 
--- Facultad de Ciencias Químicas, Físicas y Matemáticas
-('Física', 'Facultad de Ciencias Químicas, Físicas y Matemáticas', 3, '2017-01-01', TRUE),
-('Física', 'Facultad de Ciencias Químicas, Físicas y Matemáticas', 3, '2024-06-14', TRUE),
-('Matemática', 'Facultad de Ciencias Químicas, Físicas y Matemáticas', 3, '2017-01-01', TRUE),
-('Matemática', 'Facultad de Ciencias Químicas, Físicas y Matemáticas', 3, '2024-06-14', TRUE),
+-- Facultad de Ciencias Quimicas, Fisicas y Matematicas
+('Fisica', 'Facultad de Ciencias Quimicas, Fisicas y Matematicas', 3, '2017-01-01', TRUE),
+('Fisica', 'Facultad de Ciencias Quimicas, Fisicas y Matematicas', 3, '2024-06-14', TRUE),
+('Matematica', 'Facultad de Ciencias Quimicas, Fisicas y Matematicas', 3, '2017-01-01', TRUE),
+('Matematica', 'Facultad de Ciencias Quimicas, Fisicas y Matematicas', 3, '2024-06-14', TRUE),
 
 -- Facultad de Ciencias Sociales
-('Psicología', 'Facultad de Ciencias Sociales', 3, '2017-01-01', TRUE),
-('Psicología', 'Facultad de Ciencias Sociales', 3, '2024-06-14', TRUE),
-('Filosofía', 'Facultad de Ciencias Sociales', 3, '2017-01-01', TRUE),
-('Filosofía', 'Facultad de Ciencias Sociales', 3, '2024-06-14', TRUE),
-('Antropología', 'Facultad de Ciencias Sociales', 3, '2017-01-01', TRUE),
-('Antropología', 'Facultad de Ciencias Sociales', 3, '2024-06-14', TRUE),
-('Arqueología', 'Facultad de Ciencias Sociales', 3, '2017-01-01', TRUE),
-('Arqueología', 'Facultad de Ciencias Sociales', 3, '2024-06-14', TRUE),
+('Psicologia', 'Facultad de Ciencias Sociales', 3, '2017-01-01', TRUE),
+('Psicologia', 'Facultad de Ciencias Sociales', 3, '2024-06-14', TRUE),
+('Filosofia', 'Facultad de Ciencias Sociales', 3, '2017-01-01', TRUE),
+('Filosofia', 'Facultad de Ciencias Sociales', 3, '2024-06-14', TRUE),
+('Antropologia', 'Facultad de Ciencias Sociales', 3, '2017-01-01', TRUE),
+('Antropologia', 'Facultad de Ciencias Sociales', 3, '2024-06-14', TRUE),
+('Arqueologia', 'Facultad de Ciencias Sociales', 3, '2017-01-01', TRUE),
+('Arqueologia', 'Facultad de Ciencias Sociales', 3, '2024-06-14', TRUE),
 ('Historia', 'Facultad de Ciencias Sociales', 3, '2017-01-01', TRUE),
 ('Historia', 'Facultad de Ciencias Sociales', 3, '2024-06-14', TRUE),
 
--- Facultad de Comunicación Social e Idiomas
-('Ciencias de la Comunicación', 'Facultad de Comunicación Social e Idiomas', 3, '2017-01-01', TRUE),
-('Ciencias de la Comunicación', 'Facultad de Comunicación Social e Idiomas', 3, '2024-06-14', TRUE),
+-- Facultad de Comunicacion Social e Idiomas
+('Ciencias de la Comunicacion', 'Facultad de Comunicacion Social e Idiomas', 3, '2017-01-01', TRUE),
+('Ciencias de la Comunicacion', 'Facultad de Comunicacion Social e Idiomas', 3, '2024-06-14', TRUE),
 
--- Facultad de Economía
-('Economía', 'Facultad de Economía', 3, '2017-01-01', TRUE),
-('Economía', 'Facultad de Economía', 3, '2024-06-14', TRUE),
+-- Facultad de Economia
+('Economia', 'Facultad de Economia', 3, '2017-01-01', TRUE),
+('Economia', 'Facultad de Economia', 3, '2024-06-14', TRUE),
 
--- Facultad de Educación
-('Educación', 'Facultad de Educación', 3, '2017-01-01', TRUE),
-('Educación', 'Facultad de Educación', 3, '2024-06-14', TRUE),
+-- Facultad de Educacion
+('Educacion', 'Facultad de Educacion', 3, '2017-01-01', TRUE),
+('Educacion', 'Facultad de Educacion', 3, '2024-06-14', TRUE),
 
--- Facultad de Ingeniería Civil
-('Ingeniería Civil', 'Facultad de Ingeniería Civil', 3, '2017-01-01', TRUE),
-('Ingeniería Civil', 'Facultad de Ingeniería Civil', 3, '2024-06-14', TRUE),
+-- Facultad de Ingenieria Civil
+('Ingenieria Civil', 'Facultad de Ingenieria Civil', 3, '2017-01-01', TRUE),
+('Ingenieria Civil', 'Facultad de Ingenieria Civil', 3, '2024-06-14', TRUE),
 
--- Facultad de Ingeniería Eléctrica, Electrónica, Informática y Mecánica
-('Ingeniería Eléctrica', 'Facultad de Ingeniería Eléctrica, Electrónica, Informática y Mecánica', 3, '2017-01-01', TRUE),
-('Ingeniería Eléctrica', 'Facultad de Ingeniería Eléctrica, Electrónica, Informática y Mecánica', 3, '2024-06-14', TRUE),
-('Ingeniería Electrónica', 'Facultad de Ingeniería Eléctrica, Electrónica, Informática y Mecánica', 3, '2017-01-01', TRUE),
-('Ingeniería Electrónica', 'Facultad de Ingeniería Eléctrica, Electrónica, Informática y Mecánica', 3, '2024-06-14', TRUE),
-('Ingeniería Mecánica', 'Facultad de Ingeniería Eléctrica, Electrónica, Informática y Mecánica', 3, '2017-01-01', TRUE),
-('Ingeniería Mecánica', 'Facultad de Ingeniería Eléctrica, Electrónica, Informática y Mecánica', 3, '2024-06-14', TRUE),
-('Ingeniería Informática y de Sistemas', 'Facultad de Ingeniería Eléctrica, Electrónica, Informática y Mecánica', 3, '2017-01-01', TRUE),
-('Ingeniería Informática y de Sistemas', 'Facultad de Ingeniería Eléctrica, Electrónica, Informática y Mecánica', 3, '2024-06-14', TRUE),
+-- Facultad de Ingenieria Electrica, Electronica, Informatica y Mecanica
+('Ingenieria Electrica', 'Facultad de Ingenieria Electrica, Electronica, Informatica y Mecanica', 3, '2017-01-01', TRUE),
+('Ingenieria Electrica', 'Facultad de Ingenieria Electrica, Electronica, Informatica y Mecanica', 3, '2024-06-14', TRUE),
+('Ingenieria Electronica', 'Facultad de Ingenieria Electrica, Electronica, Informatica y Mecanica', 3, '2017-01-01', TRUE),
+('Ingenieria Electronica', 'Facultad de Ingenieria Electrica, Electronica, Informatica y Mecanica', 3, '2024-06-14', TRUE),
+('Ingenieria Mecanica', 'Facultad de Ingenieria Electrica, Electronica, Informatica y Mecanica', 3, '2017-01-01', TRUE),
+('Ingenieria Mecanica', 'Facultad de Ingenieria Electrica, Electronica, Informatica y Mecanica', 3, '2024-06-14', TRUE),
+('Ingenieria Informatica y de Sistemas', 'Facultad de Ingenieria Electrica, Electronica, Informatica y Mecanica', 3, '2017-01-01', TRUE),
+('Ingenieria Informatica y de Sistemas', 'Facultad de Ingenieria Electrica, Electronica, Informatica y Mecanica', 3, '2024-06-14', TRUE),
 
 -- Facultad de Medicina Humana
 ('Medicina Humana', 'Facultad de Medicina Humana', 3, '2017-01-01', TRUE),
 ('Medicina Humana', 'Facultad de Medicina Humana', 3, '2024-06-14', TRUE),
-('Odontología', 'Facultad de Medicina Humana', 3, '2017-01-01', TRUE),
-('Odontología', 'Facultad de Medicina Humana', 3, '2024-06-14', TRUE),
+('Odontologia', 'Facultad de Medicina Humana', 3, '2017-01-01', TRUE),
+('Odontologia', 'Facultad de Medicina Humana', 3, '2024-06-14', TRUE),
 
--- Facultad de Ingeniería Geológica, Minas y Metalúrgica
-('Ingeniería Geológica', 'Facultad de Ingeniería Geológica, Minas y Metalúrgica', 3, '2017-01-01', TRUE),
-('Ingeniería Geológica', 'Facultad de Ingeniería Geológica, Minas y Metalúrgica', 3, '2024-06-14', TRUE),
-('Ingeniería de Minas', 'Facultad de Ingeniería Geológica, Minas y Metalúrgica', 3, '2017-01-01', TRUE),
-('Ingeniería de Minas', 'Facultad de Ingeniería Geológica, Minas y Metalúrgica', 3, '2024-06-14', TRUE),
-('Ingeniería Metalúrgica', 'Facultad de Ingeniería Geológica, Minas y Metalúrgica', 3, '2017-01-01', TRUE),
-('Ingeniería Metalúrgica', 'Facultad de Ingeniería Geológica, Minas y Metalúrgica', 3, '2024-06-14', TRUE),
+-- Facultad de Ingenieria Geologica, Minas y Metalurgica
+('Ingenieria Geologica', 'Facultad de Ingenieria Geologica, Minas y Metalurgica', 3, '2017-01-01', TRUE),
+('Ingenieria Geologica', 'Facultad de Ingenieria Geologica, Minas y Metalurgica', 3, '2024-06-14', TRUE),
+('Ingenieria de Minas', 'Facultad de Ingenieria Geologica, Minas y Metalurgica', 3, '2017-01-01', TRUE),
+('Ingenieria de Minas', 'Facultad de Ingenieria Geologica, Minas y Metalurgica', 3, '2024-06-14', TRUE),
+('Ingenieria Metalurgica', 'Facultad de Ingenieria Geologica, Minas y Metalurgica', 3, '2017-01-01', TRUE),
+('Ingenieria Metalurgica', 'Facultad de Ingenieria Geologica, Minas y Metalurgica', 3, '2024-06-14', TRUE),
 
 -- Facultad de Ciencias de la Salud
-('Farmacia y Bioquímica', 'Facultad de Ciencias de la Salud', 3, '2017-01-01', TRUE),
-('Farmacia y Bioquímica', 'Facultad de Ciencias de la Salud', 3, '2024-06-14', TRUE);
+('Farmacia y Bioquimica', 'Facultad de Ciencias de la Salud', 3, '2017-01-01', TRUE),
+('Farmacia y Bioquimica', 'Facultad de Ciencias de la Salud', 3, '2024-06-14', TRUE);
 
 -- CURSO
 -- Inserciones de los CURSO para JULIO CÉSAR CARBAJAL LUNA
 INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
-(49, 'IF650AIN', 'Especialidad', 'MODELOS PROBABILISTICOS', 'Teórico'),
-(49, 'IF456BIN', 'Especialidad', 'ALGORITMOS AVANZADOS', 'Teórico');
+(49, 'IF650AIN', 'Especialidad', 'MODELOS PROBABILISTICOS', 'Teorico'),
+(49, 'IF456BIN', 'Especialidad', 'ALGORITMOS AVANZADOS', 'Teorico');
 
--- Inserciones de los CURSO para JULIO CÉSAR CARBAJAL LUNA (nueva sección)
+-- Inserciones de los CURSO para JULIO CÉSAR CARBAJAL LUNA (nueva seccion)
 INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
-(49, 'IF653AIN', 'Especialidad', 'MINERIA DE DATOS', 'Teórico'),
-(49, 'IF664AIN', 'Especialidad', 'BIOINFORMATICA', 'Teórico');
+(49, 'IF653AIN', 'Especialidad', 'MINERIA DE DATOS', 'Teorico'),
+(49, 'IF664AIN', 'Especialidad', 'BIOINFORMATICA', 'Teorico');
 
 -- Inserciones de los CURSO para NILA ZONIA ACURIO USCA
 INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
-(49, 'IF450BIN', 'Especialidad', 'ABSTRACCION DE DATOS Y OBJETOS', 'Teórico'),
-(49, 'IF468AIN', 'Especialidad', 'FUNDAMENTOS DE LA PROGRAMACION', 'Teórico');
+(49, 'IF450BIN', 'Especialidad', 'ABSTRACCION DE DATOS Y OBJETOS', 'Teorico'),
+(49, 'IF468AIN', 'Especialidad', 'FUNDAMENTOS DE LA PROGRAMACION', 'Teorico');
 
 -- Inserciones de los CURSO para JAVIER ARTURO ROZAS HUACHO
 INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
-(49, 'IF450AIN', 'Especialidad', 'ABSTRACCION DE DATOS Y OBJETOS', 'Teórico'),
-(49, 'IF651AIN', 'Especialidad', 'INTELIGENCIA ARTIFICIAL', 'Teórico');
+(49, 'IF450AIN', 'Especialidad', 'ABSTRACCION DE DATOS Y OBJETOS', 'Teorico'),
+(49, 'IF651AIN', 'Especialidad', 'INTELIGENCIA ARTIFICIAL', 'Teorico');
 
 -- Inserciones de los CURSO para LINO PRISCILIANO FLORES PACHECO
 INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
-(49, 'IF652AIN', 'Especialidad', 'APRENDIZAJE AUTOMATICO', 'Teórico'),
-(49, 'IF652BIN', 'Especialidad', 'APRENDIZAJE AUTOMATICO', 'Teórico');
+(49, 'IF652AIN', 'Especialidad', 'APRENDIZAJE AUTOMATICO', 'Teorico'),
+(49, 'IF652BIN', 'Especialidad', 'APRENDIZAJE AUTOMATICO', 'Teorico');
 
 -- Inserciones de los CURSO para EDWIN CARRASCO POBLETE
 INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
-(49, 'IF550AIN', 'Especialidad', 'ORGANIZACION Y ARQUITECTURA DEL COMPUTADOR', 'Teórico'),
-(49, 'IF551AIN', 'Especialidad', 'SISTEMAS OPERATIVOS', 'Teórico');
+(49, 'IF550AIN', 'Especialidad', 'ORGANIZACION Y ARQUITECTURA DEL COMPUTADOR', 'Teorico'),
+(49, 'IF551AIN', 'Especialidad', 'SISTEMAS OPERATIVOS', 'Teorico');
 
 -- Inserciones de los CURSO para EMILIO PALOMINO OLIVERA
 INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
-(49, 'IF483AIN', 'Especialidad', 'FORMULACION DE PROYECTOS DE TECNOLOGIAS DE LA INFORMACION', 'Teórico'),
-(49, 'IF553AIN', 'Especialidad', 'LENGUAJE ENSAMBLADOR', 'Teórico'),
-(17, 'IF902ATU', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACIÓN', 'Teórico');
+(49, 'IF483AIN', 'Especialidad', 'FORMULACION DE PROYECTOS DE TECNOLOGIAS DE LA INFORMACION', 'Teorico'),
+(49, 'IF553AIN', 'Especialidad', 'LENGUAJE ENSAMBLADOR', 'Teorico'),
+(17, 'IF902ATU', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico');
 
 -- Inserciones de los CURSO para ENRIQUE GAMARRA SALDIVAR
 INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
-(57, 'IF401BMI', 'Estudios Generales', 'PROGRAMACION DIGITAL', 'Práctico'),
-(49, 'IF457AIN', 'Especialidad', 'METODOS NUMERICOS', 'Teórico'),
-(41, 'IF758BCI', 'Estudios Generales', 'METODOS NUMERICOS', 'Teórico');
+(57, 'IF401BMI', 'Estudios Generales', 'PROGRAMACION DIGITAL', 'Practico'),
+(49, 'IF457AIN', 'Especialidad', 'METODOS NUMERICOS', 'Teorico'),
+(41, 'IF758BCI', 'Estudios Generales', 'METODOS NUMERICOS', 'Teorico');
 
--- Inserciones de los CURSO para DENNIS IVÁN CANDIA OVIEDO
+-- Inserciones de los CURSO para DENNIS IVaN CANDIA OVIEDO
 INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
-(57, 'IF391AMI', 'Estudios Generales', 'SISTEMA DE BASE DE DATOS', 'Práctico'),
-(49, 'IF480AIN', 'Especialidad', 'ADMINISTRACION DE TECNOLOGÍAS DE LA INFORMACIÓN', 'Teórico'),
-(49, 'IF610AIN', 'Especialidad', 'ANALISIS Y DISEÑO DE SISTEMAS DE INFORMACION', 'Teórico');
+(57, 'IF391AMI', 'Estudios Generales', 'SISTEMA DE BASE DE DATOS', 'Practico'),
+(49, 'IF480AIN', 'Especialidad', 'ADMINISTRACION DE TECNOLOGÍAS DE LA INFORMACION', 'Teorico'),
+(49, 'IF610AIN', 'Especialidad', 'ANALISIS Y DISEÑO DE SISTEMAS DE INFORMACION', 'Teorico');
 
 -- Inserciones de los CURSO para RONY VILLAFUERTE SERNA
 INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
-(49, 'IF459BIN', 'Especialidad', 'COMPUTACION GRAFICA II', 'Teórico'),
-(49, 'IF552BIN', 'Especialidad', 'REDES DE COMPUTADORAS I', 'Teórico');
+(49, 'IF459BIN', 'Especialidad', 'COMPUTACION GRAFICA II', 'Teorico'),
+(49, 'IF552BIN', 'Especialidad', 'REDES DE COMPUTADORAS I', 'Teorico');
 
--- Inserciones de los CURSO para GUZMÁN TICONA PARI
+-- Inserciones de los CURSO para GUZMaN TICONA PARI
 INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
-(43, 'IF467AEI', 'Estudios Generales', 'PROGRAMACION DIGITAL', 'Teórico'),
-(49, 'IF612AIN', 'Especialidad', 'FUNDAMENTOS Y DISEÑO DE BASE DE DATOS', 'Teórico');
+(43, 'IF467AEI', 'Estudios Generales', 'PROGRAMACION DIGITAL', 'Teorico'),
+(49, 'IF612AIN', 'Especialidad', 'FUNDAMENTOS Y DISEÑO DE BASE DE DATOS', 'Teorico');
 
 -- Inserciones de los CURSO para YESHICA ISELA ORMEÑO AYALA
 INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
-(49, 'IF710AIN', 'Especialidad', 'SEMINARIO DE INVESTIGACION I', 'Teórico'),
-(49, 'IF711AIN', 'Especialidad', 'SEMINARIO DE INVESTIGACION II', 'Teórico'),
-(51, 'IF902AFO', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACIÓN', 'Teórico');
+(49, 'IF710AIN', 'Especialidad', 'SEMINARIO DE INVESTIGACION I', 'Teorico'),
+(49, 'IF711AIN', 'Especialidad', 'SEMINARIO DE INVESTIGACION II', 'Teorico'),
+(51, 'IF902AFO', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico');
 
--- Inserciones de los CURSO para IVÁN CÉSAR MEDRANO VALENCIA
+-- Inserciones de los CURSO para IVaN CÉSAR MEDRANO VALENCIA
 INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
-(49, 'IF657AIN', 'Especialidad', 'VISION COMPUTACIONAL', 'Teórico'),
-(49, 'IF662AIN', 'Especialidad', 'DEEP LEARNING', 'Teórico');
+(49, 'IF657AIN', 'Especialidad', 'VISION COMPUTACIONAL', 'Teorico'),
+(49, 'IF662AIN', 'Especialidad', 'DEEP LEARNING', 'Teorico');
 
--- Inserciones de los CURSO para LUIS BELTRÁN PALMA TTITO
+-- Inserciones de los CURSO para LUIS BELTRaN PALMA TTITO
 INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
-(49, 'IF658AIN', 'Especialidad', 'REDES NEURONALES ARTIFICIALES', 'Teórico'),
-(49, 'IF669AIN', 'Especialidad', 'MODELADO Y SIMULACION', 'Teórico');
+(49, 'IF658AIN', 'Especialidad', 'REDES NEURONALES ARTIFICIALES', 'Teorico'),
+(49, 'IF669AIN', 'Especialidad', 'MODELADO Y SIMULACION', 'Teorico');
 
 -- Inserciones de los CURSO para ROBERT WILBERT ALZAMORA PAREDES
 INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
-(49, 'IF452AIN', 'Especialidad', 'ALGORITMOS Y ESTRUCTURAS DE DATOS', 'Teórico'),
-(49, 'IF656AIN', 'Especialidad', 'PROCESAMIENTO DE LENGUAJE NATURAL', 'Teórico');
+(49, 'IF452AIN', 'Especialidad', 'ALGORITMOS Y ESTRUCTURAS DE DATOS', 'Teorico'),
+(49, 'IF656AIN', 'Especialidad', 'PROCESAMIENTO DE LENGUAJE NATURAL', 'Teorico');
 
 -- Inserciones de los CURSO para WALDO ELIO IBARRA ZAMBRANO
 INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
-(21, 'IF167AFI', 'Estudios Generales', 'PROGRAMACION CIENTIFICA', 'Teórico'),
-(49, 'IF468BIN', 'Especialidad', 'FUNDAMENTOS DE LA PROGRAMACION', 'Teórico');
+(21, 'IF167AFI', 'Estudios Generales', 'PROGRAMACION CIENTIFICA', 'Teorico'),
+(49, 'IF468BIN', 'Especialidad', 'FUNDAMENTOS DE LA PROGRAMACION', 'Teorico');
 
 -- Inserciones de los CURSO para KARELIA MEDINA MIRANDA
 INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
-(49, 'IF452BIN', 'Especialidad', 'ALGORITMOS Y ESTRUCTURAS DE DATOS', 'Teórico'),
-(49, 'IF612BIN', 'Especialidad', 'FUNDAMENTOS Y DISEÑO DE BASE DE DATOS', 'Teórico');
+(49, 'IF452BIN', 'Especialidad', 'ALGORITMOS Y ESTRUCTURAS DE DATOS', 'Teorico'),
+(49, 'IF612BIN', 'Especialidad', 'FUNDAMENTOS Y DISEÑO DE BASE DE DATOS', 'Teorico');
 
 -- Inserciones de los CURSO para JAVIER DAVID CHAVEZ CENTENO
 INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
-(49, 'IF484AIN', 'Especialidad', 'EMPRENDIMIENTO E INNOVACION', 'Teórico'),
-(33, 'IF902AAE', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACIÓN', 'Teórico'),
-(39, 'IF902AEU', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACIÓN', 'Teórico');
+(49, 'IF484AIN', 'Especialidad', 'EMPRENDIMIENTO E INNOVACION', 'Teorico'),
+(33, 'IF902AAE', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico'),
+(39, 'IF902AEU', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico');
 
 -- Inserciones de los CURSO para ROXANA LISETTE QUINTANILLA PORTUGAL
 INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
-(39, 'IF902CEU', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACIÓN', 'Teórico'),
-(27, 'IF902AFL', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACIÓN', 'Teórico'),
-(41, 'IF902ACI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACIÓN', 'Práctico');
+(39, 'IF902CEU', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico'),
+(27, 'IF902AFL', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico'),
+(41, 'IF902ACI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico');
 
 -- Inserciones de los CURSO para VANESSA MARIBEL CHOQUE SOTO
 INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
-(49, 'IF481AIN', 'Especialidad', 'INGENIERIA ECONOMICA', 'Teórico'),
-(49, 'IF482AIN', 'Especialidad', 'PLANEAMIENTO Y DIRECCION ESTRATEGICA DE TECNOLOGIA DE INFORMACION', 'Teórico'),
-(29, 'IF902AAN', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACIÓN', 'Teórico');
+(49, 'IF481AIN', 'Especialidad', 'INGENIERIA ECONOMICA', 'Teorico'),
+(49, 'IF482AIN', 'Especialidad', 'PLANEAMIENTO Y DIRECCION ESTRATEGICA DE TECNOLOGIA DE INFORMACION', 'Teorico'),
+(29, 'IF902AAN', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico');
 
 -- Inserciones de los CURSO para MANUEL AURELIO PEÑALOZA FIGUEROA
 INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
-(49, 'IF482BIN', 'Especialidad', 'PLANEAMIENTO Y DIRECCION ESTRATEGICA DE TECNOLOGIA DE INFORMACION', 'Teórico'),
-(49, 'IF551BIN', 'Especialidad', 'SISTEMAS OPERATIVOS', 'Teórico'),
-(9, 'IF902AQI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACIÓN', 'Teórico');
+(49, 'IF482BIN', 'Especialidad', 'PLANEAMIENTO Y DIRECCION ESTRATEGICA DE TECNOLOGIA DE INFORMACION', 'Teorico'),
+(49, 'IF551BIN', 'Especialidad', 'SISTEMAS OPERATIVOS', 'Teorico'),
+(9, 'IF902AQI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico');
 
 -- Inserciones de los CURSO para JOSÉ MAURO PILLCO QUISPE
 INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
-(49, 'IF458AIN', 'Especialidad', 'COMPUTACION GRAFICA I', 'Teórico'),
-(49, 'IF654AIN', 'Especialidad', 'ROBOTICA', 'Teórico');
+(49, 'IF458AIN', 'Especialidad', 'COMPUTACION GRAFICA I', 'Teorico'),
+(49, 'IF654AIN', 'Especialidad', 'ROBOTICA', 'Teorico');
 
 -- Inserciones de los CURSO para LINO AQUILES BACA CARDENAS
 INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
-(49, 'IF457AIN', 'Especialidad', 'METODOS NUMERICOS', 'Práctico'),
-(41, 'IF758ACI', 'Estudios Generales', 'METODOS NUMERICOS', 'Teórico'),
-(35, 'IF902ACC', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACIÓN', 'Teórico'),
-(37, 'IF902AEO', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACIÓN', 'Práctico'),
-(41, 'IF902ACI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACIÓN', 'Práctico');
+(49, 'IF457AIN', 'Especialidad', 'METODOS NUMERICOS', 'Practico'),
+(41, 'IF758ACI', 'Estudios Generales', 'METODOS NUMERICOS', 'Teorico'),
+(35, 'IF902ACC', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico'),
+(37, 'IF902AEO', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
+(41, 'IF902ACI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico');
 
 -- Inserciones de los CURSO para ESTHER CRISTINA PACHECO VASQUEZ
 INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
-(23, 'IF470AME', 'Estudios Generales', 'LENGUAJE DE PROGRAMACION', 'Teórico'),
-(3, 'IF902BCO', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACIÓN', 'Teórico'),
-(39, 'IF902BEU', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACIÓN', 'Teórico');
+(23, 'IF470AME', 'Estudios Generales', 'LENGUAJE DE PROGRAMACION', 'Teorico'),
+(3, 'IF902BCO', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico'),
+(39, 'IF902BEU', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico');
 
 -- Inserciones de los CURSO para WILLIAN ZAMALLOA PARO
 INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
-(49, 'IF616AIN', 'Especialidad', 'DESARROLLO DE SOFTWARE II', 'Práctico'),
-(49, 'IF617AIN', 'Especialidad', 'INGENIERIA DE SOFTWARE II', 'Teórico'),
-(31, 'IF902AAQ', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACIÓN', 'Teórico');
+(49, 'IF616AIN', 'Especialidad', 'DESARROLLO DE SOFTWARE II', 'Practico'),
+(49, 'IF617AIN', 'Especialidad', 'INGENIERIA DE SOFTWARE II', 'Teorico'),
+(31, 'IF902AAQ', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico');
 
 -- Inserciones de los CURSO para HARLEY VERA OLIVERA
 INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
-(49, 'IF710BIN', 'Especialidad', 'SEMINARIO DE INVESTIGACION I', 'Teórico');
+(49, 'IF710BIN', 'Especialidad', 'SEMINARIO DE INVESTIGACION I', 'Teorico');
 
 -- Inserciones de los CURSO para MARITZA KATHERINE IRPANOCCA CUSIMAYTA
 INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
-(43, 'IF212AEI', 'Estudios Generales', 'ANALISIS NUMERICO', 'Teórico'),
-(23, 'IF471AME', 'Estudios Generales', 'METODOS NUMERICOS', 'Teórico'),
-(19, 'IF902ABI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACIÓN', 'Teórico'),
-(47, 'IF902BBI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACIÓN', 'Práctico'),
-(57, 'IF902AMI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACIÓN', 'Teórico');
+(43, 'IF212AEI', 'Estudios Generales', 'ANALISIS NUMERICO', 'Teorico'),
+(23, 'IF471AME', 'Estudios Generales', 'METODOS NUMERICOS', 'Teorico'),
+(19, 'IF902ABI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico'),
+(47, 'IF902BBI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
+(57, 'IF902AMI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico');
 
 -- Inserciones de los CURSO para EFRAINA GLADYS CUTIPA ARAPA
 INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
-(49, 'IF451AIN', 'Especialidad', 'POGRAMACION I', 'Práctico'),
-(49, 'IF552AIN', 'Especialidad', 'REDES DE COMPUTADORAS I', 'Teórico'),
-(21, 'IF902AFI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACIÓN', 'Teórico');
+(49, 'IF451AIN', 'Especialidad', 'POGRAMACION I', 'Practico'),
+(49, 'IF552AIN', 'Especialidad', 'REDES DE COMPUTADORAS I', 'Teorico'),
+(21, 'IF902AFI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico');
 
 -- Inserciones de los CURSO para DARIO FRANCISCO DUEÑAS BUSTINZA
 INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
-(49, 'IF480BIN', 'Especialidad', 'ADMINISTRACION DE TECNOLOGÍAS DE LA INFORMACIÓN', 'Teórico'),
-(19, 'IF902BBI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACIÓN', 'Teórico'),
-(49, 'IF481AIN', 'Especialidad', 'INGENIERIA ECONOMICA', 'Práctico'),
-(11, 'IF902AGI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACIÓN', 'Teórico');
+(49, 'IF480BIN', 'Especialidad', 'ADMINISTRACION DE TECNOLOGÍAS DE LA INFORMACION', 'Teorico'),
+(19, 'IF902BBI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico'),
+(49, 'IF481AIN', 'Especialidad', 'INGENIERIA ECONOMICA', 'Practico'),
+(11, 'IF902AGI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico');
 
 -- CURSO de Doris Sabina Aguirre Carbajal
 INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
-(49, 'IF459BIN', 'Especialidad', 'COMPUTACION GRAFICA II', 'Práctico'),
-(3, 'IF902ACO', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACIÓN', 'Teórico'),
-(39, 'IF902DEU', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACIÓN', 'Teórico'),
-(7, 'IF902AEN', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACIÓN', 'Teórico'),
-(21, 'IF902AFI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACIÓN', 'Práctico');
+(49, 'IF459BIN', 'Especialidad', 'COMPUTACION GRAFICA II', 'Practico'),
+(3, 'IF902ACO', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico'),
+(39, 'IF902DEU', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico'),
+(7, 'IF902AEN', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico'),
+(21, 'IF902AFI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico');
 
 -- CURSO de Tany Villalba Villalba
 INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
-(49, 'IF556AIN', 'Especialidad', 'SISTEMAS EMBEBIDOS', 'Teórico'),
-(37, 'IF902BAE', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACIÓN', 'Teórico'),
-(61, 'IF902BEN', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACIÓN', 'Teórico');
+(49, 'IF556AIN', 'Especialidad', 'SISTEMAS EMBEBIDOS', 'Teorico'),
+(37, 'IF902BAE', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico'),
+(61, 'IF902BEN', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico');
 
 -- CURSO de Carlos Fernando Montoya Cubas
 INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
-(49, 'IF453CIN', 'Especialidad', 'PROGRAMACION II', 'Práctico'),
-(49, 'IF466AIN', 'Especialidad', 'COMPILADORES', 'Teórico'),
-(49, 'IF650BIN', 'Especialidad', 'MODELOS PROBABILISTICOS', 'Teórico'),
-(49, 'IF651BIN', 'Especialidad', 'INTELIGENCIA ARTIFICIAL', 'Teórico');
+(49, 'IF453CIN', 'Especialidad', 'PROGRAMACION II', 'Practico'),
+(49, 'IF466AIN', 'Especialidad', 'COMPILADORES', 'Teorico'),
+(49, 'IF650BIN', 'Especialidad', 'MODELOS PROBABILISTICOS', 'Teorico'),
+(49, 'IF651BIN', 'Especialidad', 'INTELIGENCIA ARTIFICIAL', 'Teorico');
 
--- CURSO de Carlos Ramón Quispe Onofre
+-- CURSO de Carlos Ramon Quispe Onofre
 INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
-(57, 'IF401AMI', 'Especialidad', 'PROGRAMACION DIGITAL', 'Teórico'),
-(49, 'IF669BIN', 'Especialidad', 'MODELADO Y SIMULACION', 'Teórico'),
-(19, 'IF902ABI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACIÓN', 'Práctico'),
-(39, 'IF902AEE', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACIÓN', 'Teórico'),
-(33, 'IF902AHI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACIÓN', 'Teórico');
+(57, 'IF401AMI', 'Especialidad', 'PROGRAMACION DIGITAL', 'Teorico'),
+(49, 'IF669BIN', 'Especialidad', 'MODELADO Y SIMULACION', 'Teorico'),
+(19, 'IF902ABI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
+(39, 'IF902AEE', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico'),
+(33, 'IF902AHI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico');
 
 -- CURSO de Boris Chullo Llave
 INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
-(49, 'IF453BIN', 'Especialidad', 'PROGRAMACION II', 'Práctico'),
-(49, 'IF455AIN', 'Especialidad', 'ALGORITMOS PARALELOS Y DISTRIBUIDOS', 'Teórico'),
-(49, 'IF467BIN', 'Especialidad', 'ANALISIS Y DISEÑO DE ALGORITMOS', 'Teórico'),
-(13, 'IF902AAO', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACIÓN', 'Práctico'),
-(5, 'IF902ADR', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACIÓN', 'Práctico');
+(49, 'IF453BIN', 'Especialidad', 'PROGRAMACION II', 'Practico'),
+(49, 'IF455AIN', 'Especialidad', 'ALGORITMOS PARALELOS Y DISTRIBUIDOS', 'Teorico'),
+(49, 'IF467BIN', 'Especialidad', 'ANALISIS Y DISEÑO DE ALGORITMOS', 'Teorico'),
+(13, 'IF902AAO', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
+(5, 'IF902ADR', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico');
 
--- CURSO de Ray Dueñas Jiménez
+-- CURSO de Ray Dueñas Jimenez
 INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
-(45, 'IF109ALI', 'Especialidad', 'PROGRAMACION DIGITAL II', 'Teórico'),
-(49, 'IF619BIN', 'Especialidad', 'ANÁLISIS DE DATOS EMPRESARIALES', 'Práctico'),
-(49, 'IF711BIN', 'Especialidad', 'SEMINARIO DE INVESTIGACION II', 'Teórico'),
-(3, 'IF902ACO', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACIÓN', 'Práctico'),
-(5, 'IF902ADR', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACIÓN', 'Teórico'),
-(51, 'IF902AIA', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACIÓN', 'Teórico');
+(45, 'IF109ALI', 'Especialidad', 'PROGRAMACION DIGITAL II', 'Teorico'),
+(49, 'IF619BIN', 'Especialidad', 'ANaLISIS DE DATOS EMPRESARIALES', 'Practico'),
+(49, 'IF711BIN', 'Especialidad', 'SEMINARIO DE INVESTIGACION II', 'Teorico'),
+(3, 'IF902ACO', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
+(5, 'IF902ADR', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico'),
+(51, 'IF902AIA', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico');
 
--- CURSO de Héctor Eduardo Ugarte Rojas
+-- CURSO de Hector Eduardo Ugarte Rojas
 INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
-(49, 'IF453AIN', 'Especialidad', 'PROGRAMACION II', 'Práctico'),
-(49, 'IF454AIN', 'Especialidad', 'TEORIA DE LA COMPUTACION', 'Teórico'),
-(49, 'IF611AIN', 'Especialidad', 'METODOLOGIA DE DESARROLLO DE SOFTWARE', 'Teórico'),
-(15, 'IF902AAO', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACIÓN', 'Teórico'),
-(43, 'IF902AEI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACIÓN', 'Teórico');
+(49, 'IF453AIN', 'Especialidad', 'PROGRAMACION II', 'Practico'),
+(49, 'IF454AIN', 'Especialidad', 'TEORIA DE LA COMPUTACION', 'Teorico'),
+(49, 'IF611AIN', 'Especialidad', 'METODOLOGIA DE DESARROLLO DE SOFTWARE', 'Teorico'),
+(15, 'IF902AAO', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico'),
+(43, 'IF902AEI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico');
 
 -- CURSO de Liseth Urpy Segundo Carpio
 INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
-(49, 'IF064AIN', 'Especialidad', 'TALLER DE DEBATE', 'Práctico'),
-(49, 'IF613AIN', 'Especialidad', 'DESARROLLO DE SOFTWARE I', 'Práctico'),
-(49, 'IF619AIN', 'Especialidad', 'ANÁLISIS DE DATOS EMPRESARIALES', 'Teórico'),
-(53, 'IF902AMD', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACIÓN', 'Teórico');
+(49, 'IF064AIN', 'Especialidad', 'TALLER DE DEBATE', 'Practico'),
+(49, 'IF613AIN', 'Especialidad', 'DESARROLLO DE SOFTWARE I', 'Practico'),
+(49, 'IF619AIN', 'Especialidad', 'ANaLISIS DE DATOS EMPRESARIALES', 'Teorico'),
+(53, 'IF902AMD', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico');
 
--- CURSO de Luis Alvaro Monzón Condori
+-- CURSO de Luis Alvaro Monzon Condori
 INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
-(49, 'IF451BIN', 'Especialidad', 'PROGRAMACION I', 'Práctico'),
-(49, 'IF613BIN', 'Especialidad', 'DESARROLLO DE SOFTWARE I', 'Práctico'),
-(49, 'IF613CIN', 'Especialidad', 'DESARROLLO DE SOFTWARE I', 'Práctico'),
-(41, 'IF902ACI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACIÓN', 'Teórico'),
-(9, 'IF902AQI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACIÓN', 'Práctico');
+(49, 'IF451BIN', 'Especialidad', 'PROGRAMACION I', 'Practico'),
+(49, 'IF613BIN', 'Especialidad', 'DESARROLLO DE SOFTWARE I', 'Practico'),
+(49, 'IF613CIN', 'Especialidad', 'DESARROLLO DE SOFTWARE I', 'Practico'),
+(41, 'IF902ACI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico'),
+(9, 'IF902AQI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico');
 
 -- CURSO de Jisbaj Gamarra Salas
 INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
-(49, 'IF611BIN', 'Especialidad', 'METODOLOGIA DE DESARROLLO DE SOFTWARE', 'Teórico'),
-(37, 'IF902AEO', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACIÓN', 'Teórico');
+(49, 'IF611BIN', 'Especialidad', 'METODOLOGIA DE DESARROLLO DE SOFTWARE', 'Teorico'),
+(37, 'IF902AEO', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico');
 
 -- CURSO de Henry Samuel Dueñas de la Cruz
 INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
-(49, 'IF614BIN', 'Especialidad', 'INGENIERIA DE SOFTWARE I', 'Teórico'),
-(45, 'IF902ALI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACIÓN', 'Teórico');
+(49, 'IF614BIN', 'Especialidad', 'INGENIERIA DE SOFTWARE I', 'Teorico'),
+(45, 'IF902ALI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico');
 
 -- CURSO de Ana Rocio Cardenas Maita
 INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
-(1, 'IF902AAT', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACIÓN', 'Teórico');
+(1, 'IF902AAT', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico');
 
 -- CURSO de Raul Huillca Huallparimachi
 INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
-(49, 'IF467AIN', 'Especialidad', 'ANALISIS Y DISEÑO DE ALGORITMOS', 'Teórico');
+(49, 'IF467AIN', 'Especialidad', 'ANALISIS Y DISEÑO DE ALGORITMOS', 'Teorico');
 
--- CURSO de Gabriela Zúñiga Rojas
+-- CURSO de Gabriela Zuñiga Rojas
 INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
-(49, 'IF651AIN', 'Especialidad', 'INTELIGENCIA ARTIFICIAL', 'Práctico'),
-(49, 'IF652AIN', 'Especialidad', 'APRENDIZAJE AUTOMATICO', 'Práctico'),
-(49, 'IF656AIN', 'Especialidad', 'PROCESAMIENTO DE LENGUAJE NATURAL', 'Práctico'),
-(29, 'IF902AAN', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACIÓN', 'Práctico'),
-(33, 'IF902AAE', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACIÓN', 'Práctico'),
-(37, 'IF902BAE', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACIÓN', 'Práctico'),
-(7, 'IF902AEN', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACIÓN', 'Práctico'),
-(57, 'IF902AMI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACIÓN', 'Práctico');
+(49, 'IF651AIN', 'Especialidad', 'INTELIGENCIA ARTIFICIAL', 'Practico'),
+(49, 'IF652AIN', 'Especialidad', 'APRENDIZAJE AUTOMATICO', 'Practico'),
+(49, 'IF656AIN', 'Especialidad', 'PROCESAMIENTO DE LENGUAJE NATURAL', 'Practico'),
+(29, 'IF902AAN', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
+(33, 'IF902AAE', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
+(37, 'IF902BAE', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
+(7, 'IF902AEN', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
+(57, 'IF902AMI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico');
 
--- CURSO de María del Pilar Venegas Vergara
+-- CURSO de Maria del Pilar Venegas Vergara
 INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
-(57, 'IF391AMI', 'Estudios Generales', 'SISTEMA DE BASE DE DATOS', 'Práctico'),
-(49, 'IF614AIN', 'Especialidad', 'INGENIERIA DE SOFTWARE I', 'Teórico');
+(57, 'IF391AMI', 'Estudios Generales', 'SISTEMA DE BASE DE DATOS', 'Practico'),
+(49, 'IF614AIN', 'Especialidad', 'INGENIERIA DE SOFTWARE I', 'Teorico');
 
--- CURSO de Víctor Darío Sosa Jauregui
+-- CURSO de Victor Dario Sosa Jauregui
 INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
-(49, 'IF612AIN', 'Especialidad', 'FUNDAMENTOS Y DISEÑO DE BASE DE DATOS', 'Práctico'),
-(49, 'IF617AIN', 'Especialidad', 'INGENIERIA DE SOFTWARE II', 'Práctico'),
-(49, 'IF619BIN', 'Especialidad', 'ANÁLISIS DE DATOS EMPRESARIALES', 'Teórico');
+(49, 'IF612AIN', 'Especialidad', 'FUNDAMENTOS Y DISEÑO DE BASE DE DATOS', 'Practico'),
+(49, 'IF617AIN', 'Especialidad', 'INGENIERIA DE SOFTWARE II', 'Practico'),
+(49, 'IF619BIN', 'Especialidad', 'ANaLISIS DE DATOS EMPRESARIALES', 'Teorico');
 
 -- CURSO de Julio Vladimir Quispe Sota
 INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
-(49, 'IF455BIN', 'Especialidad', 'ALGORITMOS PARALELOS Y DISTRIBUIDOS', 'Teórico');
+(49, 'IF455BIN', 'Especialidad', 'ALGORITMOS PARALELOS Y DISTRIBUIDOS', 'Teorico');
 
--- CURSO de Élida Falcón Huallpa
+-- CURSO de Élida Falcon Huallpa
 INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
-(45, 'IF107ALI', 'Estudios Generales', 'PROGRAMACION DIGITAL I', 'Teórico');
+(45, 'IF107ALI', 'Estudios Generales', 'PROGRAMACION DIGITAL I', 'Teorico');
 
 -- CURSO de Vittali Quispe Surco
 INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
-(49, 'IF459AIN', 'Especialidad', 'COMPUTACION GRAFICA II', 'Teórico'),
-(49, 'IF466AIN', 'Especialidad', 'COMPILADORES', 'Práctico'),
-(49, 'IF618AIN', 'Especialidad', 'TOPICOS AVANZADOS EN INGENIERIA DE SOFTWARE', 'Teórico'),
-(39, 'IF902AEU', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACIÓN', 'Práctico'),
-(39, 'IF902DEU', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACIÓN', 'Práctico');
+(49, 'IF459AIN', 'Especialidad', 'COMPUTACION GRAFICA II', 'Teorico'),
+(49, 'IF466AIN', 'Especialidad', 'COMPILADORES', 'Practico'),
+(49, 'IF618AIN', 'Especialidad', 'TOPICOS AVANZADOS EN INGENIERIA DE SOFTWARE', 'Teorico'),
+(39, 'IF902AEU', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
+(39, 'IF902DEU', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico');
 
 -- CURSO de Vanesa Lavilla Alvarez
 INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
-(49, 'IF550AIN', 'Especialidad', 'ORGANIZACION Y ARQUITECTURA DEL COMPUTADOR', 'Práctico'),
-(49, 'IF553AIN', 'Especialidad', 'LENGUAJE ENSAMBLADOR', 'Práctico'),
-(41, 'IF758ACI', 'Estudios Generales', 'METODOS NUMERICOS', 'Práctico'),
-(39, 'IF902DEU', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACIÓN', 'Práctico'),
-(43, 'IF902AEI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACIÓN', 'Práctico'),
-(45, 'IF902ALI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACIÓN', 'Práctico'),
-(17, 'IF902ATU', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACIÓN', 'Práctico');
+(49, 'IF550AIN', 'Especialidad', 'ORGANIZACION Y ARQUITECTURA DEL COMPUTADOR', 'Practico'),
+(49, 'IF553AIN', 'Especialidad', 'LENGUAJE ENSAMBLADOR', 'Practico'),
+(41, 'IF758ACI', 'Estudios Generales', 'METODOS NUMERICOS', 'Practico'),
+(39, 'IF902DEU', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
+(43, 'IF902AEI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
+(45, 'IF902ALI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
+(17, 'IF902ATU', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico');
 
--- CURSO de Lisha Sabah Díaz Cáceres
+-- CURSO de Lisha Sabah Diaz Caceres
 INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
-(49, 'IF063BIN', 'Especialidad', 'QUECHUA', 'Práctico'),
-(1, 'IF902AAT', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACIÓN', 'Práctico'),
-(3, 'IF902ACO', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACIÓN', 'Práctico'),
-(39, 'IF902CEU', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACIÓN', 'Práctico'),
-(51, 'IF902AIA', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACIÓN', 'Práctico'),
-(55, 'IF902AGI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACIÓN', 'Práctico');
+(49, 'IF063BIN', 'Especialidad', 'QUECHUA', 'Practico'),
+(1, 'IF902AAT', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
+(3, 'IF902ACO', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
+(39, 'IF902CEU', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
+(51, 'IF902AIA', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
+(55, 'IF902AGI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico');
 
 -- CURSO de Marcio Fernando Merma Quispe
 INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
-(43, 'IF467AEI', 'Estudios Generales', 'PROGRAMACION DIGITAL', 'Práctico'),
-(5, 'IF902ADR', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACIÓN', 'Práctico'),
-(33, 'IF902AHI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACIÓN', 'Práctico'),
-(51, 'IF902AFO', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACIÓN', 'Práctico');
+(43, 'IF467AEI', 'Estudios Generales', 'PROGRAMACION DIGITAL', 'Practico'),
+(5, 'IF902ADR', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
+(33, 'IF902AHI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
+(51, 'IF902AFO', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico');
 
 -- CURSO de Olmer Claudio Villena Leon
 INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
-(49, 'IF060AIN', 'Especialidad', 'MUSICA', 'Práctico'),
-(31, 'IF902AAQ', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACIÓN', 'Práctico'),
-(33, 'IF902AAE', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACIÓN', 'Práctico'),
-(39, 'IF902AEE', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACIÓN', 'Práctico');
+(49, 'IF060AIN', 'Especialidad', 'MUSICA', 'Practico'),
+(31, 'IF902AAQ', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
+(33, 'IF902AAE', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
+(39, 'IF902AEE', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico');
 
 -- CURSO de Raimar Abarca Mora
 INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
-(49, 'IF063AIN', 'Especialidad', 'QUECHUA', 'Práctico');
+(49, 'IF063AIN', 'Especialidad', 'QUECHUA', 'Practico');
 
 -- CURSO de Gerar Francis Quispe Torres
 INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
-(49, 'IF456AIN', 'Especialidad', 'ALGORITMOS AVANZADOS', 'Teórico'),
-(49, 'IF614AIN', 'Especialidad', 'INGENIERIA DE SOFTWARE I', 'Práctico'),
-(39, 'IF902BEU', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACIÓN', 'Práctico');
+(49, 'IF456AIN', 'Especialidad', 'ALGORITMOS AVANZADOS', 'Teorico'),
+(49, 'IF614AIN', 'Especialidad', 'INGENIERIA DE SOFTWARE I', 'Practico'),
+(39, 'IF902BEU', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico');
 
 -- CURSO de Jonel Ccente Zuzunaga
 INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
-(7, 'IF902BEN', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACIÓN', 'Práctico'),
-(59, 'IF902AMT', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACIÓN', 'Teórico');
+(7, 'IF902BEN', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
+(59, 'IF902AMT', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico');
 
 -- CURSO de Stephan Jhoel Cosio Loaiza
 INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
-(49, 'IF483BIN', 'Especialidad', 'FORMULACION DE PROYECTOS DE TECNOLOGIAS DE LA INFORMACION', 'Teórico');
+(49, 'IF483BIN', 'Especialidad', 'FORMULACION DE PROYECTOS DE TECNOLOGIAS DE LA INFORMACION', 'Teorico');
 
--- CURSO de Luz Indira Ticona Félix
+-- CURSO de Luz Indira Ticona Felix
 INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
-(23, 'IF470AME', 'Estudios Generales', 'LENGUAJE DE PROGRAMACION', 'Práctico'),
-(49, 'IF656AIN', 'Especialidad', 'PROCESAMIENTO DE LENGUAJE NATURAL', 'Práctico'),
-(13, 'IF902AAO', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACIÓN', 'Práctico'),
-(43, 'IF902AEI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACIÓN', 'Práctico');
+(23, 'IF470AME', 'Estudios Generales', 'LENGUAJE DE PROGRAMACION', 'Practico'),
+(49, 'IF656AIN', 'Especialidad', 'PROCESAMIENTO DE LENGUAJE NATURAL', 'Practico'),
+(13, 'IF902AAO', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
+(43, 'IF902AEI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico');
 
 -- CURSO de Edelmira Davila Andrade
 INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
-(23, 'IF471AME', 'Estudios Generales', 'METODOS NUMERICOS', 'Práctico'),
-(49, 'IF556AIN', 'Especialidad', 'SISTEMAS EMBEBIDOS', 'Práctico'),
-(51, 'IF902AIA', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACIÓN', 'Práctico'),
-(59, 'IF902AMT', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACIÓN', 'Práctico');
+(23, 'IF471AME', 'Estudios Generales', 'METODOS NUMERICOS', 'Practico'),
+(49, 'IF556AIN', 'Especialidad', 'SISTEMAS EMBEBIDOS', 'Practico'),
+(51, 'IF902AIA', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
+(59, 'IF902AMT', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico');
 
 -- semestre
 INSERT INTO SEMESTRE (nombre_semestre, inicio, fin, activo) 
