@@ -102,8 +102,8 @@ VALUES
 -- CURSO
 -- Inserciones de los CURSO para JULIO CÉSAR CARBAJAL LUNA
 INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
-(49, 'IF456BIN', 'Especialidad', 'ALGORITMOS AVANZADOS', 'Teórico'),
-(49, 'IF650AIN', 'Especialidad', 'MODELOS PROBABILISTICOS', 'Teórico');
+(49, 'IF650AIN', 'Especialidad', 'MODELOS PROBABILISTICOS', 'Teórico'),
+(49, 'IF456BIN', 'Especialidad', 'ALGORITMOS AVANZADOS', 'Teórico');
 
 -- Inserciones de los CURSO para JULIO CÉSAR CARBAJAL LUNA (nueva sección)
 INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
