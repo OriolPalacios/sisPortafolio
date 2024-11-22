@@ -1,7 +1,3 @@
--- Script para la creación de la base de datos y las tablas necesarias para el proyecto
--- Este script es meramente descriptivo e instructivo para describir el diseño de la base de datos, no tiene ningún efecto real sobre la aplicación
-
-
 create database sisportafolio;
 use sisportafolio;
 
@@ -37,7 +33,6 @@ CREATE TABLE SEMESTRE (
 
 CREATE TABLE CURSO_SEMESTRE (
     id INT auto_increment primary key,
-    carrera VARCHAR(255),
     id_curso INT,
     id_semestre INT,
     activo BOOLEAN DEFAULT TRUE,
@@ -199,7 +194,6 @@ CREATE TABLE OBSERVACIONES (
     fecha_observacion DATE,
     FOREIGN KEY (id_portafolio_curso) REFERENCES PORTAFOLIO_CURSO(id) ON DELETE CASCADE
 );
-
 -- Insercion de datos
 INSERT INTO MALLA_CURRICULAR (nombre_carrera, facultad, duracion_semestres, anio_vigencia, activo)
 VALUES
@@ -299,134 +293,176 @@ VALUES
 
 -- Facultad de Ciencias de la Salud
 ('Farmacia y Bioquimica', 'Facultad de Ciencias de la Salud', 3, '2017-01-01', TRUE),
-('Farmacia y Bioquimica', 'Facultad de Ciencias de la Salud', 3, '2024-06-14', TRUE)
+('Farmacia y Bioquimica', 'Facultad de Ciencias de la Salud', 3, '2024-06-14', TRUE);
 
+-- CURSO
+-- Inserciones de los CURSO para JULIO CÉSAR CARBAJAL LUNA
+INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo)
+(49, 'IF650AIN', 'Especialidad', 'MODELOS PROBABILISTICOS', 'Teorico'),
+(49, 'IF456BIN', 'Especialidad', 'ALGORITMOS AVANZADOS', 'Teorico');
+-- Inserciones de los CURSO para JULIO CÉSAR CARBAJAL LUNA (nueva seccion)
+(49, 'IF653AIN', 'Especialidad', 'MINERIA DE DATOS', 'Teorico'),
+(49, 'IF664AIN', 'Especialidad', 'BIOINFORMATICA', 'Teorico');
+-- Inserciones de los CURSO para NILA ZONIA ACURIO USCA
+(49, 'IF450BIN', 'Especialidad', 'ABSTRACCION DE DATOS Y OBJETOS', 'Teorico'),
+(49, 'IF468AIN', 'Especialidad', 'FUNDAMENTOS DE LA PROGRAMACION', 'Teorico');
+-- Inserciones de los CURSO para JAVIER ARTURO ROZAS HUACHO
+(49, 'IF450AIN', 'Especialidad', 'ABSTRACCION DE DATOS Y OBJETOS', 'Teorico'),
+(49, 'IF651AIN', 'Especialidad', 'INTELIGENCIA ARTIFICIAL', 'Teorico');
+-- Inserciones de los CURSO para LINO PRISCILIANO FLORES PACHECO
+(49, 'IF652AIN', 'Especialidad', 'APRENDIZAJE AUTOMATICO', 'Teorico'),
+(49, 'IF652BIN', 'Especialidad', 'APRENDIZAJE AUTOMATICO', 'Teorico');
+-- Inserciones de los CURSO para EDWIN CARRASCO POBLETE
+(49, 'IF550AIN', 'Especialidad', 'ORGANIZACION Y ARQUITECTURA DEL COMPUTADOR', 'Teorico'),
+(49, 'IF551AIN', 'Especialidad', 'SISTEMAS OPERATIVOS', 'Teorico');
+-- Inserciones de los CURSO para EMILIO PALOMINO OLIVERA
+(49, 'IF483AIN', 'Especialidad', 'FORMULACION DE PROYECTOS DE TECNOLOGIAS DE LA INFORMACION', 'Teorico'),
+(49, 'IF553AIN', 'Especialidad', 'LENGUAJE ENSAMBLADOR', 'Teorico'),
+(17, 'IF902ATU', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico');
+-- Inserciones de los CURSO para ENRIQUE GAMARRA SALDIVAR
+(57, 'IF401BMI', 'Estudios Generales', 'PROGRAMACION DIGITAL', 'Practico'),
+(49, 'IF457AIN', 'Especialidad', 'METODOS NUMERICOS', 'Teorico'),
+(41, 'IF758BCI', 'Estudios Generales', 'METODOS NUMERICOS', 'Teorico');
+-- Inserciones de los CURSO para DENNIS IVaN CANDIA OVIEDO
+(57, 'IF391AMI', 'Estudios Generales', 'SISTEMA DE BASE DE DATOS', 'Practico'),
+(49, 'IF480AIN', 'Especialidad', 'ADMINISTRACION DE TECNOLOGÍAS DE LA INFORMACION', 'Teorico'),
+(49, 'IF610AIN', 'Especialidad', 'ANALISIS Y DISEÑO DE SISTEMAS DE INFORMACION', 'Teorico');
+-- Inserciones de los CURSO para RONY VILLAFUERTE SERNA
+(49, 'IF459BIN', 'Especialidad', 'COMPUTACION GRAFICA II', 'Teorico'),
+(49, 'IF552BIN', 'Especialidad', 'REDES DE COMPUTADORAS I', 'Teorico');
+-- Inserciones de los CURSO para GUZMaN TICONA PARI
+(43, 'IF467AEI', 'Estudios Generales', 'PROGRAMACION DIGITAL', 'Teorico'),
+(49, 'IF612AIN', 'Especialidad', 'FUNDAMENTOS Y DISEÑO DE BASE DE DATOS', 'Teorico');
+-- Inserciones de los CURSO para YESHICA ISELA ORMEÑO AYALA
+(49, 'IF710AIN', 'Especialidad', 'SEMINARIO DE INVESTIGACION I', 'Teorico'),
+(49, 'IF711BIN', 'Especialidad', 'SEMINARIO DE INVESTIGACION II', 'Teorico'),
+(51, 'IF902AFO', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico');
+-- Inserciones de los CURSO para JAVIER DAVID CHAVEZ CENTENO
+(49, 'IF484AIN', 'Especialidad', 'EMPRENDIMIENTO E INNOVACION', 'Teorico'),
+(33, 'IF902AAE', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico'),
+(39, 'IF902AEU', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico');
+-- Inserciones de los CURSO para ROXANA LISETTE QUINTANILLA PORTUGAL
+(39, 'IF902CEU', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico'),
+(27, 'IF902AFL', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico'),
+(41, 'IF902ACI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico');-- Inserciones de los CURSO para IVaN CÉSAR MEDRANO VALENCIA
+(49, 'IF657AIN', 'Especialidad', 'VISION COMPUTACIONAL', 'Teorico'),
+(49, 'IF662AIN', 'Especialidad', 'DEEP LEARNING', 'Teorico');-- Inserciones de los CURSO para LUIS BELTRaN PALMA TTITO
+(49, 'IF669AIN', 'Especialidad', 'MODELADO Y SIMULACION', 'Teorico');-- Inserciones de los CURSO para ROBERT WILBERT ALZAMORA PAREDES
+(49, 'IF658AIN', 'Especialidad', 'REDES NEURONALES ARTIFICIALES', 'Teorico'),
+(49, 'IF452AIN', 'Especialidad', 'ALGORITMOS Y ESTRUCTURAS DE DATOS', 'Teorico'),
+(49, 'IF656AIN', 'Especialidad', 'PROCESAMIENTO DE LENGUAJE NATURAL', 'Teorico');-- Inserciones de los CURSO para WALDO ELIO IBARRA ZAMBRANO
+(21, 'IF167AFI', 'Estudios Generales', 'PROGRAMACION CIENTIFICA', 'Teorico'),
+(49, 'IF468BIN', 'Especialidad', 'FUNDAMENTOS DE LA PROGRAMACION', 'Teorico');-- Inserciones de los CURSO para KARELIA MEDINA MIRANDA
+(49, 'IF452BIN', 'Especialidad', 'ALGORITMOS Y ESTRUCTURAS DE DATOS', 'Teorico'),
+(49, 'IF612BIN', 'Especialidad', 'FUNDAMENTOS Y DISEÑO DE BASE DE DATOS', 'Teorico');-- Inserciones de los CURSO para VANESSA MARIBEL CHOQUE SOTO
+(49, 'IF481AIN', 'Especialidad', 'INGENIERIA ECONOMICA', 'Teorico'),
+(49, 'IF482AIN', 'Especialidad', 'PLANEAMIENTO Y DIRECCION ESTRATEGICA DE TECNOLOGIA DE INFORMACION', 'Teorico'),
+(29, 'IF902AAN', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico');-- Inserciones de los CURSO para MANUEL AURELIO PEÑALOZA FIGUEROA
+(49, 'IF482BIN', 'Especialidad', 'PLANEAMIENTO Y DIRECCION ESTRATEGICA DE TECNOLOGIA DE INFORMACION', 'Teorico'),
+(49, 'IF551BIN', 'Especialidad', 'SISTEMAS OPERATIVOS', 'Teorico'),
+(9, 'IF902AQI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico');
+-- Inserciones de los CURSO para JOSÉ MAURO PILLCO QUISPE
+(49, 'IF458AIN', 'Especialidad', 'COMPUTACION GRAFICA I', 'Teorico'),
+(49, 'IF654AIN', 'Especialidad', 'ROBOTICA', 'Teorico');
+-- Inserciones de los CURSO para LINO AQUILES BACA CARDENAS
+(49, 'IF457AIN', 'Especialidad', 'METODOS NUMERICOS', 'Practico'),
+(41, 'IF758ACI', 'Estudios Generales', 'METODOS NUMERICOS', 'Teorico'),
+(35, 'IF902ACC', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico'),
+(37, 'IF902AEO', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
+(41, 'IF902ACI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico');
 -- Inserciones de los CURSO para ESTHER CRISTINA PACHECO VASQUEZ
-INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
 (23, 'IF470AME', 'Estudios Generales', 'LENGUAJE DE PROGRAMACION', 'Teorico'),
 (3, 'IF902BCO', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico'),
 (39, 'IF902BEU', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico');
-
 -- Inserciones de los CURSO para WILLIAN ZAMALLOA PARO
-INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
 (49, 'IF616AIN', 'Especialidad', 'DESARROLLO DE SOFTWARE II', 'Practico'),
 (49, 'IF617AIN', 'Especialidad', 'INGENIERIA DE SOFTWARE II', 'Teorico'),
 (31, 'IF902AAQ', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico');
-
 -- Inserciones de los CURSO para HARLEY VERA OLIVERA
-INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
 (49, 'IF710BIN', 'Especialidad', 'SEMINARIO DE INVESTIGACION I', 'Teorico');
-
 -- Inserciones de los CURSO para MARITZA KATHERINE IRPANOCCA CUSIMAYTA
-INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
 (43, 'IF212AEI', 'Estudios Generales', 'ANALISIS NUMERICO', 'Teorico'),
 (23, 'IF471AME', 'Estudios Generales', 'METODOS NUMERICOS', 'Teorico'),
 (19, 'IF902ABI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico'),
 (47, 'IF902BBI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
 (57, 'IF902AMI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico');
-
 -- Inserciones de los CURSO para EFRAINA GLADYS CUTIPA ARAPA
-INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
 (49, 'IF451AIN', 'Especialidad', 'POGRAMACION I', 'Practico'),
 (49, 'IF552AIN', 'Especialidad', 'REDES DE COMPUTADORAS I', 'Teorico'),
 (21, 'IF902AFI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico');
-
 -- Inserciones de los CURSO para DARIO FRANCISCO DUEÑAS BUSTINZA
-INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
 (49, 'IF480BIN', 'Especialidad', 'ADMINISTRACION DE TECNOLOGÍAS DE LA INFORMACION', 'Teorico'),
-(19, 'IF902BBI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico'),
 (49, 'IF481AIN', 'Especialidad', 'INGENIERIA ECONOMICA', 'Practico'),
+(19, 'IF902BBI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico'),
 (11, 'IF902AGI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico');
-
 -- CURSO de Doris Sabina Aguirre Carbajal
-INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
 (49, 'IF459BIN', 'Especialidad', 'COMPUTACION GRAFICA II', 'Practico'),
 (3, 'IF902ACO', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico'),
 (39, 'IF902DEU', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico'),
 (7, 'IF902AEN', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico'),
 (21, 'IF902AFI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico');
-
 -- CURSO de Tany Villalba Villalba
-INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
 (49, 'IF556AIN', 'Especialidad', 'SISTEMAS EMBEBIDOS', 'Teorico'),
 (37, 'IF902BAE', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico'),
 (61, 'IF902BEN', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico');
-
 -- CURSO de Carlos Fernando Montoya Cubas
-INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
 (49, 'IF453CIN', 'Especialidad', 'PROGRAMACION II', 'Practico'),
 (49, 'IF466AIN', 'Especialidad', 'COMPILADORES', 'Teorico'),
 (49, 'IF650BIN', 'Especialidad', 'MODELOS PROBABILISTICOS', 'Teorico'),
 (49, 'IF651BIN', 'Especialidad', 'INTELIGENCIA ARTIFICIAL', 'Teorico');
-
 -- CURSO de Carlos Ramon Quispe Onofre
-INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
 (57, 'IF401AMI', 'Especialidad', 'PROGRAMACION DIGITAL', 'Teorico'),
 (49, 'IF669BIN', 'Especialidad', 'MODELADO Y SIMULACION', 'Teorico'),
 (19, 'IF902ABI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
 (39, 'IF902AEE', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico'),
 (33, 'IF902AHI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico');
-
 -- CURSO de Boris Chullo Llave
-INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
 (49, 'IF453BIN', 'Especialidad', 'PROGRAMACION II', 'Practico'),
 (49, 'IF455AIN', 'Especialidad', 'ALGORITMOS PARALELOS Y DISTRIBUIDOS', 'Teorico'),
 (49, 'IF467BIN', 'Especialidad', 'ANALISIS Y DISEÑO DE ALGORITMOS', 'Teorico'),
 (13, 'IF902AAO', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
 (5, 'IF902ADR', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico');
-
 -- CURSO de Ray Dueñas Jimenez
-INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
 (45, 'IF109ALI', 'Especialidad', 'PROGRAMACION DIGITAL II', 'Teorico'),
 (49, 'IF619BIN', 'Especialidad', 'ANaLISIS DE DATOS EMPRESARIALES', 'Practico'),
 (49, 'IF711BIN', 'Especialidad', 'SEMINARIO DE INVESTIGACION II', 'Teorico'),
 (3, 'IF902ACO', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
 (5, 'IF902ADR', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico'),
 (51, 'IF902AIA', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico');
-
 -- CURSO de Hector Eduardo Ugarte Rojas
-INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
 (49, 'IF453AIN', 'Especialidad', 'PROGRAMACION II', 'Practico'),
 (49, 'IF454AIN', 'Especialidad', 'TEORIA DE LA COMPUTACION', 'Teorico'),
 (49, 'IF611AIN', 'Especialidad', 'METODOLOGIA DE DESARROLLO DE SOFTWARE', 'Teorico'),
 (15, 'IF902AAO', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico'),
 (43, 'IF902AEI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico');
-
 -- CURSO de Liseth Urpy Segundo Carpio
-INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
 (49, 'IF064AIN', 'Especialidad', 'TALLER DE DEBATE', 'Practico'),
 (49, 'IF613AIN', 'Especialidad', 'DESARROLLO DE SOFTWARE I', 'Practico'),
 (49, 'IF619AIN', 'Especialidad', 'ANaLISIS DE DATOS EMPRESARIALES', 'Teorico'),
 (53, 'IF902AMD', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico');
-
 -- CURSO de Luis Alvaro Monzon Condori
-INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
 (49, 'IF451BIN', 'Especialidad', 'PROGRAMACION I', 'Practico'),
 (49, 'IF613BIN', 'Especialidad', 'DESARROLLO DE SOFTWARE I', 'Practico'),
 (49, 'IF613CIN', 'Especialidad', 'DESARROLLO DE SOFTWARE I', 'Practico'),
 (41, 'IF902ACI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico'),
 (9, 'IF902AQI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico');
-
+-- CURSO de Vittali Quispe Surco
+(49, 'IF459AIN', 'Especialidad', 'COMPUTACION GRAFICA II', 'Teorico'),
+(49, 'IF466AIN', 'Especialidad', 'COMPILADORES', 'Practico'),
+(49, 'IF618AIN', 'Especialidad', 'TOPICOS AVANZADOS EN INGENIERIA DE SOFTWARE', 'Teorico'),
+(39, 'IF902AEU', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
+(39, 'IF902DEU', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico');
 -- CURSO de Jisbaj Gamarra Salas
-INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
 (49, 'IF611BIN', 'Especialidad', 'METODOLOGIA DE DESARROLLO DE SOFTWARE', 'Teorico'),
 (37, 'IF902AEO', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico');
-
 -- CURSO de Henry Samuel Dueñas de la Cruz
-INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
 (49, 'IF614BIN', 'Especialidad', 'INGENIERIA DE SOFTWARE I', 'Teorico'),
 (45, 'IF902ALI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico');
-
 -- CURSO de Ana Rocio Cardenas Maita
-INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
 (1, 'IF902AAT', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico');
-
 -- CURSO de Raul Huillca Huallparimachi
-INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
 (49, 'IF467AIN', 'Especialidad', 'ANALISIS Y DISEÑO DE ALGORITMOS', 'Teorico');
-
 -- CURSO de Gabriela Zuñiga Rojas
-INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
 (49, 'IF651AIN', 'Especialidad', 'INTELIGENCIA ARTIFICIAL', 'Practico'),
 (49, 'IF652AIN', 'Especialidad', 'APRENDIZAJE AUTOMATICO', 'Practico'),
 (49, 'IF656AIN', 'Especialidad', 'PROCESAMIENTO DE LENGUAJE NATURAL', 'Practico'),
@@ -435,36 +471,18 @@ INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) 
 (37, 'IF902BAE', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
 (7, 'IF902AEN', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
 (57, 'IF902AMI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico');
-
 -- CURSO de Maria del Pilar Venegas Vergara
-INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
 (57, 'IF391AMI', 'Estudios Generales', 'SISTEMA DE BASE DE DATOS', 'Practico'),
 (49, 'IF614AIN', 'Especialidad', 'INGENIERIA DE SOFTWARE I', 'Teorico');
-
 -- CURSO de Victor Dario Sosa Jauregui
-INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
 (49, 'IF612AIN', 'Especialidad', 'FUNDAMENTOS Y DISEÑO DE BASE DE DATOS', 'Practico'),
 (49, 'IF617AIN', 'Especialidad', 'INGENIERIA DE SOFTWARE II', 'Practico'),
 (49, 'IF619BIN', 'Especialidad', 'ANaLISIS DE DATOS EMPRESARIALES', 'Teorico');
-
 -- CURSO de Julio Vladimir Quispe Sota
-INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
 (49, 'IF455BIN', 'Especialidad', 'ALGORITMOS PARALELOS Y DISTRIBUIDOS', 'Teorico');
-
 -- CURSO de Élida Falcon Huallpa
-INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
 (45, 'IF107ALI', 'Estudios Generales', 'PROGRAMACION DIGITAL I', 'Teorico');
-
--- CURSO de Vittali Quispe Surco
-INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
-(49, 'IF459AIN', 'Especialidad', 'COMPUTACION GRAFICA II', 'Teorico'),
-(49, 'IF466AIN', 'Especialidad', 'COMPILADORES', 'Practico'),
-(49, 'IF618AIN', 'Especialidad', 'TOPICOS AVANZADOS EN INGENIERIA DE SOFTWARE', 'Teorico'),
-(39, 'IF902AEU', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
-(39, 'IF902DEU', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico');
-
 -- CURSO de Vanesa Lavilla Alvarez
-INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
 (49, 'IF550AIN', 'Especialidad', 'ORGANIZACION Y ARQUITECTURA DEL COMPUTADOR', 'Practico'),
 (49, 'IF553AIN', 'Especialidad', 'LENGUAJE ENSAMBLADOR', 'Practico'),
 (41, 'IF758ACI', 'Estudios Generales', 'METODOS NUMERICOS', 'Practico'),
@@ -472,58 +490,40 @@ INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) 
 (43, 'IF902AEI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
 (45, 'IF902ALI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
 (17, 'IF902ATU', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico');
-
 -- CURSO de Lisha Sabah Diaz Caceres
-INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
 (49, 'IF063BIN', 'Especialidad', 'QUECHUA', 'Practico'),
 (1, 'IF902AAT', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
 (3, 'IF902ACO', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
 (39, 'IF902CEU', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
 (51, 'IF902AIA', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
 (55, 'IF902AGI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico');
-
 -- CURSO de Marcio Fernando Merma Quispe
-INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
 (43, 'IF467AEI', 'Estudios Generales', 'PROGRAMACION DIGITAL', 'Practico'),
 (5, 'IF902ADR', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
 (33, 'IF902AHI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
 (51, 'IF902AFO', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico');
-
 -- CURSO de Olmer Claudio Villena Leon
-INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
 (49, 'IF060AIN', 'Especialidad', 'MUSICA', 'Practico'),
 (31, 'IF902AAQ', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
 (33, 'IF902AAE', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
 (39, 'IF902AEE', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico');
-
 -- CURSO de Raimar Abarca Mora
-INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
 (49, 'IF063AIN', 'Especialidad', 'QUECHUA', 'Practico');
-
 -- CURSO de Gerar Francis Quispe Torres
-INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
 (49, 'IF456AIN', 'Especialidad', 'ALGORITMOS AVANZADOS', 'Teorico'),
 (49, 'IF614AIN', 'Especialidad', 'INGENIERIA DE SOFTWARE I', 'Practico'),
 (39, 'IF902BEU', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico');
-
 -- CURSO de Jonel Ccente Zuzunaga
-INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
 (7, 'IF902BEN', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
 (59, 'IF902AMT', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico');
-
 -- CURSO de Stephan Jhoel Cosio Loaiza
-INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
 (49, 'IF483BIN', 'Especialidad', 'FORMULACION DE PROYECTOS DE TECNOLOGIAS DE LA INFORMACION', 'Teorico');
-
 -- CURSO de Luz Indira Ticona Felix
-INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
 (23, 'IF470AME', 'Estudios Generales', 'LENGUAJE DE PROGRAMACION', 'Practico'),
 (49, 'IF656AIN', 'Especialidad', 'PROCESAMIENTO DE LENGUAJE NATURAL', 'Practico'),
 (13, 'IF902AAO', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
 (43, 'IF902AEI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico');
-
 -- CURSO de Edelmira Davila Andrade
-INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo) VALUES
 (23, 'IF471AME', 'Estudios Generales', 'METODOS NUMERICOS', 'Practico'),
 (49, 'IF556AIN', 'Especialidad', 'SISTEMAS EMBEBIDOS', 'Practico'),
 (51, 'IF902AIA', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
@@ -543,66 +543,887 @@ VALUES
 
 
 -- USUARIOS
-INSERT INTO USUARIO VALUES 
-("LAURO","ENCISO","RODAS","1974-06-05","M","LAURO.ENCISO@unsaac.edu.pe","999833533","password","Ingenieria","Ingenieria de Sistemas",True),
-("JULIO CESAR","CARBAJAL","LUNA","1975-10-23","M","JULIO.CESAR.CARBAJAL@unsaac.edu.pe","999150808","password","Ingenieria","Ingenieria de Sistemas",True),
-("NILA ZONIA","ACURIO","USCA","1977-09-21","F","NILA.ZONIA.ACURIO@unsaac.edu.pe","999816538","password","Ingenieria","Ingenieria de Sistemas",True),
-("JAVIER ARTURO","ROZAS","HUACHO","1985-05-06","M","JAVIER.ARTURO.ROZAS@unsaac.edu.pe","999232242","password","Ingenieria","Ingenieria de Sistemas",True),
-("LINO PRISCILIANO","FLORES","PACHECO","1991-05-17","M","LINO.PRISCILIANO.FLORES@unsaac.edu.pe","999302642","password","Ingenieria","Ingenieria de Sistemas",True),
-("EDWIN","CARRASCO","POBLETE","1974-02-26","F","EDWIN.CARRASCO@unsaac.edu.pe","999916639","password","Ingenieria","Ingenieria de Sistemas",True),
-("EMILIO","PALOMINO","OLIVERA","1995-11-15","M","EMILIO.PALOMINO@unsaac.edu.pe","999631379","password","Ingenieria","Ingenieria de Sistemas",True),
-("ENRIQUE","GAMARRA","SALDIVAR","1973-11-23","M","ENRIQUE.GAMARRA@unsaac.edu.pe","999842608","password","Ingenieria","Ingenieria de Sistemas",True),
-("DENNIS IVAN","CANDIA","OVIEDO","1971-07-04","F","DENNIS.IVAN.CANDIA@unsaac.edu.pe","999104312","password","Ingenieria","Ingenieria de Sistemas",True),
-("RONY","VILLAFUERTE","SERNA","1994-09-22","M","RONY.VILLAFUERTE@unsaac.edu.pe","999707313","password","Ingenieria","Ingenieria de Sistemas",True),
-("GUZMAN","TICONA","PARI","1971-05-22","M","GUZMAN.TICONA@unsaac.edu.pe","999440297","password","Ingenieria","Ingenieria de Sistemas",True),
-("YESHICA ISELA","ORMENO","AYALA","1989-06-17","F","YESHICA.ISELA.ORMENO@unsaac.edu.pe","999256021","password","Ingenieria","Ingenieria de Sistemas",True),
-("JAVIER DAVID","CHAVEZ","CENTENO","1985-11-13","F","JAVIER.DAVID.CHAVEZ@unsaac.edu.pe","999511994","password","Ingenieria","Ingenieria de Sistemas",True),
-("ROXANA LISETTE","QUINTANILLA","PORTUGAL","1977-12-30","M","ROXANA.LISETTE.QUINTANILLA@unsaac.edu.pe","999130349","password","Ingenieria","Ingenieria de Sistemas",True),
-("IVAN CESAR","MEDRANO","VALENCIA","1988-11-18","M","IVAN.CESAR.MEDRANO@unsaac.edu.pe","999688465","password","Ingenieria","Ingenieria de Sistemas",True),
-("LUIS BELTRAN","PALMA","TTITO","1993-05-29","F","LUIS.BELTRAN.PALMA@unsaac.edu.pe","999354772","password","Ingenieria","Ingenieria de Sistemas",True),
-("ROBERT WILBERT","ALZAMORA","PAREDES","1974-08-29","F","ROBERT.WILBERT.ALZAMORA@unsaac.edu.pe","999052109","password","Ingenieria","Ingenieria de Sistemas",True),
-("WALDO ELIO","IBARRA","ZAMBRANO","1999-01-29","F","WALDO.ELIO.IBARRA@unsaac.edu.pe","999906417","password","Ingenieria","Ingenieria de Sistemas",True),
-("KARELIA","MEDINA","MIRANDA","1991-04-19","M","KARELIA.MEDINA@unsaac.edu.pe","999236400","password","Ingenieria","Ingenieria de Sistemas",True),
-("VANESSA MARIBEL","CHOQUE","SOTO","1993-03-22","M","VANESSA.MARIBEL.CHOQUE@unsaac.edu.pe","999147382","password","Ingenieria","Ingenieria de Sistemas",True),
-("MANUEL AURELIO","PENALOZA","FIGUEROA","1976-10-13","F","MANUEL.AURELIO.PENALOZA@unsaac.edu.pe","999135871","password","Ingenieria","Ingenieria de Sistemas",True),
-("JOSW MAURO","PILLCO","QUISPE","1997-05-07","M","JOSW.MAURO.PILLCO@unsaac.edu.pe","999674972","password","Ingenieria","Ingenieria de Sistemas",True),
-("LINO AQUILES","BACA","CARDENAS","1988-07-22","M","LINO.AQUILES.BACA@unsaac.edu.pe","999046871","password","Ingenieria","Ingenieria de Sistemas",True),
-("ESTHER CRISTINA","PACHECO","VASQUEZ","1988-06-20","F","ESTHER.CRISTINA.PACHECO@unsaac.edu.pe","999373103","password","Ingenieria","Ingenieria de Sistemas",True),
-("WILLIAN","ZAMALLOA","PARO","1990-04-02","F","WILLIAN.ZAMALLOA@unsaac.edu.pe","999639453","password","Ingenieria","Ingenieria de Sistemas",True),
-("HARLEY","VERA","OLIVERA","1979-07-04","F","HARLEY.VERA@unsaac.edu.pe","999476959","password","Ingenieria","Ingenieria de Sistemas",True),
-("MARITZA KATHERINE","IRPANOCA","CUSIMAYTA","1972-04-21","M","MARITZA.KATHERINE.IRPANOCA@unsaac.edu.pe","999974433","password","Ingenieria","Ingenieria de Sistemas",True),
-("EFRAINA GLADYS","CUTIPA","ARAPA","1987-08-08","F","EFRAINA.GLADYS.CUTIPA@unsaac.edu.pe","999025395","password","Ingenieria","Ingenieria de Sistemas",True),
-("DARIO FRANCISCO","DUENAS","BUSTINZA","1974-11-15","F","DARIO.FRANCISCO.DUENAS@unsaac.edu.pe","999521068","password","Ingenieria","Ingenieria de Sistemas",True),
-("DORIS SABINA","AGUIRRE","CARBAJAL","1997-08-10","F","DORIS.SABINA.AGUIRRE@unsaac.edu.pe","999717595","password","Ingenieria","Ingenieria de Sistemas",True),
-("TANY","VILLALBA","VILLALBA","1980-01-13","M","TANY.VILLALBA@unsaac.edu.pe","999474988","password","Ingenieria","Ingenieria de Sistemas",True),
-("CARLOS FERNANDO","MONTOYA","CUBAS","1999-06-30","F","CARLOS.FERNANDO.MONTOYA@unsaac.edu.pe","999114532","password","Ingenieria","Ingenieria de Sistemas",True),
-("CARLOS RAMON","QUISPE","ONOFRE","1981-08-01","M","CARLOS.RAMON.QUISPE@unsaac.edu.pe","999095357","password","Ingenieria","Ingenieria de Sistemas",True),
-("BORIS","CHULLO","LLAVE","1976-04-26","F","BORIS.CHULLO@unsaac.edu.pe","999284327","password","Ingenieria","Ingenieria de Sistemas",True),
-("RAY","DUENAS","JIMWNEZ","1997-07-25","M","RAY.DUENAS@unsaac.edu.pe","999317806","password","Ingenieria","Ingenieria de Sistemas",True),
-("HWCTOR EDUARDO","UGARTE","ROJAS","1989-12-30","M","HWCTOR.EDUARDO.UGARTE@unsaac.edu.pe","999921777","password","Ingenieria","Ingenieria de Sistemas",True),
-("LISETH URPY","SEGUNDO","CARPIO","1973-07-30","F","LISETH.URPY.SEGUNDO@unsaac.edu.pe","999041757","password","Ingenieria","Ingenieria de Sistemas",True),
-("LUIS ALVARO","MONZON","CONDORI","1992-07-18","M","LUIS.ALVARO.MONZON@unsaac.edu.pe","999682287","password","Ingenieria","Ingenieria de Sistemas",True),
-("VITALI","QUISPE","SURCO","1977-01-02","F","VITALI.QUISPE@unsaac.edu.pe","999562707","password","Ingenieria","Ingenieria de Sistemas",True),
-("JISBAJ","GAMARRAS","SALAS","1970-12-17","M","JISBAJ.GAMARRAS@unsaac.edu.pe","999668009","password","Ingenieria","Ingenieria de Sistemas",True),
-("HENRY SAMUEL","DUENAS","DE","1979-06-10","F","HENRY.SAMUEL.DUENAS@unsaac.edu.pe","999513495","password","Ingenieria","Ingenieria de Sistemas",True),
-("ANA ROCIO","CARDENAS","MAITA","1980-10-28","M","ANA.ROCIO.CARDENAS@unsaac.edu.pe","999363185","password","Ingenieria","Ingenieria de Sistemas",True),
-("RAUL","HUILLCA","HUALLPARIMACHI","1992-08-14","M","RAUL.HUILLCA@unsaac.edu.pe","999849467","password","Ingenieria","Ingenieria de Sistemas",True),
-("GABRIELA","ZUNIGA","ROJAS","1996-04-06","M","GABRIELA.ZUNIGA@unsaac.edu.pe","999829288","password","Ingenieria","Ingenieria de Sistemas",True),
-("MARIA DEL","PILAR","VENEGAS","1990-05-17","M","MARIA.DEL.PILAR@unsaac.edu.pe","999085496","password","Ingenieria","Ingenieria de Sistemas",True),
-("VICTOR DARIO","SOSA","JAUREGUI","1999-03-03","F","VICTOR.DARIO.SOSA@unsaac.edu.pe","999238324","password","Ingenieria","Ingenieria de Sistemas",True),
-("JULIO VLADIMIR","QUISPE","SOTA","1971-01-12","F","JULIO.VLADIMIR.QUISPE@unsaac.edu.pe","999942520","password","Ingenieria","Ingenieria de Sistemas",True),
-("WLIDA","FALCON","HUALLPA","1970-09-28","M","WLIDA.FALCON@unsaac.edu.pe","999911345","password","Ingenieria","Ingenieria de Sistemas",True),
-("VANESA","LAVILLA","ALVAREZ","1978-06-11","M","VANESA.LAVILLA@unsaac.edu.pe","999004241","password","Ingenieria","Ingenieria de Sistemas",True),
-("LISHA SABAH","DIAZ","CACERES","1981-10-02","F","LISHA.SABAH.DIAZ@unsaac.edu.pe","999895746","password","Ingenieria","Ingenieria de Sistemas",True),
-("MARCIO FERNANDO","MERMA","QUISPE","1996-04-13","M","MARCIO.FERNANDO.MERMA@unsaac.edu.pe","999252150","password","Ingenieria","Ingenieria de Sistemas",True),
-("OLMER CLAUDIO","VILLENA","LEON","1978-08-07","M","OLMER.CLAUDIO.VILLENA@unsaac.edu.pe","999109426","password","Ingenieria","Ingenieria de Sistemas",True),
-("RAIMAR","ABARCA","MORA","1975-10-15","M","RAIMAR.ABARCA@unsaac.edu.pe","999328418","password","Ingenieria","Ingenieria de Sistemas",True),
-("GERAR FRANCIS","QUISPE","TORRES","1970-03-07","F","GERAR.FRANCIS.QUISPE@unsaac.edu.pe","999210365","password","Ingenieria","Ingenieria de Sistemas",True),
-("JONEL","CCENTE","ZUZUNAGA","1977-01-12","M","JONEL.CCENTE@unsaac.edu.pe","999529032","password","Ingenieria","Ingenieria de Sistemas",True),
-("STEPHAN JHOEL","COSIO","LOAIZA","1993-06-11","F","STEPHAN.JHOEL.COSIO@unsaac.edu.pe","999617539","password","Ingenieria","Ingenieria de Sistemas",True),
-("LUZ INDIRA","TICONA","FWLIX","1999-04-20","F","LUZ.INDIRA.TICONA@unsaac.edu.pe","999869700","password","Ingenieria","Ingenieria de Sistemas",True),
-("EDELMIRA","DAVILA","ANDRADE","1972-12-22","F","EDELMIRA.DAVILA@unsaac.edu.pe","999585471","password","Ingenieria","Ingenieria de Sistemas",True);
+INSERT INTO USUARIO
+(nombres, apellido_paterno, apellido_materno, fecha_nacimiento, sexo, correo, telefono, contrasena, departamento, especialidad) 
+ VALUES 
+("LAURO","ENCISO","RODAS","1974-06-05","M","LAURO.ENCISO@unsaac.edu.pe","999833533","password","Ingenieria","Ingenieria de Sistemas"),
+("JULIO CESAR","CARBAJAL","LUNA","1975-10-23","M","JULIO.CESAR.CARBAJAL@unsaac.edu.pe","999150808","password","Ingenieria","Ingenieria de Sistemas"),
+("NILA ZONIA","ACURIO","USCA","1977-09-21","F","NILA.ZONIA.ACURIO@unsaac.edu.pe","999816538","password","Ingenieria","Ingenieria de Sistemas"),
+("JAVIER ARTURO","ROZAS","HUACHO","1985-05-06","M","JAVIER.ARTURO.ROZAS@unsaac.edu.pe","999232242","password","Ingenieria","Ingenieria de Sistemas"),
+("LINO PRISCILIANO","FLORES","PACHECO","1991-05-17","M","LINO.PRISCILIANO.FLORES@unsaac.edu.pe","999302642","password","Ingenieria","Ingenieria de Sistemas"),
+("EDWIN","CARRASCO","POBLETE","1974-02-26","F","EDWIN.CARRASCO@unsaac.edu.pe","999916639","password","Ingenieria","Ingenieria de Sistemas"),
+("EMILIO","PALOMINO","OLIVERA","1995-11-15","M","EMILIO.PALOMINO@unsaac.edu.pe","999631379","password","Ingenieria","Ingenieria de Sistemas"),
+("ENRIQUE","GAMARRA","SALDIVAR","1973-11-23","M","ENRIQUE.GAMARRA@unsaac.edu.pe","999842608","password","Ingenieria","Ingenieria de Sistemas"),
+("DENNIS IVAN","CANDIA","OVIEDO","1971-07-04","F","DENNIS.IVAN.CANDIA@unsaac.edu.pe","999104312","password","Ingenieria","Ingenieria de Sistemas"),
+("RONY","VILLAFUERTE","SERNA","1994-09-22","M","RONY.VILLAFUERTE@unsaac.edu.pe","999707313","password","Ingenieria","Ingenieria de Sistemas"),
+("GUZMAN","TICONA","PARI","1971-05-22","M","GUZMAN.TICONA@unsaac.edu.pe","999440297","password","Ingenieria","Ingenieria de Sistemas"),
+("YESHICA ISELA","ORMENO","AYALA","1989-06-17","F","YESHICA.ISELA.ORMENO@unsaac.edu.pe","999256021","password","Ingenieria","Ingenieria de Sistemas"),
+("JAVIER DAVID","CHAVEZ","CENTENO","1985-11-13","F","JAVIER.DAVID.CHAVEZ@unsaac.edu.pe","999511994","password","Ingenieria","Ingenieria de Sistemas"),
+("ROXANA LISETTE","QUINTANILLA","PORTUGAL","1977-12-30","M","ROXANA.LISETTE.QUINTANILLA@unsaac.edu.pe","999130349","password","Ingenieria","Ingenieria de Sistemas"),
+("IVAN CESAR","MEDRANO","VALENCIA","1988-11-18","M","IVAN.CESAR.MEDRANO@unsaac.edu.pe","999688465","password","Ingenieria","Ingenieria de Sistemas"),
+("LUIS BELTRAN","PALMA","TTITO","1993-05-29","F","LUIS.BELTRAN.PALMA@unsaac.edu.pe","999354772","password","Ingenieria","Ingenieria de Sistemas"),
+("ROBERT WILBERT","ALZAMORA","PAREDES","1974-08-29","F","ROBERT.WILBERT.ALZAMORA@unsaac.edu.pe","999052109","password","Ingenieria","Ingenieria de Sistemas"),
+("WALDO ELIO","IBARRA","ZAMBRANO","1999-01-29","F","WALDO.ELIO.IBARRA@unsaac.edu.pe","999906417","password","Ingenieria","Ingenieria de Sistemas"),
+("KARELIA","MEDINA","MIRANDA","1991-04-19","M","KARELIA.MEDINA@unsaac.edu.pe","999236400","password","Ingenieria","Ingenieria de Sistemas"),
+("VANESSA MARIBEL","CHOQUE","SOTO","1993-03-22","M","VANESSA.MARIBEL.CHOQUE@unsaac.edu.pe","999147382","password","Ingenieria","Ingenieria de Sistemas"),
+("MANUEL AURELIO","PENALOZA","FIGUEROA","1976-10-13","F","MANUEL.AURELIO.PENALOZA@unsaac.edu.pe","999135871","password","Ingenieria","Ingenieria de Sistemas"),
+("JOSW MAURO","PILLCO","QUISPE","1997-05-07","M","JOSW.MAURO.PILLCO@unsaac.edu.pe","999674972","password","Ingenieria","Ingenieria de Sistemas"),
+("LINO AQUILES","BACA","CARDENAS","1988-07-22","M","LINO.AQUILES.BACA@unsaac.edu.pe","999046871","password","Ingenieria","Ingenieria de Sistemas"),
+("ESTHER CRISTINA","PACHECO","VASQUEZ","1988-06-20","F","ESTHER.CRISTINA.PACHECO@unsaac.edu.pe","999373103","password","Ingenieria","Ingenieria de Sistemas"),
+("WILLIAN","ZAMALLOA","PARO","1990-04-02","F","WILLIAN.ZAMALLOA@unsaac.edu.pe","999639453","password","Ingenieria","Ingenieria de Sistemas"),
+("HARLEY","VERA","OLIVERA","1979-07-04","F","HARLEY.VERA@unsaac.edu.pe","999476959","password","Ingenieria","Ingenieria de Sistemas"),
+("MARITZA KATHERINE","IRPANOCA","CUSIMAYTA","1972-04-21","M","MARITZA.KATHERINE.IRPANOCA@unsaac.edu.pe","999974433","password","Ingenieria","Ingenieria de Sistemas"),
+("EFRAINA GLADYS","CUTIPA","ARAPA","1987-08-08","F","EFRAINA.GLADYS.CUTIPA@unsaac.edu.pe","999025395","password","Ingenieria","Ingenieria de Sistemas"),
+("DARIO FRANCISCO","DUENAS","BUSTINZA","1974-11-15","F","DARIO.FRANCISCO.DUENAS@unsaac.edu.pe","999521068","password","Ingenieria","Ingenieria de Sistemas"),
+("DORIS SABINA","AGUIRRE","CARBAJAL","1997-08-10","F","DORIS.SABINA.AGUIRRE@unsaac.edu.pe","999717595","password","Ingenieria","Ingenieria de Sistemas"),
+("TANY","VILLALBA","VILLALBA","1980-01-13","M","TANY.VILLALBA@unsaac.edu.pe","999474988","password","Ingenieria","Ingenieria de Sistemas"),
+("CARLOS FERNANDO","MONTOYA","CUBAS","1999-06-30","F","CARLOS.FERNANDO.MONTOYA@unsaac.edu.pe","999114532","password","Ingenieria","Ingenieria de Sistemas"),
+("CARLOS RAMON","QUISPE","ONOFRE","1981-08-01","M","CARLOS.RAMON.QUISPE@unsaac.edu.pe","999095357","password","Ingenieria","Ingenieria de Sistemas"),
+("BORIS","CHULLO","LLAVE","1976-04-26","F","BORIS.CHULLO@unsaac.edu.pe","999284327","password","Ingenieria","Ingenieria de Sistemas"),
+("RAY","DUENAS","JIMWNEZ","1997-07-25","M","RAY.DUENAS@unsaac.edu.pe","999317806","password","Ingenieria","Ingenieria de Sistemas"),
+("HWCTOR EDUARDO","UGARTE","ROJAS","1989-12-30","M","HWCTOR.EDUARDO.UGARTE@unsaac.edu.pe","999921777","password","Ingenieria","Ingenieria de Sistemas"),
+("LISETH URPY","SEGUNDO","CARPIO","1973-07-30","F","LISETH.URPY.SEGUNDO@unsaac.edu.pe","999041757","password","Ingenieria","Ingenieria de Sistemas"),
+("LUIS ALVARO","MONZON","CONDORI","1992-07-18","M","LUIS.ALVARO.MONZON@unsaac.edu.pe","999682287","password","Ingenieria","Ingenieria de Sistemas"),
+("VITALI","QUISPE","SURCO","1977-01-02","F","VITALI.QUISPE@unsaac.edu.pe","999562707","password","Ingenieria","Ingenieria de Sistemas"),
+("JISBAJ","GAMARRAS","SALAS","1970-12-17","M","JISBAJ.GAMARRAS@unsaac.edu.pe","999668009","password","Ingenieria","Ingenieria de Sistemas"),
+("HENRY SAMUEL","DUENAS","DE","1979-06-10","F","HENRY.SAMUEL.DUENAS@unsaac.edu.pe","999513495","password","Ingenieria","Ingenieria de Sistemas"),
+("ANA ROCIO","CARDENAS","MAITA","1980-10-28","M","ANA.ROCIO.CARDENAS@unsaac.edu.pe","999363185","password","Ingenieria","Ingenieria de Sistemas"),
+("RAUL","HUILLCA","HUALLPARIMACHI","1992-08-14","M","RAUL.HUILLCA@unsaac.edu.pe","999849467","password","Ingenieria","Ingenieria de Sistemas"),
+("GABRIELA","ZUNIGA","ROJAS","1996-04-06","M","GABRIELA.ZUNIGA@unsaac.edu.pe","999829288","password","Ingenieria","Ingenieria de Sistemas"),
+("MARIA DEL","PILAR","VENEGAS","1990-05-17","M","MARIA.DEL.PILAR@unsaac.edu.pe","999085496","password","Ingenieria","Ingenieria de Sistemas"),
+("VICTOR DARIO","SOSA","JAUREGUI","1999-03-03","F","VICTOR.DARIO.SOSA@unsaac.edu.pe","999238324","password","Ingenieria","Ingenieria de Sistemas"),
+("JULIO VLADIMIR","QUISPE","SOTA","1971-01-12","F","JULIO.VLADIMIR.QUISPE@unsaac.edu.pe","999942520","password","Ingenieria","Ingenieria de Sistemas"),
+("WLIDA","FALCON","HUALLPA","1970-09-28","M","WLIDA.FALCON@unsaac.edu.pe","999911345","password","Ingenieria","Ingenieria de Sistemas"),
+("VANESA","LAVILLA","ALVAREZ","1978-06-11","M","VANESA.LAVILLA@unsaac.edu.pe","999004241","password","Ingenieria","Ingenieria de Sistemas"),
+("LISHA SABAH","DIAZ","CACERES","1981-10-02","F","LISHA.SABAH.DIAZ@unsaac.edu.pe","999895746","password","Ingenieria","Ingenieria de Sistemas"),
+("MARCIO FERNANDO","MERMA","QUISPE","1996-04-13","M","MARCIO.FERNANDO.MERMA@unsaac.edu.pe","999252150","password","Ingenieria","Ingenieria de Sistemas"),
+("OLMER CLAUDIO","VILLENA","LEON","1978-08-07","M","OLMER.CLAUDIO.VILLENA@unsaac.edu.pe","999109426","password","Ingenieria","Ingenieria de Sistemas"),
+("RAIMAR","ABARCA","MORA","1975-10-15","M","RAIMAR.ABARCA@unsaac.edu.pe","999328418","password","Ingenieria","Ingenieria de Sistemas"),
+("GERAR FRANCIS","QUISPE","TORRES","1970-03-07","F","GERAR.FRANCIS.QUISPE@unsaac.edu.pe","999210365","password","Ingenieria","Ingenieria de Sistemas"),
+("JONEL","CCENTE","ZUZUNAGA","1977-01-12","M","JONEL.CCENTE@unsaac.edu.pe","999529032","password","Ingenieria","Ingenieria de Sistemas"),
+("STEPHAN JHOEL","COSIO","LOAIZA","1993-06-11","F","STEPHAN.JHOEL.COSIO@unsaac.edu.pe","999617539","password","Ingenieria","Ingenieria de Sistemas"),
+("LUZ INDIRA","TICONA","FWLIX","1999-04-20","F","LUZ.INDIRA.TICONA@unsaac.edu.pe","999869700","password","Ingenieria","Ingenieria de Sistemas"),
+("EDELMIRA","DAVILA","ANDRADE","1972-12-22","F","EDELMIRA.DAVILA@unsaac.edu.pe","999585471","password","Ingenieria","Ingenieria de Sistemas");
 
--- USUARIO_ROL
-INSERT INTO USUARIO_ROL VALUES
-(),
+-- USUARIO_ROL 
+INSERT INTO USUARIO_ROL (id_usuario, id_rol, fecha_asignacion, activo)
+VALUES
+-- supervisores
+(1, 3, "2022-02-19", FALSE),
+(2, 3, "2022-02-16", FALSE),
+(3, 3, "2022-02-18", FALSE),
+(4, 3, "2022-02-18", FALSE),
+(5, 3, "2022-02-19", FALSE),
+(6, 3, "2022-02-17", FALSE),
+(7, 3, "2022-02-16", FALSE),
+(8, 3, "2022-02-17", FALSE),
+(9, 3, "2022-02-16", FALSE),
+(10, 3, "2022-02-19", FALSE),
+(11, 3, "2022-02-17", FALSE),
+(12, 3, "2022-02-18", FALSE),
+(13, 3, "2022-02-16", FALSE),
+(14, 3, "2022-02-19", FALSE),
+(15, 3, "2022-02-19", FALSE),
+(16, 3, "2022-02-19", FALSE),
+(17, 3, "2022-02-17", FALSE),
+-- administrador
+(6, 1, "2022-02-17", TRUE);
+-- docentes
+INSERT INTO USUARIO_ROL  (id_usuario, id_rol, fecha_asignacion, activo)
+VALUES
+(1, 2, "2022-02-19", FALSE),
+(2, 2, "2022-02-16", FALSE),
+(3, 2, "2022-02-19", FALSE),
+(4, 2, "2022-02-19", FALSE),
+(5, 2, "2022-02-16", FALSE),
+(6, 2, "2022-02-19", FALSE),
+(7, 2, "2022-02-17", FALSE),
+(8, 2, "2022-02-16", FALSE),
+(9, 2, "2022-02-18", FALSE),
+(10, 2, "2022-02-17", FALSE),
+(11, 2, "2022-02-16", FALSE),
+(12, 2, "2022-02-18", FALSE),
+(13, 2, "2022-02-19", FALSE),
+(14, 2, "2022-02-19", FALSE),
+(15, 2, "2022-02-19", FALSE),
+(16, 2, "2022-02-17", FALSE),
+(17, 2, "2022-02-17", FALSE),
+(18, 2, "2022-02-18", FALSE),
+(19, 2, "2022-02-18", FALSE),
+(20, 2, "2022-02-17", FALSE),
+(21, 2, "2022-02-18", FALSE),
+(22, 2, "2022-02-16", FALSE),
+(23, 2, "2022-02-16", FALSE),
+(24, 2, "2022-02-19", FALSE),
+(25, 2, "2022-02-18", FALSE),
+(26, 2, "2022-02-18", FALSE),
+(27, 2, "2022-02-18", FALSE),
+(28, 2, "2022-02-17", FALSE),
+(29, 2, "2022-02-17", FALSE),
+(30, 2, "2022-02-17", FALSE),
+(31, 2, "2022-02-17", FALSE),
+(32, 2, "2022-02-16", FALSE),
+(33, 2, "2022-02-17", FALSE),
+(34, 2, "2022-02-16", FALSE),
+(35, 2, "2022-02-18", FALSE),
+(36, 2, "2022-02-16", FALSE),
+(37, 2, "2022-02-17", FALSE),
+(38, 2, "2022-02-17", FALSE),
+(39, 2, "2022-02-18", FALSE),
+(40, 2, "2022-02-18", FALSE),
+(41, 2, "2022-02-17", FALSE),
+(42, 2, "2022-02-17", FALSE),
+(43, 2, "2022-02-16", FALSE),
+(44, 2, "2022-02-19", FALSE),
+(45, 2, "2022-02-17", FALSE),
+(46, 2, "2022-02-16", FALSE),
+(47, 2, "2022-02-17", FALSE),
+(48, 2, "2022-02-18", FALSE),
+(49, 2, "2022-02-19", FALSE),
+(50, 2, "2022-02-17", FALSE),
+(51, 2, "2022-02-19", FALSE),
+(52, 2, "2022-02-16", FALSE),
+(53, 2, "2022-02-16", FALSE),
+(54, 2, "2022-02-19", FALSE),
+(55, 2, "2022-02-18", FALSE),
+(56, 2, "2022-02-19", FALSE),
+(57, 2, "2022-02-16", FALSE),
+(58, 2, "2022-02-18", FALSE);
+
+INSERT INTO ASIGNACION_REVISION (id_administrador_usuario, id_revisor_usuario, id_docente_usuario, id_semestre, fecha_asignacion, activo)
+VALUES
+(6, 1, 1, 1, "2022-08-15", FALSE),
+(6, 1, 1, 1, "2022-08-15", FALSE),
+(6, 1, 2, 1, "2022-08-15", FALSE),
+(6, 1, 2, 1, "2022-08-15", FALSE),
+(6, 1, 3, 1, "2022-08-15", FALSE),
+(6, 1, 3, 1, "2022-08-15", FALSE),
+(6, 1, 4, 1, "2022-08-15", FALSE),
+(6, 1, 4, 1, "2022-08-15", FALSE),
+(6, 2, 5, 1, "2022-08-15", FALSE),
+(6, 2, 5, 1, "2022-08-15", FALSE),
+(6, 2, 6, 1, "2022-08-15", FALSE),
+(6, 2, 6, 1, "2022-08-15", FALSE),
+(6, 2, 7, 1, "2022-08-15", FALSE),
+(6, 2, 7, 1, "2022-08-15", FALSE),
+(6, 2, 7, 1, "2022-08-15", FALSE),
+(6, 2, 8, 1, "2022-08-15", FALSE),
+(6, 2, 8, 1, "2022-08-15", FALSE),
+(6, 2, 8, 1, "2022-08-15", FALSE),
+(6, 2, 9, 1, "2022-08-15", FALSE),
+(6, 3, 9, 1, "2022-08-15", FALSE),
+(6, 3, 9, 1, "2022-08-15", FALSE),
+(6, 3, 10, 1, "2022-08-15", FALSE),
+(6, 3, 10, 1, "2022-08-15", FALSE),
+(6, 3, 11, 1, "2022-08-15", FALSE),
+(6, 3, 11, 1, "2022-08-15", FALSE),
+(6, 3, 12, 1, "2022-08-15", FALSE),
+(6, 3, 12, 1, "2022-08-15", FALSE),
+(6, 3, 12, 1, "2022-08-15", FALSE),
+(6, 3, 13, 1, "2022-08-15", FALSE),
+(6, 3, 13, 1, "2022-08-15", FALSE),
+(6, 4, 13, 1, "2022-08-15", FALSE),
+(6, 4, 14, 1, "2022-08-15", FALSE),
+(6, 4, 14, 1, "2022-08-15", FALSE),
+(6, 4, 14, 1, "2022-08-15", FALSE),
+(6, 4, 15, 1, "2022-08-15", FALSE),
+(6, 4, 15, 1, "2022-08-15", FALSE),
+(6, 4, 16, 1, "2022-08-15", FALSE),
+(6, 4, 16, 1, "2022-08-15", FALSE),
+(6, 4, 17, 1, "2022-08-15", FALSE),
+(6, 4, 17, 1, "2022-08-15", FALSE),
+(6, 4, 18, 1, "2022-08-15", FALSE),
+(6, 5, 18, 1, "2022-08-15", FALSE),
+(6, 5, 19, 1, "2022-08-15", FALSE),
+(6, 5, 19, 1, "2022-08-15", FALSE),
+(6, 5, 20, 1, "2022-08-15", FALSE),
+(6, 5, 20, 1, "2022-08-15", FALSE),
+(6, 5, 20, 1, "2022-08-15", FALSE),
+(6, 5, 21, 1, "2022-08-15", FALSE),
+(6, 5, 21, 1, "2022-08-15", FALSE),
+(6, 5, 21, 1, "2022-08-15", FALSE),
+(6, 5, 22, 1, "2022-08-15", FALSE),
+(6, 5, 22, 1, "2022-08-15", FALSE),
+(6, 6, 23, 1, "2022-08-15", FALSE),
+(6, 6, 23, 1, "2022-08-15", FALSE),
+(6, 6, 23, 1, "2022-08-15", FALSE),
+(6, 6, 23, 1, "2022-08-15", FALSE),
+(6, 6, 24, 1, "2022-08-15", FALSE),
+(6, 6, 24, 1, "2022-08-15", FALSE),
+(6, 6, 24, 1, "2022-08-15", FALSE),
+(6, 6, 25, 1, "2022-08-15", FALSE),
+(6, 6, 25, 1, "2022-08-15", FALSE),
+(6, 6, 25, 1, "2022-08-15", FALSE),
+(6, 6, 26, 1, "2022-08-15", FALSE),
+(6, 7, 27, 1, "2022-08-15", FALSE),
+(6, 7, 27, 1, "2022-08-15", FALSE),
+(6, 7, 27, 1, "2022-08-15", FALSE),
+(6, 7, 27, 1, "2022-08-15", FALSE),
+(6, 7, 27, 1, "2022-08-15", FALSE),
+(6, 7, 28, 1, "2022-08-15", FALSE),
+(6, 7, 28, 1, "2022-08-15", FALSE),
+(6, 7, 28, 1, "2022-08-15", FALSE),
+(6, 7, 29, 1, "2022-08-15", FALSE),
+(6, 7, 29, 1, "2022-08-15", FALSE),
+(6, 7, 29, 1, "2022-08-15", FALSE),
+(6, 8, 29, 1, "2022-08-15", FALSE),
+(6, 8, 30, 1, "2022-08-15", FALSE),
+(6, 8, 30, 1, "2022-08-15", FALSE),
+(6, 8, 30, 1, "2022-08-15", FALSE),
+(6, 8, 30, 1, "2022-08-15", FALSE),
+(6, 8, 30, 1, "2022-08-15", FALSE),
+(6, 8, 31, 1, "2022-08-15", FALSE),
+(6, 8, 31, 1, "2022-08-15", FALSE),
+(6, 8, 31, 1, "2022-08-15", FALSE),
+(6, 8, 32, 1, "2022-08-15", FALSE),
+(6, 8, 32, 1, "2022-08-15", FALSE),
+(6, 9, 32, 1, "2022-08-15", FALSE),
+(6, 9, 32, 1, "2022-08-15", FALSE),
+(6, 9, 33, 1, "2022-08-15", FALSE),
+(6, 9, 33, 1, "2022-08-15", FALSE),
+(6, 9, 33, 1, "2022-08-15", FALSE),
+(6, 9, 33, 1, "2022-08-15", FALSE),
+(6, 9, 33, 1, "2022-08-15", FALSE),
+(6, 9, 34, 1, "2022-08-15", FALSE),
+(6, 9, 34, 1, "2022-08-15", FALSE),
+(6, 9, 34, 1, "2022-08-15", FALSE),
+(6, 9, 34, 1, "2022-08-15", FALSE),
+(6, 10, 34, 1, "2022-08-15", FALSE),
+(6, 10, 35, 1, "2022-08-15", FALSE),
+(6, 10, 35, 1, "2022-08-15", FALSE),
+(6, 10, 35, 1, "2022-08-15", FALSE),
+(6, 10, 35, 1, "2022-08-15", FALSE),
+(6, 10, 35, 1, "2022-08-15", FALSE),
+(6, 10, 35, 1, "2022-08-15", FALSE),
+(6, 10, 36, 1, "2022-08-15", FALSE),
+(6, 10, 36, 1, "2022-08-15", FALSE),
+(6, 10, 36, 1, "2022-08-15", FALSE),
+(6, 10, 36, 1, "2022-08-15", FALSE),
+(6, 11, 36, 1, "2022-08-15", FALSE),
+(6, 11, 37, 1, "2022-08-15", FALSE),
+(6, 11, 37, 1, "2022-08-15", FALSE),
+(6, 11, 37, 1, "2022-08-15", FALSE),
+(6, 11, 37, 1, "2022-08-15", FALSE),
+(6, 11, 37, 1, "2022-08-15", FALSE),
+(6, 11, 38, 1, "2022-08-15", FALSE),
+(6, 11, 38, 1, "2022-08-15", FALSE),
+(6, 11, 38, 1, "2022-08-15", FALSE),
+(6, 11, 38, 1, "2022-08-15", FALSE),
+(6, 11, 38, 1, "2022-08-15", FALSE),
+(6, 12, 39, 1, "2022-08-15", FALSE),
+(6, 12, 39, 1, "2022-08-15", FALSE),
+(6, 12, 39, 1, "2022-08-15", FALSE),
+(6, 12, 39, 1, "2022-08-15", FALSE),
+(6, 12, 39, 1, "2022-08-15", FALSE),
+(6, 12, 40, 1, "2022-08-15", FALSE),
+(6, 12, 40, 1, "2022-08-15", FALSE),
+(6, 12, 41, 1, "2022-08-15", FALSE),
+(6, 12, 41, 1, "2022-08-15", FALSE),
+(6, 12, 42, 1, "2022-08-15", FALSE),
+(6, 12, 43, 1, "2022-08-15", FALSE),
+(6, 13, 44, 1, "2022-08-15", FALSE),
+(6, 13, 44, 1, "2022-08-15", FALSE),
+(6, 13, 44, 1, "2022-08-15", FALSE),
+(6, 13, 44, 1, "2022-08-15", FALSE),
+(6, 13, 44, 1, "2022-08-15", FALSE),
+(6, 13, 44, 1, "2022-08-15", FALSE),
+(6, 13, 44, 1, "2022-08-15", FALSE),
+(6, 13, 44, 1, "2022-08-15", FALSE),
+(6, 13, 45, 1, "2022-08-15", FALSE),
+(6, 13, 45, 1, "2022-08-15", FALSE),
+(6, 13, 46, 1, "2022-08-15", FALSE),
+(6, 14, 46, 1, "2022-08-15", FALSE),
+(6, 14, 46, 1, "2022-08-15", FALSE),
+(6, 14, 47, 1, "2022-08-15", FALSE),
+(6, 14, 48, 1, "2022-08-15", FALSE),
+(6, 14, 49, 1, "2022-08-15", FALSE),
+(6, 14, 49, 1, "2022-08-15", FALSE),
+(6, 14, 49, 1, "2022-08-15", FALSE),
+(6, 14, 49, 1, "2022-08-15", FALSE),
+(6, 14, 49, 1, "2022-08-15", FALSE),
+(6, 14, 49, 1, "2022-08-15", FALSE),
+(6, 14, 49, 1, "2022-08-15", FALSE),
+(6, 15, 49, 1, "2022-08-15", FALSE),
+(6, 15, 50, 1, "2022-08-15", FALSE),
+(6, 15, 50, 1, "2022-08-15", FALSE),
+(6, 15, 50, 1, "2022-08-15", FALSE),
+(6, 15, 50, 1, "2022-08-15", FALSE),
+(6, 15, 50, 1, "2022-08-15", FALSE),
+(6, 15, 50, 1, "2022-08-15", FALSE),
+(6, 15, 51, 1, "2022-08-15", FALSE),
+(6, 15, 51, 1, "2022-08-15", FALSE),
+(6, 15, 51, 1, "2022-08-15", FALSE),
+(6, 15, 51, 1, "2022-08-15", FALSE),
+(6, 16, 52, 1, "2022-08-15", FALSE),
+(6, 16, 52, 1, "2022-08-15", FALSE),
+(6, 16, 52, 1, "2022-08-15", FALSE),
+(6, 16, 52, 1, "2022-08-15", FALSE),
+(6, 16, 53, 1, "2022-08-15", FALSE),
+(6, 16, 54, 1, "2022-08-15", FALSE),
+(6, 16, 54, 1, "2022-08-15", FALSE),
+(6, 16, 54, 1, "2022-08-15", FALSE),
+(6, 16, 55, 1, "2022-08-15", FALSE),
+(6, 16, 55, 1, "2022-08-15", FALSE),
+(6, 16, 56, 1, "2022-08-15", FALSE),
+(6, 17, 57, 1, "2022-08-15", FALSE),
+(6, 17, 57, 1, "2022-08-15", FALSE),
+(6, 17, 57, 1, "2022-08-15", FALSE),
+(6, 17, 57, 1, "2022-08-15", FALSE),
+(6, 17, 58, 1, "2022-08-15", FALSE),
+(6, 17, 58, 1, "2022-08-15", FALSE),
+(6, 17, 58, 1, "2022-08-15", FALSE),
+(6, 17, 58, 1, "2022-08-15", FALSE);
+
+
+-- cuso_semestre
+INSERT INTO CURSO_SEMESTRE (id_curso, id_semestre, activo) 
+VALUES
+(1, 1, FALSE),
+(2, 1, FALSE),
+(3, 1, FALSE),
+(4, 1, FALSE),
+(5, 1, FALSE),
+(6, 1, FALSE),
+(7, 1, FALSE),
+(8, 1, FALSE),
+(9, 1, FALSE),
+(10, 1, FALSE),
+(11, 1, FALSE),
+(12, 1, FALSE),
+(13, 1, FALSE),
+(14, 1, FALSE),
+(15, 1, FALSE),
+(16, 1, FALSE),
+(17, 1, FALSE),
+(18, 1, FALSE),
+(19, 1, FALSE),
+(20, 1, FALSE),
+(21, 1, FALSE),
+(22, 1, FALSE),
+(23, 1, FALSE),
+(24, 1, FALSE),
+(25, 1, FALSE),
+(26, 1, FALSE),
+(27, 1, FALSE),
+(28, 1, FALSE),
+(29, 1, FALSE),
+(30, 1, FALSE),
+(31, 1, FALSE),
+(32, 1, FALSE),
+(33, 1, FALSE),
+(34, 1, FALSE),
+(35, 1, FALSE),
+(36, 1, FALSE),
+(37, 1, FALSE),
+(38, 1, FALSE),
+(39, 1, FALSE),
+(40, 1, FALSE),
+(41, 1, FALSE),
+(42, 1, FALSE),
+(43, 1, FALSE),
+(44, 1, FALSE),
+(45, 1, FALSE),
+(46, 1, FALSE),
+(47, 1, FALSE),
+(48, 1, FALSE),
+(49, 1, FALSE),
+(50, 1, FALSE),
+(51, 1, FALSE),
+(52, 1, FALSE),
+(53, 1, FALSE),
+(54, 1, FALSE),
+(55, 1, FALSE),
+(56, 1, FALSE),
+(57, 1, FALSE),
+(58, 1, FALSE),
+(59, 1, FALSE),
+(60, 1, FALSE),
+(61, 1, FALSE),
+(62, 1, FALSE),
+(63, 1, FALSE),
+(64, 1, FALSE),
+(65, 1, FALSE),
+(66, 1, FALSE),
+(67, 1, FALSE),
+(68, 1, FALSE),
+(69, 1, FALSE),
+(70, 1, FALSE),
+(71, 1, FALSE),
+(72, 1, FALSE),
+(73, 1, FALSE),
+(74, 1, FALSE),
+(75, 1, FALSE),
+(76, 1, FALSE),
+(77, 1, FALSE),
+(78, 1, FALSE),
+(79, 1, FALSE),
+(80, 1, FALSE),
+(81, 1, FALSE),
+(82, 1, FALSE),
+(83, 1, FALSE),
+(84, 1, FALSE),
+(85, 1, FALSE),
+(86, 1, FALSE),
+(87, 1, FALSE),
+(88, 1, FALSE),
+(89, 1, FALSE),
+(90, 1, FALSE),
+(91, 1, FALSE),
+(92, 1, FALSE),
+(93, 1, FALSE),
+(94, 1, FALSE),
+(95, 1, FALSE),
+(96, 1, FALSE),
+(97, 1, FALSE),
+(98, 1, FALSE),
+(99, 1, FALSE),
+(100, 1, FALSE),
+(101, 1, FALSE),
+(102, 1, FALSE),
+(103, 1, FALSE),
+(104, 1, FALSE),
+(105, 1, FALSE),
+(106, 1, FALSE),
+(107, 1, FALSE),
+(108, 1, FALSE),
+(109, 1, FALSE),
+(110, 1, FALSE),
+(111, 1, FALSE),
+(112, 1, FALSE),
+(113, 1, FALSE),
+(114, 1, FALSE),
+(115, 1, FALSE),
+(116, 1, FALSE),
+(117, 1, FALSE),
+(118, 1, FALSE),
+(119, 1, FALSE),
+(120, 1, FALSE),
+(121, 1, FALSE),
+(122, 1, FALSE),
+(123, 1, FALSE),
+(124, 1, FALSE),
+(125, 1, FALSE),
+(126, 1, FALSE),
+(127, 1, FALSE),
+(128, 1, FALSE),
+(129, 1, FALSE),
+(130, 1, FALSE),
+(131, 1, FALSE),
+(132, 1, FALSE),
+(133, 1, FALSE),
+(134, 1, FALSE),
+(135, 1, FALSE),
+(136, 1, FALSE),
+(137, 1, FALSE),
+(138, 1, FALSE),
+(139, 1, FALSE),
+(140, 1, FALSE),
+(141, 1, FALSE),
+(142, 1, FALSE),
+(143, 1, FALSE),
+(144, 1, FALSE),
+(145, 1, FALSE),
+(146, 1, FALSE),
+(147, 1, FALSE),
+(148, 1, FALSE),
+(149, 1, FALSE),
+(150, 1, FALSE),
+(151, 1, FALSE),
+(152, 1, FALSE),
+(153, 1, FALSE),
+(154, 1, FALSE),
+(155, 1, FALSE),
+(156, 1, FALSE),
+(157, 1, FALSE),
+(158, 1, FALSE),
+(159, 1, FALSE),
+(160, 1, FALSE),
+(161, 1, FALSE),
+(162, 1, FALSE),
+(163, 1, FALSE),
+(164, 1, FALSE),
+(165, 1, FALSE),
+(166, 1, FALSE),
+(167, 1, FALSE),
+(168, 1, FALSE),
+(169, 1, FALSE),
+(170, 1, FALSE),
+(171, 1, FALSE),
+(172, 1, FALSE),
+(173, 1, FALSE),
+(174, 1, FALSE),
+(175, 1, FALSE),
+(176, 1, FALSE),
+(177, 1, FALSE),
+(178, 1, FALSE),
+(179, 1, FALSE),
+(180, 1, FALSE);
+
+INSERT INTO PORTAFOLIO_CURSO (id_asignacion_revision, id_curso_semestre, codigo_curso_semestre, formato, estado, tipo)
+VALUES
+(1, 1, "IF650AIN", "pdf", "Completado", "Teorico"),
+(2, 2, "IF456BIN", "pdf", "Completado", "Teorico"),
+(3, 3, "IF653AIN", "pdf", "Completado", "Teorico"),
+(4, 4, "IF664AIN", "pdf", "Completado", "Teorico"),
+(5, 5, "IF450BIN", "pdf", "Completado", "Teorico"),
+(6, 6, "IF468AIN", "pdf", "Completado", "Teorico"),
+(7, 7, "IF450AIN", "pdf", "Completado", "Teorico"),
+(8, 8, "IF651AIN", "pdf", "Completado", "Teorico"),
+(9, 9, "IF652AIN", "pdf", "Completado", "Teorico"),
+(10, 10, "IF652BIN", "pdf", "Completado", "Teorico"),
+(11, 11, "IF550AIN", "pdf", "Completado", "Teorico"),
+(12, 12, "IF551AIN", "pdf", "Completado", "Teorico"),
+(13, 13, "IF483AIN", "pdf", "Completado", "Teorico"),
+(14, 14, "IF553AIN", "pdf", "Completado", "Teorico"),
+(15, 15, "IF902ATU", "pdf", "Completado", "Teorico"),
+(16, 16, "IF401BMI", "pdf", "Completado", "Teorico"),
+(17, 17, "IF457AIN", "pdf", "Completado", "Teorico"),
+(18, 18, "IF758BCI", "pdf", "Completado", "Teorico"),
+(19, 19, "IF391AMI", "pdf", "Completado", "Teorico"),
+(20, 20, "IF480AIN", "pdf", "Completado", "Teorico"),
+(21, 21, "IF610AIN", "pdf", "Completado", "Teorico"),
+(22, 22, "IF459BIN", "pdf", "Completado", "Teorico"),
+(23, 23, "IF552BIN", "pdf", "Completado", "Teorico"),
+(24, 24, "IF467AEI", "pdf", "Completado", "Teorico"),
+(25, 25, "IF612AIN", "pdf", "Completado", "Teorico"),
+(26, 26, "IF710AIN", "pdf", "Completado", "Teorico"),
+(27, 27, "IF711BIN", "pdf", "Completado", "Teorico"),
+(28, 28, "IF902AFO", "pdf", "Completado", "Teorico"),
+(29, 29, "IF484AIN", "pdf", "Completado", "Teorico"), -- sin traza
+(30, 30, "IF902AAE", "pdf", "Completado", "Teorico"), -- sin traza
+(31, 31, "IF902AEU", "pdf", "Completado", "Teorico"), -- sin traza
+(32, 32, "IF902CEU", "pdf", "Completado", "Teorico"), -- sin traza
+(33, 33, "IF902AFL", "pdf", "Completado", "Teorico"), -- sin traza
+(34, 34, "IF902ACI", "pdf", "Completado", "Teorico"), -- sin traza
+(35, 35, "IF657AIN", "pdf", "Completado", "Teorico"),
+(36, 36, "IF662AIN", "pdf", "Completado", "Teorico"),
+(37, 37, "IF669AIN", "pdf", "Completado", "Teorico"),
+(38, 38, "IF658AIN", "pdf", "Completado", "Teorico"),
+(39, 39, "IF452AIN", "pdf", "Completado", "Teorico"),
+(40, 40, "IF656AIN", "pdf", "Completado", "Teorico"),
+(41, 41, "IF167AFI", "pdf", "Completado", "Teorico"),
+(42, 42, "IF468BIN", "pdf", "Completado", "Teorico"),
+(43, 43, "IF452BIN", "pdf", "Completado", "Teorico"),
+(44, 44, "IF612BIN", "pdf", "Completado", "Teorico"),
+(45, 45, "IF481AIN", "pdf", "Completado", "Teorico"),
+(46, 46, "IF482AIN", "pdf", "Completado", "Teorico"),
+(47, 47, "IF902AAN", "pdf", "Completado", "Teorico"),
+(48, 48, "IF482BIN", "pdf", "Completado", "Teorico"),
+(49, 49, "IF551BIN", "pdf", "Completado", "Teorico"),
+(50, 50, "IF902AQI", "pdf", "Completado", "Teorico"),
+(51, 51, "IF458AIN", "pdf", "Completado", "Teorico"),
+(52, 52, "IF654AIN", "pdf", "Completado", "Teorico"),
+(53, 53, "IF457AIN", "pdf", "Completado", "Teorico"),---
+(147, 147, "IF758ACI", "pdf", "Completado", "Teorico"), -- REGISTRO MOVIDO
+(54, 54, "IF902ACC", "pdf", "Completado", "Teorico"),
+(55, 55, "IF902AEO", "pdf", "Completado", "Teorico"),
+(56, 56, "IF902ACI", "pdf", "Completado", "Teorico"),
+(57, 57, "IF470AME", "pdf", "Completado", "Teorico"),
+(58, 58, "IF902BCO", "pdf", "Completado", "Teorico"),
+(59, 59, "IF902BEU", "pdf", "Completado", "Teorico"),
+(60, 60, "IF616AIN", "pdf", "Completado", "Teorico"),
+(61, 61, "IF617AIN", "pdf", "Completado", "Teorico"),
+(62, 62, "IF902AAQ", "pdf", "Completado", "Teorico"),
+(63, 63, "IF710BIN", "pdf", "Completado", "Teorico"),
+(64, 64, "IF212AEI", "pdf", "Completado", "Teorico"),
+(65, 65, "IF471AME", "pdf", "Completado", "Teorico"),
+(66, 66, "IF902ABI", "pdf", "Completado", "Teorico"),
+(67, 67, "IF902BBI", "pdf", "Completado", "Teorico"),
+(68, 68, "IF902AMI", "pdf", "Completado", "Teorico"),
+(69, 69, "IF451AIN", "pdf", "Completado", "Teorico"),
+(70, 70, "IF552AIN", "pdf", "Completado", "Teorico"),
+(71, 71, "IF902AFI", "pdf", "Completado", "Teorico"),
+(72, 72, "IF480BIN", "pdf", "Completado", "Teorico"),
+(73, 73, "IF481AIN", "pdf", "Completado", "Teorico"),
+(74, 74, "IF902BBI", "pdf", "Completado", "Teorico"),
+(75, 75, "IF902AGI", "pdf", "Completado", "Teorico"),
+(76, 76, "IF459BIN", "pdf", "Completado", "Teorico"),
+(77, 77, "IF902ACO", "pdf", "Completado", "Teorico"),
+(78, 78, "IF902DEU", "pdf", "Completado", "Teorico"),
+(79, 79, "IF902AEN", "pdf", "Completado", "Teorico"),
+(80, 80, "IF902AFI", "pdf", "Completado", "Teorico"),
+(81, 81, "IF556AIN", "pdf", "Completado", "Teorico"),
+(82, 82, "IF902BAE", "pdf", "Completado", "Teorico"),
+(83, 83, "IF902BEN", "pdf", "Completado", "Teorico"),
+(84, 84, "IF453CIN", "pdf", "Completado", "Teorico"),
+(85, 85, "IF466AIN", "pdf", "Completado", "Teorico"),
+(86, 86, "IF650BIN", "pdf", "Completado", "Teorico"),
+(87, 87, "IF651BIN", "pdf", "Completado", "Teorico"),
+(88, 88, "IF401AMI", "pdf", "Completado", "Teorico"),
+(89, 89, "IF669BIN", "pdf", "Completado", "Teorico"),
+(90, 90, "IF902ABI", "pdf", "Completado", "Teorico"),
+(91, 91, "IF902AEE", "pdf", "Completado", "Teorico"),
+(92, 92, "IF902AHI", "pdf", "Completado", "Teorico"),
+(93, 93, "IF453BIN", "pdf", "Completado", "Teorico"),
+(94, 94, "IF455AIN", "pdf", "Completado", "Teorico"),
+(95, 95, "IF467BIN", "pdf", "Completado", "Teorico"),
+(96, 96, "IF902AAO", "pdf", "Completado", "Teorico"),
+(97, 97, "IF902ADR", "pdf", "Completado", "Teorico"),
+(98, 98, "IF109ALI", "pdf", "Completado", "Teorico"),
+(99, 99, "IF619BIN", "pdf", "Completado", "Teorico"),
+(100, 100, "IF711BIN", "pdf", "Completado", "Teorico"),
+(101, 101, "IF902ACO", "pdf", "Completado", "Teorico"),
+(102, 102, "IF902ADR", "pdf", "Completado", "Teorico"),
+(103, 103, "IF902AIA", "pdf", "Completado", "Teorico"),
+(104, 104, "IF453AIN", "pdf", "Completado", "Teorico"),
+(105, 105, "IF454AIN", "pdf", "Completado", "Teorico"),
+(106, 106, "IF611AIN", "pdf", "Completado", "Teorico"),
+(107, 107, "IF902AAO", "pdf", "Completado", "Teorico"),
+(108, 108, "IF902AEI", "pdf", "Completado", "Teorico"),
+(109, 109, "IF064AIN", "pdf", "Completado", "Teorico"),
+(110, 110, "IF613AIN", "pdf", "Completado", "Teorico"),
+(111, 111, "IF619AIN", "pdf", "Completado", "Teorico"),
+(112, 112, "IF902AMD", "pdf", "Completado", "Teorico"),
+-- (113, 113, "IF902AMD", "pdf", "Completado", "Teorico"), --repetido -- registro eliminado
+(114, 114, "IF451BIN", "pdf", "Completado", "Teorico"),
+(115, 115, "IF613BIN", "pdf", "Completado", "Teorico"),
+(116, 116, "IF613CIN", "pdf", "Completado", "Teorico"),
+(117, 117, "IF902ACI", "pdf", "Completado", "Teorico"),
+(118, 118, "IF902AQI", "pdf", "Completado", "Teorico"),
+(119, 119, "IF459AIN", "pdf", "Completado", "Teorico"),
+(120, 120, "IF466AIN", "pdf", "Completado", "Teorico"),
+(121, 121, "IF618AIN", "pdf", "Completado", "Teorico"),
+(122, 122, "IF902AEU", "pdf", "Completado", "Teorico"),
+(123, 123, "IF902DEU", "pdf", "Completado", "Teorico"),
+(124, 124, "IF611BIN", "pdf", "Completado", "Teorico"),
+(125, 125, "IF902AEO", "pdf", "Completado", "Teorico"),
+(126, 126, "IF614BIN", "pdf", "Completado", "Teorico"),
+(127, 127, "IF902ALI", "pdf", "Completado", "Teorico"),
+(128, 128, "IF902AAT", "pdf", "Completado", "Teorico"),
+(129, 129, "IF467AIN", "pdf", "Completado", "Teorico"),
+(130, 130, "IF651AIN", "pdf", "Completado", "Teorico"),
+(131, 131, "IF652AIN", "pdf", "Completado", "Teorico"),
+(132, 132, "IF656AIN", "pdf", "Completado", "Teorico"),
+(133, 133, "IF902AAN", "pdf", "Completado", "Teorico"),
+(134, 134, "IF902AAE", "pdf", "Completado", "Teorico"),
+(135, 135, "IF902BAE", "pdf", "Completado", "Teorico"),
+(136, 136, "IF902AEN", "pdf", "Completado", "Teorico"),
+(137, 137, "IF902AMI", "pdf", "Completado", "Teorico"),
+(138, 138, "IF391AMI", "pdf", "Completado", "Teorico"),
+(139, 139, "IF614AIN", "pdf", "Completado", "Teorico"),
+(140, 140, "IF612AIN", "pdf", "Completado", "Teorico"),
+(141, 141, "IF617AIN", "pdf", "Completado", "Teorico"),
+(142, 142, "IF619BIN", "pdf", "Completado", "Teorico"),
+(143, 143, "IF455BIN", "pdf", "Completado", "Teorico"),
+(144, 144, "IF107ALI", "pdf", "Completado", "Teorico"), ---
+(145, 145, "IF550AIN", "pdf", "Completado", "Teorico"),
+(146, 146, "IF553AIN", "pdf", "Completado", "Teorico"),
+(148, 148, "IF758ACI", "pdf", "Completado", "Teorico"),
+(149, 149, "IF902DEU", "pdf", "Completado", "Teorico"),
+(150, 150, "IF902AEI", "pdf", "Completado", "Teorico"),
+(151, 151, "IF902ALI", "pdf", "Completado", "Teorico"),
+(152, 152, "IF902ATU", "pdf", "Completado", "Teorico"),
+(153, 153, "IF063BIN", "pdf", "Completado", "Teorico"),
+(154, 154, "IF902AAT", "pdf", "Completado", "Teorico"),
+(155, 155, "IF902ACO", "pdf", "Completado", "Teorico"),
+(156, 156, "IF902CEU", "pdf", "Completado", "Teorico"),
+(157, 157, "IF902AIA", "pdf", "Completado", "Teorico"),
+(158, 158, "IF902AGI", "pdf", "Completado", "Teorico"),
+(159, 159, "IF467AEI", "pdf", "Completado", "Teorico"),
+(160, 160, "IF902ADR", "pdf", "Completado", "Teorico"),
+(161, 161, "IF902AHI", "pdf", "Completado", "Teorico"),
+(162, 162, "IF902AFO", "pdf", "Completado", "Teorico"),
+(163, 163, "IF060AIN", "pdf", "Completado", "Teorico"),
+(164, 164, "IF902AAQ", "pdf", "Completado", "Teorico"),
+(165, 165, "IF902AAE", "pdf", "Completado", "Teorico"),
+(166, 166, "IF902AEE", "pdf", "Completado", "Teorico"),
+(167, 167, "IF063AIN", "pdf", "Completado", "Teorico"),
+(168, 168, "IF456AIN", "pdf", "Completado", "Teorico"),
+(169, 169, "IF614AIN", "pdf", "Completado", "Teorico"),
+(170, 170, "IF902BEU", "pdf", "Completado", "Teorico"),
+(171, 171, "IF902BEN", "pdf", "Completado", "Teorico"),
+(172, 172, "IF902AMT", "pdf", "Completado", "Teorico"),
+(173, 173, "IF483BIN", "pdf", "Completado", "Teorico"),
+(174, 174, "IF470AME", "pdf", "Completado", "Teorico"),
+(175, 175, "IF656AIN", "pdf", "Completado", "Teorico"),
+(176, 176, "IF902AAO", "pdf", "Completado", "Teorico"),
+(177, 177, "IF902AEI", "pdf", "Completado", "Teorico"),
+(178, 178, "IF471AME", "pdf", "Completado", "Teorico"),
+(179, 179, "IF556AIN", "pdf", "Completado", "Teorico"),
+(180, 180, "IF902AIA", "pdf", "Completado", "Teorico"),
+(181, 181, "IF902AMT", "pdf", "Completado", "Teorico");
+
+INSERT INTO EVALUACION_Teorico VALUES
+(2, 1, 1, "2", "2", "2", "2", "2", "2", "2", "2", "0", "2", "2", "0","2", "2", "2", "2", "0", "2", "2", "2", "0", "2", "2", "0", "2", "2", "2", "0", "0", "0", "0", "0", "0", "0", "0", "2", "2022-02-18"),
+(1, 1, 2, "2", "2", "2", "2", "2", "2", "2", "2", "0", "2", "0", "0","0", "2", "2", "2", "0", "2", "2", "2", "0", "2", "2", "2", "2", "2", "0", "0", "0", "0", "0", "0", "0", "0", "0", "2", "2022-02-16"),
+(1, 2, 3, "2", "2", "2", "2", "2", "2", "2", "2", "0", "2", "2", "0","2", "2", "0", "0", "0", "2", "0", "0", "0", "2", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "2022-02-19"),
+(1, 2, 4, "2", "2", "2", "2", "2", "2", "2", "2", "0", "2", "2", "0","2", "2", "0", "0", "0", "2", "0", "0", "0", "2", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "2022-02-16"),
+(1, 3, 5, "2", "2", "2", "2", "2", "2", "2", "1", "2", "2", "2", "2","2", "2", "2", "2", "0", "2", "2", "2", "0", "2", "2", "2", "2", "2", "2", "0", "0", "0", "0", "0", "0", "0", "0", "2", "2022-02-18"),
+(1, 3, 6, "2", "2", "2", "2", "2", "2", "2", "1", "2", "2", "2", "2","2", "2", "2", "2", "0", "2", "2", "2", "0", "2", "2", "2", "2", "2", "2", "0", "0", "0", "0", "0", "0", "0", "0", "2", "2022-02-16"),
+(1, 4, 7, "2", "2", "2", "2", "2", "2", "2", "1", "2", "2", "2", "0","2", "2", "2", "2", "0", "2", "2", "2", "0", "2", "2", "2", "2", "2", "2", "0", "2", "2", "2", "0", "0", "0", "0", "0", "2022-02-19"),
+(1, 4, 8, "2", "2", "2", "2", "2", "2", "2", "1", "2", "2", "2", "2","2", "2", "2", "2", "0", "2", "2", "2", "0", "2", "2", "2", "2", "2", "2", "0", "2", "2", "2", "0", "0", "0", "0", "0", "2022-02-19"),
+(2, 5, 9, "2", "2", "2", "2", "2", "2", "2", "1", "2", "2", "2", "1","2", "2", "2", "2", "0", "2", "2", "2", "0", "2", "2", "2", "0", "0", "0", "0", "2", "2", "2", "2", "0", "2", "0", "2", "2022-02-16"),
+(2, 5, 10, "2", "2", "2", "2", "2", "2", "2", "1", "2", "2", "2", "1","2", "2", "2", "2", "0", "2", "2", "2", "0", "2", "2", "2", "0", "0", "0", "0", "2", "2", "2", "2", "0", "2", "0", "2", "2022-02-17"),
+(2, 6, 11, "2", "2", "2", "2", "2", "1", "2", "2", "2", "2", "2", "0","2", "2", "2", "2", "0", "2", "2", "2", "0", "2", "2", "2", "2", "2", "2", "0", "0", "0", "0", "0", "0", "0", "0", "0", "2022-02-18"),
+(2, 6, 12, "2", "2", "2", "2", "2", "1", "2", "2", "2", "2", "2", "0","2", "2", "2", "2", "0", "2", "2", "2", "0", "2", "2", "2", "2", "2", "2", "0", "0", "0", "0", "0", "0", "0", "0", "0", "2022-02-18"),
+(2, 7, 13, "2", "2", "2", "2", "2", "0", "2", "0", "2", "2", "0", "0","0", "2", "2", "0", "0", "2", "2", "0", "0", "0", "0", "0", "2", "2", "0", "2", "2", "2", "0", "0", "0", "0", "0", "2", "2022-02-16"),
+(2, 7, 14, "2", "2", "2", "2", "2", "0", "2", "0", "2", "2", "0", "0","0", "2", "2", "0", "0", "2", "2", "0", "0", "0", "0", "0", "2", "2", "0", "2", "2", "2", "0", "0", "0", "0", "0", "2", "2022-02-19"),
+(2, 7, 15, "2", "2", "2", "2", "2", "0", "2", "0", "2", "2", "0", "0","0", "2", "2", "0", "0", "2", "2", "0", "0", "0", "0", "0", "2", "2", "0", "2", "2", "2", "0", "0", "0", "0", "0", "2", "2022-02-16"),
+(2, 8, 16, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2","2", "1", "1", "0", "0", "1", "1", "0", "0", "0", "0", "0", "2", "2", "0", "0", "0", "0", "0", "0", "0", "0", "0", "2", "2022-02-17"),
+(2, 8, 17, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2","2", "2", "1", "0", "0", "2", "1", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "2", "2022-02-17"),
+(2, 8, 18, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2","2", "2", "1", "0", "0", "2", "1", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "2", "2022-02-19"),
+(3, 9, 20, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "0", "0","0", "0", "0", "0", "0", "0", "0", "0", "0", "2", "2", "0", "0", "0", "0", "0", "2", "2", "0", "0", "0", "0", "0", "2", "2022-02-16"),
+(3, 9, 21, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "0", "0","0", "0", "0", "0", "0", "0", "0", "0", "0", "2", "2", "2", "0", "0", "0", "0", "2", "2", "2", "0", "0", "0", "0", "2", "2022-02-16"),
+(3, 10, 22, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "1", "2","1", "1", "1", "1", "0", "1", "1", "1", "0", "2", "0", "0", "2", "2", "2", "2", "2", "2", "2", "0", "0", "0", "0", "2", "2022-02-17"),
+(3, 10, 23, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "1", "2","1", "1", "1", "1", "0", "1", "1", "1", "0", "2", "0", "0", "2", "2", "2", "2", "2", "2", "2", "0", "0", "0", "0", "2", "2022-02-16"),
+(3, 11, 24, "2", "2", "2", "2", "2", "2", "0", "0", "0", "2", "0", "0","0", "2", "2", "2", "0", "2", "2", "2", "0", "2", "2", "2", "2", "2", "2", "2", "0", "0", "0", "0", "0", "0", "0", "2", "2022-02-18"),
+(3, 11, 25, "2", "2", "2", "2", "2", "2", "0", "0", "0", "2", "1", "2","1", "0", "0", "2", "0", "0", "0", "2", "0", "2", "2", "2", "2", "2", "2", "2", "2", "0", "0", "0", "0", "0", "0", "2", "2022-02-18"),
+(3, 12, 26, "2", "2", "2", "2", "2", "0", "0", "0", "0", "0", "0", "0","0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "2022-02-17"),
+(3, 12, 27, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2","2", "2", "2", "2", "0", "2", "2", "2", "0", "2", "2", "2", "0", "0", "0", "0", "2", "2", "2", "2", "2", "0", "0", "0", "2022-02-18"),
+(3, 13, 29, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "0","2", "2", "2", "0", "0", "2", "2", "0", "0", "1", "1", "0", "1", "1", "0", "0", "2", "2", "0", "0", "0", "0", "0", "2", "2022-02-19"),
+(3, 13, 30, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "0","2", "2", "2", "0", "0", "2", "2", "0", "0", "1", "1", "0", "1", "1", "0", "0", "2", "2", "0", "0", "0", "0", "0", "2", "2022-02-19"),
+(4, 13, 31, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "0","2", "2", "2", "0", "0", "2", "2", "0", "0", "1", "1", "0", "1", "1", "0", "0", "2", "2", "0", "0", "0", "0", "0", "2", "2022-02-16"),
+(4, 14, 32, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2","2", "2", "2", "0", "0", "2", "2", "0", "0", "2", "2", "0", "2", "2", "0", "0", "2", "2", "0", "0", "0", "0", "0", "2", "2022-02-16"),
+(4, 14, 33, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2","2", "2", "2", "0", "0", "2", "2", "0", "0", "2", "2", "0", "2", "2", "0", "0", "2", "2", "0", "0", "0", "0", "0", "2", "2022-02-17"),
+(4, 15, 35, "2", "2", "2", "2", "2", "2", "2", "2", "1", "2", "1", "1","1", "1", "2", "2", "0", "1", "2", "2", "0", "2", "2", "2", "1", "1", "1", "1", "2", "2", "2", "0", "0", "0", "2", "2", "2022-02-16"),
+(4, 15, 36, "2", "2", "2", "2", "2", "2", "2", "2", "1", "2", "1", "1","1", "2", "2", "2", "0", "2", "2", "2", "0", "2", "2", "2", "1", "1", "1", "1", "2", "2", "2", "0", "0", "0", "2", "2", "2022-02-19"),
+(4, 16, 37, "2", "2", "2", "2", "2", "2", "0", "1", "0", "2", "0", "0","0", "2", "2", "1", "1", "2", "2", "1", "1", "0", "0", "0", "2", "2", "2", "0", "0", "0", "0", "0", "0", "0", "2", "2", "2022-02-17"),
+(4, 16, 38, "2", "2", "2", "2", "2", "2", "0", "1", "0", "2", "0", "0","0", "2", "2", "2", "1", "2", "2", "2", "1", "0", "0", "0", "2", "2", "2", "0", "0", "0", "0", "0", "0", "0", "2", "2", "2022-02-16"),
+(4, 17, 39, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2","2", "2", "2", "2", "0", "2", "2", "2", "0", "2", "2", "2", "2", "2", "2", "0", "2", "2", "2", "0", "0", "0", "0", "2", "2022-02-17"),
+(4, 17, 40, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2","2", "2", "2", "2", "0", "2", "2", "2", "0", "2", "2", "2", "2", "2", "2", "0", "2", "2", "2", "0", "0", "0", "0", "2", "2022-02-19"),
+(4, 18, 41, "2", "0", "2", "2", "0", "0", "0", "0", "0", "0", "0", "0","0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "2022-02-17"),
+(5, 18, 42, "2", "0", "2", "2", "0", "0", "0", "0", "0", "0", "0", "0","0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "2022-02-17"),
+(5, 19, 43, "2", "2", "2", "2", "2", "2", "2", "0", "2", "2", "0", "0","0", "1", "2", "1", "1", "1", "2", "1", "1", "2", "2", "2", "2", "2", "2", "0", "2", "2", "2", "0", "0", "0", "0", "2", "2022-02-16"),
+(5, 19, 44, "2", "2", "2", "2", "2", "2", "2", "0", "2", "2", "1", "0","1", "1", "1", "1", "0", "1", "1", "1", "0", "2", "2", "2", "2", "2", "2", "0", "2", "2", "2", "0", "0", "0", "0", "2", "2022-02-16"),
+(5, 20, 45, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2","2", "2", "2", "0", "0", "2", "2", "0", "0", "2", "2", "0", "2", "2", "0", "0", "2", "2", "0", "0", "0", "0", "0", "2", "2022-02-16"),
+(5, 20, 46, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2","2", "2", "2", "0", "0", "2", "2", "0", "0", "2", "2", "0", "2", "2", "0", "0", "2", "2", "0", "0", "0", "0", "0", "2", "2022-02-19"),
+(5, 20, 47, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2","2", "2", "2", "0", "0", "2", "2", "0", "0", "2", "2", "0", "2", "2", "0", "0", "2", "2", "0", "0", "0", "0", "0", "2", "2022-02-16"),
+(5, 21, 48, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2","2", "2", "2", "0", "0", "2", "2", "0", "0", "2", "2", "0", "2", "2", "0", "0", "2", "2", "0", "0", "0", "0", "0", "2", "2022-02-17"),
+(5, 21, 49, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2","2", "2", "2", "2", "0", "2", "2", "2", "0", "2", "2", "2", "2", "2", "2", "0", "2", "2", "2", "0", "0", "0", "0", "2", "2022-02-16"),
+(5, 22, 51, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2","2", "2", "2", "2", "0", "2", "2", "2", "0", "2", "2", "2", "2", "2", "2", "0", "2", "2", "2", "0", "0", "0", "0", "2", "2022-02-19"),
+(5, 22, 52, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2","2", "2", "2", "2", "0", "2", "2", "2", "0", "2", "2", "2", "2", "2", "2", "0", "2", "2", "2", "0", "0", "0", "0", "2", "2022-02-18"),
+(6, 23, 53, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2","2", "2", "2", "0", "0", "2", "2", "0", "0", "2", "2", "0", "2", "2", "0", "0", "0", "0", "0", "0", "0", "0", "0", "2", "2022-02-16"),
+(6, 23, 54, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2","2", "2", "2", "0", "0", "2", "2", "0", "0", "2", "2", "0", "2", "2", "0", "0", "0", "0", "0", "0", "0", "0", "0", "2", "2022-02-19"),
+(6, 24, 57, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2","2", "2", "2", "2", "0", "2", "2", "2", "0", "2", "2", "2", "2", "2", "2", "0", "0", "0", "0", "0", "0", "0", "0", "2", "2022-02-16"),
+(6, 24, 58, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2","2", "2", "2", "0", "0", "2", "2", "0", "0", "2", "2", "0", "2", "2", "0", "0", "0", "0", "0", "0", "0", "0", "0", "2", "2022-02-18"),
+(6, 24, 59, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2","2", "2", "2", "0", "0", "2", "2", "0", "0", "2", "2", "0", "2", "2", "0", "0", "0", "0", "0", "0", "0", "0", "0", "2", "2022-02-18"),
+(6, 25, 61, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2","2", "2", "2", "2", "2", "2", "2", "2", "2", "0", "0", "0", "2", "2", "2", "0", "0", "0", "0", "0", "0", "0", "0", "2", "2022-02-17"),
+(6, 25, 62, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2","2", "2", "2", "2", "2", "2", "2", "2", "2", "0", "0", "0", "2", "2", "2", "0", "0", "0", "0", "0", "0", "0", "0", "2", "2022-02-17"),
+(6, 26, 63, "2", "2", "2", "2", "2", "2", "2", "0", "0", "2", "0", "0","0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "2022-02-18"),
+(7, 27, 64, "2", "2", "2", "2", "2", "2", "2", "0", "2", "2", "2", "0","2", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "2022-02-18"),
+(7, 27, 65, "2", "2", "2", "2", "2", "2", "2", "0", "2", "2", "2", "0","2", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "2022-02-16"),
+(7, 27, 68, "2", "2", "2", "2", "2", "2", "2", "0", "2", "2", "2", "0","2", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "2022-02-19"),
+(7, 28, 70, "2", "2", "2", "2", "2", "2", "2", "2", "0", "2", "2", "0","2", "0", "0", "0", "0", "0", "0", "0", "0", "2", "2", "2", "2", "2", "2", "0", "0", "0", "0", "0", "0", "0", "0", "2", "2022-02-16"),
+(7, 28, 71, "2", "2", "2", "2", "2", "2", "2", "2", "0", "0", "2", "0","2", "0", "0", "0", "0", "0", "0", "0", "0", "2", "2", "0", "2", "2", "0", "0", "0", "0", "0", "0", "0", "0", "0", "2", "2022-02-17"),
+(7, 29, 72, "2", "2", "2", "2", "2", "2", "2", "0", "0", "2", "2", "2","2", "2", "2", "0", "0", "2", "2", "0", "0", "2", "2", "0", "2", "2", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "2022-02-18"),
+(7, 29, 74, "2", "2", "2", "2", "2", "2", "2", "0", "0", "2", "2", "2","2", "2", "2", "0", "0", "2", "2", "0", "0", "2", "2", "0", "2", "2", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "2022-02-19"),
+(8, 29, 75, "2", "2", "2", "2", "2", "2", "2", "0", "0", "2", "2", "2","2", "2", "2", "0", "0", "2", "2", "0", "0", "2", "2", "0", "2", "2", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "2022-02-19"),
+(8, 30, 77, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2","2", "2", "2", "0", "0", "2", "2", "0", "0", "2", "2", "0", "2", "2", "0", "0", "2", "2", "0", "0", "0", "0", "0", "0", "2022-02-19"),
+(8, 30, 78, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2","2", "2", "2", "0", "0", "2", "2", "0", "0", "2", "2", "0", "2", "2", "0", "0", "2", "2", "0", "0", "0", "0", "0", "0", "2022-02-18"),
+(8, 30, 79, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2","2", "2", "2", "0", "0", "2", "2", "0", "0", "2", "2", "0", "2", "2", "0", "0", "2", "2", "0", "0", "0", "0", "0", "0", "2022-02-16"),
+(8, 31, 81, "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0","0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "2022-02-17"),
+(8, 31, 82, "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0","0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "2022-02-16"),
+(8, 31, 83, "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0","0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "2022-02-19"),
+(8, 32, 85, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2","2", "2", "2", "0", "2", "2", "2", "0", "2", "2", "2", "0", "2", "2", "0", "2", "0", "0", "0", "0", "0", "0", "0", "2", "2022-02-18"),
+(9, 32, 86, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2","2", "2", "2", "2", "0", "2", "2", "2", "0", "2", "2", "2", "2", "2", "2", "0", "0", "0", "0", "0", "0", "0", "0", "2", "2022-02-17"),
+(9, 32, 87, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2","2", "2", "2", "2", "0", "2", "2", "2", "0", "2", "2", "2", "2", "2", "2", "0", "0", "0", "0", "0", "0", "0", "0", "2", "2022-02-18"),
+(9, 33, 88, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "0","2", "2", "2", "0", "0", "2", "2", "0", "0", "2", "2", "0", "2", "2", "0", "0", "2", "2", "0", "0", "0", "0", "0", "2", "2022-02-16"),
+(9, 33, 89, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "0","2", "2", "2", "2", "0", "2", "2", "2", "0", "2", "2", "2", "2", "2", "2", "0", "2", "2", "2", "0", "0", "0", "0", "2", "2022-02-17"),
+(9, 33, 91, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "0","2", "2", "2", "0", "0", "2", "2", "0", "0", "2", "2", "0", "2", "2", "0", "0", "2", "2", "0", "0", "0", "0", "0", "2", "2022-02-17"),
+(9, 33, 92, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "0","2", "2", "2", "0", "0", "2", "2", "0", "0", "2", "2", "0", "2", "2", "0", "0", "2", "2", "0", "0", "0", "0", "0", "2", "2022-02-16"),
+(9, 34, 94, "2", "2", "2", "2", "2", "0", "2", "2", "2", "2", "2", "0","2", "2", "2", "2", "0", "2", "2", "2", "0", "2", "2", "2", "2", "2", "2", "0", "2", "2", "2", "0", "0", "0", "0", "0", "2022-02-19"),
+(9, 34, 95, "2", "2", "2", "2", "2", "0", "2", "2", "2", "2", "2", "0","2", "2", "2", "0", "0", "2", "2", "0", "0", "2", "2", "0", "2", "2", "0", "0", "2", "2", "0", "0", "0", "0", "0", "0", "2022-02-17"),
+(10, 35, 98, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2","2", "2", "2", "0", "0", "2", "2", "0", "0", "2", "2", "0", "2", "2", "0", "0", "2", "2", "0", "0", "0", "0", "0", "2", "2022-02-16"),
+(10, 35, 100, "2", "2", "2", "2", "2", "2", "2", "2", "0", "2", "2", "2","2", "2", "2", "0", "0", "2", "2", "0", "0", "2", "2", "0", "2", "2", "0", "0", "2", "2", "0", "0", "0", "0", "0", "2", "2022-02-18"),
+(10, 35, 102, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2","2", "2", "2", "0", "0", "2", "2", "0", "0", "2", "2", "0", "2", "2", "0", "0", "2", "2", "0", "0", "0", "0", "0", "2", "2022-02-19"),
+(10, 35, 103, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2","2", "2", "2", "0", "0", "2", "2", "0", "0", "2", "2", "0", "2", "2", "0", "0", "2", "2", "0", "0", "0", "0", "0", "2", "2022-02-17"),
+(10, 36, 104, "2", "2", "2", "2", "2", "2", "2", "2", "0", "2", "0", "0","0", "2", "2", "0", "0", "2", "2", "0", "0", "0", "0", "0", "2", "2", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "2022-02-19"),
+(10, 36, 105, "2", "2", "2", "2", "2", "2", "2", "0", "0", "2", "0", "0","0", "2", "2", "0", "0", "2", "2", "0", "0", "0", "0", "0", "2", "2", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "2022-02-18"),
+(10, 36, 106, "2", "2", "2", "2", "0", "2", "0", "2", "0", "2", "0", "0","0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "2022-02-16"),
+(10, 36, 107, "2", "2", "2", "2", "2", "2", "2", "2", "0", "2", "2", "0","2", "2", "2", "0", "0", "2", "2", "0", "0", "0", "0", "0", "2", "2", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "2022-02-17"),
+(11, 36, 108, "2", "2", "2", "2", "2", "2", "0", "2", "0", "2", "2", "0","2", "2", "2", "0", "0", "2", "2", "0", "0", "0", "0", "0", "2", "2", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "2022-02-19"),
+(11, 37, 109, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2","2", "2", "2", "0", "0", "2", "2", "0", "0", "2", "2", "0", "2", "2", "0", "0", "2", "2", "0", "0", "0", "0", "0", "2", "2022-02-16"),
+(11, 37, 110, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2","2", "2", "2", "0", "0", "2", "2", "0", "0", "2", "2", "0", "2", "2", "0", "0", "2", "2", "0", "0", "0", "0", "0", "2", "2022-02-16"),
+(11, 37, 111, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2","2", "2", "2", "0", "0", "2", "2", "0", "0", "2", "2", "0", "2", "2", "0", "0", "2", "2", "0", "0", "0", "0", "0", "2", "2022-02-18"),
+(11, 37, 112, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2","2", "2", "2", "0", "0", "2", "2", "0", "0", "2", "2", "0", "2", "2", "0", "0", "2", "2", "0", "0", "0", "0", "0", "2", "2022-02-17"),
+(11, 38, 114, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2","2", "2", "2", "0", "2", "2", "2", "0", "2", "2", "2", "0", "2", "2", "0", "0", "0", "0", "0", "0", "0", "0", "0", "2", "2022-02-18"),
+(11, 38, 115, "2", "2", "2", "2", "2", "2", "2", "0", "2", "2", "2", "2","2", "2", "2", "0", "2", "2", "2", "0", "2", "0", "0", "0", "2", "2", "0", "0", "0", "0", "0", "0", "0", "0", "0", "2", "2022-02-18"),
+(11, 38, 116, "2", "2", "2", "2", "2", "2", "2", "0", "2", "2", "2", "2","2", "2", "2", "0", "2", "2", "2", "0", "2", "0", "0", "0", "2", "2", "0", "0", "0", "0", "0", "0", "0", "0", "0", "2", "2022-02-19"),
+(11, 38, 117, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2","2", "2", "2", "0", "2", "2", "2", "0", "2", "0", "0", "0", "2", "2", "0", "0", "0", "0", "0", "0", "0", "0", "0", "2", "2022-02-17"),
+(12, 39, 119, "2", "2", "2", "2", "2", "2", "2", "2", "0", "2", "0", "0","0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "2022-02-19"),
+(12, 39, 121, "2", "2", "2", "2", "2", "2", "2", "2", "0", "2", "0", "0","0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "2022-02-16"),
+(12, 40, 124, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2","2", "2", "2", "0", "0", "2", "2", "0", "0", "2", "2", "0", "2", "2", "0", "0", "2", "2", "0", "0", "0", "0", "0", "2", "2022-02-16"),
+(12, 40, 125, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2","2", "2", "2", "0", "0", "2", "2", "0", "0", "2", "2", "0", "2", "2", "0", "0", "2", "2", "0", "0", "0", "0", "0", "2", "2022-02-16"),
+(12, 41, 126, "2", "2", "2", "2", "2", "2", "2", "0", "2", "2", "1", "2","1", "0", "0", "0", "0", "0", "0", "0", "0", "2", "2", "2", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "2022-02-19"),
+(12, 41, 127, "2", "2", "2", "2", "2", "2", "2", "0", "2", "2", "2", "2","2", "2", "2", "0", "0", "2", "2", "0", "0", "2", "2", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "2022-02-17"),
+(12, 42, 128, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2","2", "0", "2", "0", "2", "0", "2", "0", "2", "2", "2", "0", "2", "2", "0", "0", "2", "2", "0", "0", "0", "0", "0", "2", "2022-02-16"),
+(12, 43, 129, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2","2", "2", "2", "0", "0", "2", "2", "0", "0", "2", "2", "0", "2", "2", "0", "0", "0", "0", "0", "0", "0", "0", "0", "2", "2022-02-17"),
+(13, 45, 139, "2", "2", "2", "2", "2", "0", "2", "2", "2", "2", "1", "0","1", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "2022-02-17"),
+(14, 46, 142, "0", "0", "0", "0", "2", "2", "2", "2", "2", "2", "2", "2","2", "2", "2", "0", "0", "2", "2", "0", "0", "2", "2", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "2022-02-19"),
+(14, 47, 143, "2", "0", "2", "2", "1", "0", "0", "0", "0", "0", "0", "2","0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "2", "2022-02-19"),
+(14, 48, 144, "0", "0", "0", "0", "2", "2", "2", "0", "0", "2", "0", "0","0", "1", "1", "0", "1", "1", "1", "0", "1", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "2022-02-19"),
+(15, 50, 153, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "1","2", "2", "2", "0", "1", "2", "2", "0", "1", "2", "2", "0", "2", "2", "0", "0", "2", "1", "0", "0", "0", "0", "0", "2", "2022-02-18"),
+(16, 54, 168, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "2","2", "2", "2", "0", "0", "2", "2", "0", "0", "2", "0", "0", "2", "2", "2", "2", "2", "2", "2", "0", "0", "0", "0", "2", "2022-02-16"),
+(16, 55, 172, "2", "2", "2", "2", "2", "2", "2", "2", "0", "2", "2", "1","2", "2", "2", "0", "0", "2", "2", "0", "0", "2", "2", "0", "2", "2", "0", "0", "2", "2", "0", "0", "0", "0", "0", "2", "2022-02-16"),
+(16, 56, 173, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "0", "2","0", "2", "2", "0", "0", "2", "2", "0", "0", "2", "2", "0", "2", "2", "0", "0", "2", "2", "0", "0", "0", "0", "0", "2", "2022-02-19");
+
+INSERT INTO EVALUACION_Practico VALUES
+(2, 9, 19, "2", "2", "2", "2", "2", "2", "2", "2", "0", "0", "0", "2022-02-17"),
+(3, 12, 28, "2", "2", "2", "2", "0", "0", "2", "2", "0", "0", "0", "2022-02-19"),
+(4, 14, 34, "2", "2", "2", "2", "0", "2", "0", "2", "2", "2", "0", "2022-02-18"),
+(5, 21, 50, "2", "2", "2", "2", "2", "2", "2", "0", "2", "2", "0", "2022-02-16"),
+(6, 23, 55, "2", "2", "2", "2", "0", "0", "0", "0", "2", "2", "0", "2022-02-16"),
+(6, 23, 56, "2", "2", "2", "2", "0", "0", "0", "0", "2", "2", "0", "2022-02-17"),
+(6, 25, 60, "2", "2", "2", "2", "2", "2", "2", "2", "0", "0", "0", "2022-02-19"),
+(7, 27, 66, "2", "2", "2", "2", "2", "0", "2", "2", "0", "0", "0", "2022-02-18"),
+(7, 27, 67, "2", "2", "2", "2", "0", "0", "0", "0", "0", "0", "0", "2022-02-19"),
+(7, 28, 69, "2", "2", "2", "2", "2", "2", "0", "0", "0", "0", "0", "2022-02-16"),
+(7, 29, 73, "2", "2", "2", "2", "2", "0", "0", "2", "0", "0", "0", "2022-02-18"),
+(8, 30, 76, "2", "2", "2", "2", "2", "0", "0", "2", "0", "0", "0", "2022-02-16"),
+(8, 30, 80, "2", "2", "2", "2", "2", "0", "0", "2", "0", "0", "0", "2022-02-19"),
+(8, 32, 84, "2", "2", "2", "2", "2", "2", "2", "2", "0", "0", "0", "2022-02-16"),
+(9, 33, 90, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "0", "2022-02-17"),
+(9, 34, 93, "2", "2", "2", "2", "0", "2", "2", "2", "2", "2", "0", "2022-02-17"),
+(9, 34, 96, "2", "2", "2", "2", "0", "0", "0", "0", "0", "0", "0", "2022-02-18"),
+(10, 34, 97, "2", "2", "2", "2", "2", "0", "2", "2", "2", "2", "0", "2022-02-18"),
+(10, 35, 99, "2", "2", "2", "2", "2", "0", "2", "2", "2", "2", "0", "2022-02-19"),
+(10, 35, 101, "2", "2", "2", "2", "2", "0", "2", "2", "2", "2", "0", "2022-02-17"),
+(11, 37, 113, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "0", "2022-02-18"),
+(11, 38, 118, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "0", "2022-02-16"),
+(12, 39, 120, "2", "2", "2", "2", "0", "0", "0", "0", "0", "0", "0", "2022-02-17"),
+(12, 39, 122, "2", "2", "2", "2", "0", "0", "0", "0", "0", "0", "0", "2022-02-18"),
+(12, 39, 123, "2", "2", "2", "2", "0", "0", "0", "0", "0", "0", "0", "2022-02-18"),
+(13, 44, 130, "0", "0", "0", "0", "2", "2", "2", "2", "0", "0", "0", "2022-02-17"),
+(13, 44, 131, "0", "0", "0", "0", "2", "2", "2", "2", "0", "0", "0", "2022-02-16"),
+(13, 44, 132, "0", "0", "0", "0", "0", "2", "0", "2", "0", "0", "0", "2022-02-19"),
+(13, 44, 133, "0", "0", "0", "0", "0", "2", "2", "2", "0", "0", "0", "2022-02-18"),
+(13, 44, 134, "0", "0", "0", "0", "0", "2", "2", "2", "0", "0", "0", "2022-02-19"),
+(13, 44, 135, "0", "0", "0", "0", "0", "2", "2", "2", "0", "0", "0", "2022-02-19"),
+(13, 44, 136, "0", "0", "0", "0", "0", "2", "2", "2", "0", "0", "0", "2022-02-17"),
+(13, 44, 137, "0", "0", "0", "0", "0", "2", "2", "2", "0", "0", "0", "2022-02-17"),
+(13, 45, 138, "2", "2", "2", "2", "0", "0", "0", "0", "0", "0", "0", "2022-02-17"),
+(13, 46, 140, "0", "0", "0", "0", "2", "0", "0", "2", "0", "0", "0", "2022-02-17"),
+(14, 46, 141, "0", "0", "0", "0", "2", "0", "0", "2", "0", "0", "0", "2022-02-17"),
+(14, 49, 145, "2", "2", "2", "2", "0", "2", "2", "0", "2", "2", "0", "2022-02-16"),
+(14, 49, 146, "2", "2", "2", "2", "0", "2", "2", "0", "2", "2", "0", "2022-02-19"),
+(14, 49, 147, "2", "2", "2", "2", "0", "2", "2", "0", "2", "2", "0", "2022-02-16"),
+(14, 49, 148, "2", "2", "2", "2", "0", "2", "2", "0", "2", "2", "0", "2022-02-16"),
+(14, 49, 149, "2", "2", "2", "2", "0", "2", "2", "0", "2", "2", "0", "2022-02-18"),
+(14, 49, 150, "2", "2", "2", "2", "0", "2", "2", "0", "2", "2", "0", "2022-02-18"),
+(14, 49, 151, "2", "2", "2", "2", "0", "2", "2", "0", "2", "2", "0", "2022-02-19"),
+(15, 49, 152, "2", "2", "2", "2", "0", "2", "2", "0", "2", "2", "0", "2022-02-18"),
+(15, 50, 154, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "0", "2022-02-19"),
+(15, 50, 155, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "0", "2022-02-17"),
+(15, 50, 156, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "0", "2022-02-16"),
+(15, 50, 157, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "0", "2022-02-18"),
+(15, 50, 158, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "0", "2022-02-16"),
+(15, 51, 159, "2", "2", "2", "2", "0", "2", "0", "0", "2", "2", "0", "2022-02-19"),
+(15, 51, 160, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "0", "2022-02-19"),
+(15, 51, 161, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "0", "2022-02-16"),
+(15, 51, 162, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "0", "2022-02-18"),
+(16, 52, 163, "2", "2", "2", "2", "0", "0", "0", "2", "1", "0", "0", "2022-02-18"),
+(16, 52, 164, "2", "2", "2", "2", "2", "0", "2", "2", "2", "2", "0", "2022-02-16"),
+(16, 52, 165, "2", "2", "2", "2", "2", "0", "2", "2", "2", "2", "0", "2022-02-16"),
+(16, 52, 166, "2", "2", "2", "2", "2", "0", "2", "2", "2", "2", "0", "2022-02-19"),
+(16, 53, 167, "2", "2", "2", "2", "2", "2", "2", "1", "0", "0", "0", "2022-02-17"),
+(16, 54, 169, "2", "2", "2", "2", "2", "0", "2", "2", "0", "0", "0", "2022-02-19"),
+(16, 54, 170, "2", "2", "2", "2", "2", "2", "2", "2", "0", "0", "0", "2022-02-17"),
+(16, 55, 171, "2", "2", "2", "2", "2", "2", "0", "0", "2", "2", "0", "2022-02-19"),
+(17, 57, 174, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "0", "2022-02-16"),
+(17, 57, 175, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "0", "2022-02-17"),
+(17, 57, 176, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "0", "2022-02-18"),
+(17, 57, 177, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "0", "2022-02-19"),
+(17, 58, 178, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "0", "2022-02-18"),
+(17, 58, 179, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "0", "2022-02-19"),
+(17, 58, 180, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "0", "2022-02-16"),
+(17, 58, 181, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "0", "2022-02-17");
