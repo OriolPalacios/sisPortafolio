@@ -298,170 +298,169 @@ VALUES
 -- CURSO
 -- Inserciones de los CURSO para JULIO CÉSAR CARBAJAL LUNA
 INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo)
+VALUES
 (49, 'IF650AIN', 'Especialidad', 'MODELOS PROBABILISTICOS', 'Teorico'),
-(49, 'IF456BIN', 'Especialidad', 'ALGORITMOS AVANZADOS', 'Teorico');
--- Inserciones de los CURSO para JULIO CÉSAR CARBAJAL LUNA (nueva seccion)
+(49, 'IF456BIN', 'Especialidad', 'ALGORITMOS AVANZADOS', 'Teorico'),
 (49, 'IF653AIN', 'Especialidad', 'MINERIA DE DATOS', 'Teorico'),
-(49, 'IF664AIN', 'Especialidad', 'BIOINFORMATICA', 'Teorico');
--- Inserciones de los CURSO para NILA ZONIA ACURIO USCA
+(49, 'IF664AIN', 'Especialidad', 'BIOINFORMATICA', 'Teorico'),
 (49, 'IF450BIN', 'Especialidad', 'ABSTRACCION DE DATOS Y OBJETOS', 'Teorico'),
-(49, 'IF468AIN', 'Especialidad', 'FUNDAMENTOS DE LA PROGRAMACION', 'Teorico');
+(49, 'IF468AIN', 'Especialidad', 'FUNDAMENTOS DE LA PROGRAMACION', 'Teorico'),
 -- Inserciones de los CURSO para JAVIER ARTURO ROZAS HUACHO
 (49, 'IF450AIN', 'Especialidad', 'ABSTRACCION DE DATOS Y OBJETOS', 'Teorico'),
-(49, 'IF651AIN', 'Especialidad', 'INTELIGENCIA ARTIFICIAL', 'Teorico');
+(49, 'IF651AIN', 'Especialidad', 'INTELIGENCIA ARTIFICIAL', 'Teorico'),
 -- Inserciones de los CURSO para LINO PRISCILIANO FLORES PACHECO
 (49, 'IF652AIN', 'Especialidad', 'APRENDIZAJE AUTOMATICO', 'Teorico'),
-(49, 'IF652BIN', 'Especialidad', 'APRENDIZAJE AUTOMATICO', 'Teorico');
+(49, 'IF652BIN', 'Especialidad', 'APRENDIZAJE AUTOMATICO', 'Teorico'),
 -- Inserciones de los CURSO para EDWIN CARRASCO POBLETE
 (49, 'IF550AIN', 'Especialidad', 'ORGANIZACION Y ARQUITECTURA DEL COMPUTADOR', 'Teorico'),
-(49, 'IF551AIN', 'Especialidad', 'SISTEMAS OPERATIVOS', 'Teorico');
+(49, 'IF551AIN', 'Especialidad', 'SISTEMAS OPERATIVOS', 'Teorico'),
 -- Inserciones de los CURSO para EMILIO PALOMINO OLIVERA
 (49, 'IF483AIN', 'Especialidad', 'FORMULACION DE PROYECTOS DE TECNOLOGIAS DE LA INFORMACION', 'Teorico'),
 (49, 'IF553AIN', 'Especialidad', 'LENGUAJE ENSAMBLADOR', 'Teorico'),
-(17, 'IF902ATU', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico');
+(17, 'IF902ATU', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico'),
 -- Inserciones de los CURSO para ENRIQUE GAMARRA SALDIVAR
 (57, 'IF401BMI', 'Estudios Generales', 'PROGRAMACION DIGITAL', 'Practico'),
 (49, 'IF457AIN', 'Especialidad', 'METODOS NUMERICOS', 'Teorico'),
-(41, 'IF758BCI', 'Estudios Generales', 'METODOS NUMERICOS', 'Teorico');
+(41, 'IF758BCI', 'Estudios Generales', 'METODOS NUMERICOS', 'Teorico'),
 -- Inserciones de los CURSO para DENNIS IVaN CANDIA OVIEDO
 (57, 'IF391AMI', 'Estudios Generales', 'SISTEMA DE BASE DE DATOS', 'Practico'),
 (49, 'IF480AIN', 'Especialidad', 'ADMINISTRACION DE TECNOLOGÍAS DE LA INFORMACION', 'Teorico'),
-(49, 'IF610AIN', 'Especialidad', 'ANALISIS Y DISEÑO DE SISTEMAS DE INFORMACION', 'Teorico');
+(49, 'IF610AIN', 'Especialidad', 'ANALISIS Y DISEÑO DE SISTEMAS DE INFORMACION', 'Teorico'),
 -- Inserciones de los CURSO para RONY VILLAFUERTE SERNA
 (49, 'IF459BIN', 'Especialidad', 'COMPUTACION GRAFICA II', 'Teorico'),
-(49, 'IF552BIN', 'Especialidad', 'REDES DE COMPUTADORAS I', 'Teorico');
+(49, 'IF552BIN', 'Especialidad', 'REDES DE COMPUTADORAS I', 'Teorico'),
 -- Inserciones de los CURSO para GUZMaN TICONA PARI
 (43, 'IF467AEI', 'Estudios Generales', 'PROGRAMACION DIGITAL', 'Teorico'),
-(49, 'IF612AIN', 'Especialidad', 'FUNDAMENTOS Y DISEÑO DE BASE DE DATOS', 'Teorico');
+(49, 'IF612AIN', 'Especialidad', 'FUNDAMENTOS Y DISEÑO DE BASE DE DATOS', 'Teorico'),
 -- Inserciones de los CURSO para YESHICA ISELA ORMEÑO AYALA
 (49, 'IF710AIN', 'Especialidad', 'SEMINARIO DE INVESTIGACION I', 'Teorico'),
 (49, 'IF711BIN', 'Especialidad', 'SEMINARIO DE INVESTIGACION II', 'Teorico'),
-(51, 'IF902AFO', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico');
+(51, 'IF902AFO', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico'),
 -- Inserciones de los CURSO para JAVIER DAVID CHAVEZ CENTENO
 (49, 'IF484AIN', 'Especialidad', 'EMPRENDIMIENTO E INNOVACION', 'Teorico'),
 (33, 'IF902AAE', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico'),
-(39, 'IF902AEU', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico');
+(39, 'IF902AEU', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico'),
 -- Inserciones de los CURSO para ROXANA LISETTE QUINTANILLA PORTUGAL
 (39, 'IF902CEU', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico'),
 (27, 'IF902AFL', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico'),
-(41, 'IF902ACI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico');-- Inserciones de los CURSO para IVaN CÉSAR MEDRANO VALENCIA
+(41, 'IF902ACI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),-- Inserciones de los CURSO para IVaN CÉSAR MEDRANO VALENCIA
 (49, 'IF657AIN', 'Especialidad', 'VISION COMPUTACIONAL', 'Teorico'),
-(49, 'IF662AIN', 'Especialidad', 'DEEP LEARNING', 'Teorico');-- Inserciones de los CURSO para LUIS BELTRaN PALMA TTITO
-(49, 'IF669AIN', 'Especialidad', 'MODELADO Y SIMULACION', 'Teorico');-- Inserciones de los CURSO para ROBERT WILBERT ALZAMORA PAREDES
+(49, 'IF662AIN', 'Especialidad', 'DEEP LEARNING', 'Teorico'),-- Inserciones de los CURSO para LUIS BELTRaN PALMA TTITO
+(49, 'IF669AIN', 'Especialidad', 'MODELADO Y SIMULACION', 'Teorico'),-- Inserciones de los CURSO para ROBERT WILBERT ALZAMORA PAREDES
 (49, 'IF658AIN', 'Especialidad', 'REDES NEURONALES ARTIFICIALES', 'Teorico'),
 (49, 'IF452AIN', 'Especialidad', 'ALGORITMOS Y ESTRUCTURAS DE DATOS', 'Teorico'),
-(49, 'IF656AIN', 'Especialidad', 'PROCESAMIENTO DE LENGUAJE NATURAL', 'Teorico');-- Inserciones de los CURSO para WALDO ELIO IBARRA ZAMBRANO
+(49, 'IF656AIN', 'Especialidad', 'PROCESAMIENTO DE LENGUAJE NATURAL', 'Teorico'),-- Inserciones de los CURSO para WALDO ELIO IBARRA ZAMBRANO
 (21, 'IF167AFI', 'Estudios Generales', 'PROGRAMACION CIENTIFICA', 'Teorico'),
-(49, 'IF468BIN', 'Especialidad', 'FUNDAMENTOS DE LA PROGRAMACION', 'Teorico');-- Inserciones de los CURSO para KARELIA MEDINA MIRANDA
+(49, 'IF468BIN', 'Especialidad', 'FUNDAMENTOS DE LA PROGRAMACION', 'Teorico'),-- Inserciones de los CURSO para KARELIA MEDINA MIRANDA
 (49, 'IF452BIN', 'Especialidad', 'ALGORITMOS Y ESTRUCTURAS DE DATOS', 'Teorico'),
-(49, 'IF612BIN', 'Especialidad', 'FUNDAMENTOS Y DISEÑO DE BASE DE DATOS', 'Teorico');-- Inserciones de los CURSO para VANESSA MARIBEL CHOQUE SOTO
+(49, 'IF612BIN', 'Especialidad', 'FUNDAMENTOS Y DISEÑO DE BASE DE DATOS', 'Teorico'),-- Inserciones de los CURSO para VANESSA MARIBEL CHOQUE SOTO
 (49, 'IF481AIN', 'Especialidad', 'INGENIERIA ECONOMICA', 'Teorico'),
 (49, 'IF482AIN', 'Especialidad', 'PLANEAMIENTO Y DIRECCION ESTRATEGICA DE TECNOLOGIA DE INFORMACION', 'Teorico'),
-(29, 'IF902AAN', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico');-- Inserciones de los CURSO para MANUEL AURELIO PEÑALOZA FIGUEROA
+(29, 'IF902AAN', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico'),-- Inserciones de los CURSO para MANUEL AURELIO PEÑALOZA FIGUEROA
 (49, 'IF482BIN', 'Especialidad', 'PLANEAMIENTO Y DIRECCION ESTRATEGICA DE TECNOLOGIA DE INFORMACION', 'Teorico'),
 (49, 'IF551BIN', 'Especialidad', 'SISTEMAS OPERATIVOS', 'Teorico'),
-(9, 'IF902AQI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico');
+(9, 'IF902AQI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico'),
 -- Inserciones de los CURSO para JOSÉ MAURO PILLCO QUISPE
 (49, 'IF458AIN', 'Especialidad', 'COMPUTACION GRAFICA I', 'Teorico'),
-(49, 'IF654AIN', 'Especialidad', 'ROBOTICA', 'Teorico');
+(49, 'IF654AIN', 'Especialidad', 'ROBOTICA', 'Teorico'),
 -- Inserciones de los CURSO para LINO AQUILES BACA CARDENAS
 (49, 'IF457AIN', 'Especialidad', 'METODOS NUMERICOS', 'Practico'),
 (41, 'IF758ACI', 'Estudios Generales', 'METODOS NUMERICOS', 'Teorico'),
 (35, 'IF902ACC', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico'),
 (37, 'IF902AEO', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
-(41, 'IF902ACI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico');
+(41, 'IF902ACI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
 -- Inserciones de los CURSO para ESTHER CRISTINA PACHECO VASQUEZ
 (23, 'IF470AME', 'Estudios Generales', 'LENGUAJE DE PROGRAMACION', 'Teorico'),
 (3, 'IF902BCO', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico'),
-(39, 'IF902BEU', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico');
+(39, 'IF902BEU', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico'),
 -- Inserciones de los CURSO para WILLIAN ZAMALLOA PARO
 (49, 'IF616AIN', 'Especialidad', 'DESARROLLO DE SOFTWARE II', 'Practico'),
 (49, 'IF617AIN', 'Especialidad', 'INGENIERIA DE SOFTWARE II', 'Teorico'),
-(31, 'IF902AAQ', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico');
+(31, 'IF902AAQ', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico'),
 -- Inserciones de los CURSO para HARLEY VERA OLIVERA
-(49, 'IF710BIN', 'Especialidad', 'SEMINARIO DE INVESTIGACION I', 'Teorico');
+(49, 'IF710BIN', 'Especialidad', 'SEMINARIO DE INVESTIGACION I', 'Teorico'),
 -- Inserciones de los CURSO para MARITZA KATHERINE IRPANOCCA CUSIMAYTA
 (43, 'IF212AEI', 'Estudios Generales', 'ANALISIS NUMERICO', 'Teorico'),
 (23, 'IF471AME', 'Estudios Generales', 'METODOS NUMERICOS', 'Teorico'),
 (19, 'IF902ABI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico'),
 (47, 'IF902BBI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
-(57, 'IF902AMI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico');
+(57, 'IF902AMI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico'),
 -- Inserciones de los CURSO para EFRAINA GLADYS CUTIPA ARAPA
 (49, 'IF451AIN', 'Especialidad', 'POGRAMACION I', 'Practico'),
 (49, 'IF552AIN', 'Especialidad', 'REDES DE COMPUTADORAS I', 'Teorico'),
-(21, 'IF902AFI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico');
+(21, 'IF902AFI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico'),
 -- Inserciones de los CURSO para DARIO FRANCISCO DUEÑAS BUSTINZA
 (49, 'IF480BIN', 'Especialidad', 'ADMINISTRACION DE TECNOLOGÍAS DE LA INFORMACION', 'Teorico'),
 (49, 'IF481AIN', 'Especialidad', 'INGENIERIA ECONOMICA', 'Practico'),
 (19, 'IF902BBI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico'),
-(11, 'IF902AGI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico');
+(11, 'IF902AGI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico'),
 -- CURSO de Doris Sabina Aguirre Carbajal
 (49, 'IF459BIN', 'Especialidad', 'COMPUTACION GRAFICA II', 'Practico'),
 (3, 'IF902ACO', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico'),
 (39, 'IF902DEU', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico'),
 (7, 'IF902AEN', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico'),
-(21, 'IF902AFI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico');
+(21, 'IF902AFI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
 -- CURSO de Tany Villalba Villalba
 (49, 'IF556AIN', 'Especialidad', 'SISTEMAS EMBEBIDOS', 'Teorico'),
 (37, 'IF902BAE', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico'),
-(61, 'IF902BEN', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico');
+(61, 'IF902BEN', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico'),
 -- CURSO de Carlos Fernando Montoya Cubas
 (49, 'IF453CIN', 'Especialidad', 'PROGRAMACION II', 'Practico'),
 (49, 'IF466AIN', 'Especialidad', 'COMPILADORES', 'Teorico'),
 (49, 'IF650BIN', 'Especialidad', 'MODELOS PROBABILISTICOS', 'Teorico'),
-(49, 'IF651BIN', 'Especialidad', 'INTELIGENCIA ARTIFICIAL', 'Teorico');
+(49, 'IF651BIN', 'Especialidad', 'INTELIGENCIA ARTIFICIAL', 'Teorico'),
 -- CURSO de Carlos Ramon Quispe Onofre
 (57, 'IF401AMI', 'Especialidad', 'PROGRAMACION DIGITAL', 'Teorico'),
 (49, 'IF669BIN', 'Especialidad', 'MODELADO Y SIMULACION', 'Teorico'),
 (19, 'IF902ABI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
 (39, 'IF902AEE', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico'),
-(33, 'IF902AHI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico');
+(33, 'IF902AHI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico'),
 -- CURSO de Boris Chullo Llave
 (49, 'IF453BIN', 'Especialidad', 'PROGRAMACION II', 'Practico'),
 (49, 'IF455AIN', 'Especialidad', 'ALGORITMOS PARALELOS Y DISTRIBUIDOS', 'Teorico'),
 (49, 'IF467BIN', 'Especialidad', 'ANALISIS Y DISEÑO DE ALGORITMOS', 'Teorico'),
 (13, 'IF902AAO', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
-(5, 'IF902ADR', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico');
+(5, 'IF902ADR', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
 -- CURSO de Ray Dueñas Jimenez
 (45, 'IF109ALI', 'Especialidad', 'PROGRAMACION DIGITAL II', 'Teorico'),
 (49, 'IF619BIN', 'Especialidad', 'ANaLISIS DE DATOS EMPRESARIALES', 'Practico'),
 (49, 'IF711BIN', 'Especialidad', 'SEMINARIO DE INVESTIGACION II', 'Teorico'),
 (3, 'IF902ACO', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
 (5, 'IF902ADR', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico'),
-(51, 'IF902AIA', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico');
+(51, 'IF902AIA', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico'),
 -- CURSO de Hector Eduardo Ugarte Rojas
 (49, 'IF453AIN', 'Especialidad', 'PROGRAMACION II', 'Practico'),
 (49, 'IF454AIN', 'Especialidad', 'TEORIA DE LA COMPUTACION', 'Teorico'),
 (49, 'IF611AIN', 'Especialidad', 'METODOLOGIA DE DESARROLLO DE SOFTWARE', 'Teorico'),
 (15, 'IF902AAO', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico'),
-(43, 'IF902AEI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico');
+(43, 'IF902AEI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico'),
 -- CURSO de Liseth Urpy Segundo Carpio
 (49, 'IF064AIN', 'Especialidad', 'TALLER DE DEBATE', 'Practico'),
 (49, 'IF613AIN', 'Especialidad', 'DESARROLLO DE SOFTWARE I', 'Practico'),
 (49, 'IF619AIN', 'Especialidad', 'ANaLISIS DE DATOS EMPRESARIALES', 'Teorico'),
-(53, 'IF902AMD', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico');
+(53, 'IF902AMD', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico'),
 -- CURSO de Luis Alvaro Monzon Condori
 (49, 'IF451BIN', 'Especialidad', 'PROGRAMACION I', 'Practico'),
 (49, 'IF613BIN', 'Especialidad', 'DESARROLLO DE SOFTWARE I', 'Practico'),
 (49, 'IF613CIN', 'Especialidad', 'DESARROLLO DE SOFTWARE I', 'Practico'),
 (41, 'IF902ACI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico'),
-(9, 'IF902AQI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico');
+(9, 'IF902AQI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
 -- CURSO de Vittali Quispe Surco
 (49, 'IF459AIN', 'Especialidad', 'COMPUTACION GRAFICA II', 'Teorico'),
 (49, 'IF466AIN', 'Especialidad', 'COMPILADORES', 'Practico'),
 (49, 'IF618AIN', 'Especialidad', 'TOPICOS AVANZADOS EN INGENIERIA DE SOFTWARE', 'Teorico'),
 (39, 'IF902AEU', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
-(39, 'IF902DEU', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico');
+(39, 'IF902DEU', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
 -- CURSO de Jisbaj Gamarra Salas
 (49, 'IF611BIN', 'Especialidad', 'METODOLOGIA DE DESARROLLO DE SOFTWARE', 'Teorico'),
-(37, 'IF902AEO', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico');
+(37, 'IF902AEO', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico'),
 -- CURSO de Henry Samuel Dueñas de la Cruz
 (49, 'IF614BIN', 'Especialidad', 'INGENIERIA DE SOFTWARE I', 'Teorico'),
-(45, 'IF902ALI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico');
+(45, 'IF902ALI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico'),
 -- CURSO de Ana Rocio Cardenas Maita
-(1, 'IF902AAT', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico');
+(1, 'IF902AAT', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico'),
 -- CURSO de Raul Huillca Huallparimachi
-(49, 'IF467AIN', 'Especialidad', 'ANALISIS Y DISEÑO DE ALGORITMOS', 'Teorico');
+(49, 'IF467AIN', 'Especialidad', 'ANALISIS Y DISEÑO DE ALGORITMOS', 'Teorico'),
 -- CURSO de Gabriela Zuñiga Rojas
 (49, 'IF651AIN', 'Especialidad', 'INTELIGENCIA ARTIFICIAL', 'Practico'),
 (49, 'IF652AIN', 'Especialidad', 'APRENDIZAJE AUTOMATICO', 'Practico'),
@@ -470,18 +469,18 @@ INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo)
 (33, 'IF902AAE', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
 (37, 'IF902BAE', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
 (7, 'IF902AEN', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
-(57, 'IF902AMI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico');
+(57, 'IF902AMI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
 -- CURSO de Maria del Pilar Venegas Vergara
 (57, 'IF391AMI', 'Estudios Generales', 'SISTEMA DE BASE DE DATOS', 'Practico'),
-(49, 'IF614AIN', 'Especialidad', 'INGENIERIA DE SOFTWARE I', 'Teorico');
+(49, 'IF614AIN', 'Especialidad', 'INGENIERIA DE SOFTWARE I', 'Teorico'),
 -- CURSO de Victor Dario Sosa Jauregui
 (49, 'IF612AIN', 'Especialidad', 'FUNDAMENTOS Y DISEÑO DE BASE DE DATOS', 'Practico'),
 (49, 'IF617AIN', 'Especialidad', 'INGENIERIA DE SOFTWARE II', 'Practico'),
-(49, 'IF619BIN', 'Especialidad', 'ANaLISIS DE DATOS EMPRESARIALES', 'Teorico');
+(49, 'IF619BIN', 'Especialidad', 'ANaLISIS DE DATOS EMPRESARIALES', 'Teorico'),
 -- CURSO de Julio Vladimir Quispe Sota
-(49, 'IF455BIN', 'Especialidad', 'ALGORITMOS PARALELOS Y DISTRIBUIDOS', 'Teorico');
+(49, 'IF455BIN', 'Especialidad', 'ALGORITMOS PARALELOS Y DISTRIBUIDOS', 'Teorico'),
 -- CURSO de Élida Falcon Huallpa
-(45, 'IF107ALI', 'Estudios Generales', 'PROGRAMACION DIGITAL I', 'Teorico');
+(45, 'IF107ALI', 'Estudios Generales', 'PROGRAMACION DIGITAL I', 'Teorico'),
 -- CURSO de Vanesa Lavilla Alvarez
 (49, 'IF550AIN', 'Especialidad', 'ORGANIZACION Y ARQUITECTURA DEL COMPUTADOR', 'Practico'),
 (49, 'IF553AIN', 'Especialidad', 'LENGUAJE ENSAMBLADOR', 'Practico'),
@@ -489,40 +488,40 @@ INSERT INTO CURSO (id_malla, codigo_curso, area_curricular, nombre_curso, tipo)
 (39, 'IF902DEU', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
 (43, 'IF902AEI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
 (45, 'IF902ALI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
-(17, 'IF902ATU', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico');
+(17, 'IF902ATU', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
 -- CURSO de Lisha Sabah Diaz Caceres
 (49, 'IF063BIN', 'Especialidad', 'QUECHUA', 'Practico'),
 (1, 'IF902AAT', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
 (3, 'IF902ACO', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
 (39, 'IF902CEU', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
 (51, 'IF902AIA', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
-(55, 'IF902AGI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico');
+(55, 'IF902AGI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
 -- CURSO de Marcio Fernando Merma Quispe
 (43, 'IF467AEI', 'Estudios Generales', 'PROGRAMACION DIGITAL', 'Practico'),
 (5, 'IF902ADR', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
 (33, 'IF902AHI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
-(51, 'IF902AFO', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico');
+(51, 'IF902AFO', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
 -- CURSO de Olmer Claudio Villena Leon
 (49, 'IF060AIN', 'Especialidad', 'MUSICA', 'Practico'),
 (31, 'IF902AAQ', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
 (33, 'IF902AAE', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
-(39, 'IF902AEE', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico');
+(39, 'IF902AEE', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
 -- CURSO de Raimar Abarca Mora
-(49, 'IF063AIN', 'Especialidad', 'QUECHUA', 'Practico');
+(49, 'IF063AIN', 'Especialidad', 'QUECHUA', 'Practico'),
 -- CURSO de Gerar Francis Quispe Torres
 (49, 'IF456AIN', 'Especialidad', 'ALGORITMOS AVANZADOS', 'Teorico'),
 (49, 'IF614AIN', 'Especialidad', 'INGENIERIA DE SOFTWARE I', 'Practico'),
-(39, 'IF902BEU', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico');
+(39, 'IF902BEU', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
 -- CURSO de Jonel Ccente Zuzunaga
 (7, 'IF902BEN', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
-(59, 'IF902AMT', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico');
+(59, 'IF902AMT', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Teorico'),
 -- CURSO de Stephan Jhoel Cosio Loaiza
-(49, 'IF483BIN', 'Especialidad', 'FORMULACION DE PROYECTOS DE TECNOLOGIAS DE LA INFORMACION', 'Teorico');
+(49, 'IF483BIN', 'Especialidad', 'FORMULACION DE PROYECTOS DE TECNOLOGIAS DE LA INFORMACION', 'Teorico'),
 -- CURSO de Luz Indira Ticona Felix
 (23, 'IF470AME', 'Estudios Generales', 'LENGUAJE DE PROGRAMACION', 'Practico'),
 (49, 'IF656AIN', 'Especialidad', 'PROCESAMIENTO DE LENGUAJE NATURAL', 'Practico'),
 (13, 'IF902AAO', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
-(43, 'IF902AEI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico');
+(43, 'IF902AEI', 'Estudios Generales', 'TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION', 'Practico'),
 -- CURSO de Edelmira Davila Andrade
 (23, 'IF471AME', 'Estudios Generales', 'METODOS NUMERICOS', 'Practico'),
 (49, 'IF556AIN', 'Especialidad', 'SISTEMAS EMBEBIDOS', 'Practico'),
@@ -1061,189 +1060,232 @@ VALUES
 
 INSERT INTO PORTAFOLIO_CURSO (id_asignacion_revision, id_curso_semestre, codigo_curso_semestre, formato, estado, tipo)
 VALUES
-(1, 1, "IF650AIN", "pdf", "Completado", "Teorico"),
-(2, 2, "IF456BIN", "pdf", "Completado", "Teorico"),
-(3, 3, "IF653AIN", "pdf", "Completado", "Teorico"),
-(4, 4, "IF664AIN", "pdf", "Completado", "Teorico"),
-(5, 5, "IF450BIN", "pdf", "Completado", "Teorico"),
-(6, 6, "IF468AIN", "pdf", "Completado", "Teorico"),
-(7, 7, "IF450AIN", "pdf", "Completado", "Teorico"),
-(8, 8, "IF651AIN", "pdf", "Completado", "Teorico"),
-(9, 9, "IF652AIN", "pdf", "Completado", "Teorico"),
-(10, 10, "IF652BIN", "pdf", "Completado", "Teorico"),
-(11, 11, "IF550AIN", "pdf", "Completado", "Teorico"),
-(12, 12, "IF551AIN", "pdf", "Completado", "Teorico"),
-(13, 13, "IF483AIN", "pdf", "Completado", "Teorico"),
-(14, 14, "IF553AIN", "pdf", "Completado", "Teorico"),
-(15, 15, "IF902ATU", "pdf", "Completado", "Teorico"),
-(16, 16, "IF401BMI", "pdf", "Completado", "Teorico"),
-(17, 17, "IF457AIN", "pdf", "Completado", "Teorico"),
-(18, 18, "IF758BCI", "pdf", "Completado", "Teorico"),
-(19, 19, "IF391AMI", "pdf", "Completado", "Teorico"),
-(20, 20, "IF480AIN", "pdf", "Completado", "Teorico"),
-(21, 21, "IF610AIN", "pdf", "Completado", "Teorico"),
-(22, 22, "IF459BIN", "pdf", "Completado", "Teorico"),
-(23, 23, "IF552BIN", "pdf", "Completado", "Teorico"),
-(24, 24, "IF467AEI", "pdf", "Completado", "Teorico"),
-(25, 25, "IF612AIN", "pdf", "Completado", "Teorico"),
-(26, 26, "IF710AIN", "pdf", "Completado", "Teorico"),
-(27, 27, "IF711BIN", "pdf", "Completado", "Teorico"),
-(28, 28, "IF902AFO", "pdf", "Completado", "Teorico"),
-(29, 29, "IF484AIN", "pdf", "Completado", "Teorico"), -- sin traza
-(30, 30, "IF902AAE", "pdf", "Completado", "Teorico"), -- sin traza
-(31, 31, "IF902AEU", "pdf", "Completado", "Teorico"), -- sin traza
-(32, 32, "IF902CEU", "pdf", "Completado", "Teorico"), -- sin traza
-(33, 33, "IF902AFL", "pdf", "Completado", "Teorico"), -- sin traza
-(34, 34, "IF902ACI", "pdf", "Completado", "Teorico"), -- sin traza
-(35, 35, "IF657AIN", "pdf", "Completado", "Teorico"),
-(36, 36, "IF662AIN", "pdf", "Completado", "Teorico"),
-(37, 37, "IF669AIN", "pdf", "Completado", "Teorico"),
-(38, 38, "IF658AIN", "pdf", "Completado", "Teorico"),
-(39, 39, "IF452AIN", "pdf", "Completado", "Teorico"),
-(40, 40, "IF656AIN", "pdf", "Completado", "Teorico"),
-(41, 41, "IF167AFI", "pdf", "Completado", "Teorico"),
-(42, 42, "IF468BIN", "pdf", "Completado", "Teorico"),
-(43, 43, "IF452BIN", "pdf", "Completado", "Teorico"),
-(44, 44, "IF612BIN", "pdf", "Completado", "Teorico"),
-(45, 45, "IF481AIN", "pdf", "Completado", "Teorico"),
-(46, 46, "IF482AIN", "pdf", "Completado", "Teorico"),
-(47, 47, "IF902AAN", "pdf", "Completado", "Teorico"),
-(48, 48, "IF482BIN", "pdf", "Completado", "Teorico"),
-(49, 49, "IF551BIN", "pdf", "Completado", "Teorico"),
-(50, 50, "IF902AQI", "pdf", "Completado", "Teorico"),
-(51, 51, "IF458AIN", "pdf", "Completado", "Teorico"),
-(52, 52, "IF654AIN", "pdf", "Completado", "Teorico"),
-(53, 53, "IF457AIN", "pdf", "Completado", "Teorico"),---
-(147, 147, "IF758ACI", "pdf", "Completado", "Teorico"), -- REGISTRO MOVIDO
-(54, 54, "IF902ACC", "pdf", "Completado", "Teorico"),
-(55, 55, "IF902AEO", "pdf", "Completado", "Teorico"),
-(56, 56, "IF902ACI", "pdf", "Completado", "Teorico"),
-(57, 57, "IF470AME", "pdf", "Completado", "Teorico"),
-(58, 58, "IF902BCO", "pdf", "Completado", "Teorico"),
-(59, 59, "IF902BEU", "pdf", "Completado", "Teorico"),
-(60, 60, "IF616AIN", "pdf", "Completado", "Teorico"),
-(61, 61, "IF617AIN", "pdf", "Completado", "Teorico"),
-(62, 62, "IF902AAQ", "pdf", "Completado", "Teorico"),
-(63, 63, "IF710BIN", "pdf", "Completado", "Teorico"),
-(64, 64, "IF212AEI", "pdf", "Completado", "Teorico"),
-(65, 65, "IF471AME", "pdf", "Completado", "Teorico"),
-(66, 66, "IF902ABI", "pdf", "Completado", "Teorico"),
-(67, 67, "IF902BBI", "pdf", "Completado", "Teorico"),
-(68, 68, "IF902AMI", "pdf", "Completado", "Teorico"),
-(69, 69, "IF451AIN", "pdf", "Completado", "Teorico"),
-(70, 70, "IF552AIN", "pdf", "Completado", "Teorico"),
-(71, 71, "IF902AFI", "pdf", "Completado", "Teorico"),
-(72, 72, "IF480BIN", "pdf", "Completado", "Teorico"),
-(73, 73, "IF481AIN", "pdf", "Completado", "Teorico"),
-(74, 74, "IF902BBI", "pdf", "Completado", "Teorico"),
-(75, 75, "IF902AGI", "pdf", "Completado", "Teorico"),
-(76, 76, "IF459BIN", "pdf", "Completado", "Teorico"),
-(77, 77, "IF902ACO", "pdf", "Completado", "Teorico"),
-(78, 78, "IF902DEU", "pdf", "Completado", "Teorico"),
-(79, 79, "IF902AEN", "pdf", "Completado", "Teorico"),
-(80, 80, "IF902AFI", "pdf", "Completado", "Teorico"),
-(81, 81, "IF556AIN", "pdf", "Completado", "Teorico"),
-(82, 82, "IF902BAE", "pdf", "Completado", "Teorico"),
-(83, 83, "IF902BEN", "pdf", "Completado", "Teorico"),
-(84, 84, "IF453CIN", "pdf", "Completado", "Teorico"),
-(85, 85, "IF466AIN", "pdf", "Completado", "Teorico"),
-(86, 86, "IF650BIN", "pdf", "Completado", "Teorico"),
-(87, 87, "IF651BIN", "pdf", "Completado", "Teorico"),
-(88, 88, "IF401AMI", "pdf", "Completado", "Teorico"),
-(89, 89, "IF669BIN", "pdf", "Completado", "Teorico"),
-(90, 90, "IF902ABI", "pdf", "Completado", "Teorico"),
-(91, 91, "IF902AEE", "pdf", "Completado", "Teorico"),
-(92, 92, "IF902AHI", "pdf", "Completado", "Teorico"),
-(93, 93, "IF453BIN", "pdf", "Completado", "Teorico"),
-(94, 94, "IF455AIN", "pdf", "Completado", "Teorico"),
-(95, 95, "IF467BIN", "pdf", "Completado", "Teorico"),
-(96, 96, "IF902AAO", "pdf", "Completado", "Teorico"),
-(97, 97, "IF902ADR", "pdf", "Completado", "Teorico"),
-(98, 98, "IF109ALI", "pdf", "Completado", "Teorico"),
-(99, 99, "IF619BIN", "pdf", "Completado", "Teorico"),
-(100, 100, "IF711BIN", "pdf", "Completado", "Teorico"),
-(101, 101, "IF902ACO", "pdf", "Completado", "Teorico"),
-(102, 102, "IF902ADR", "pdf", "Completado", "Teorico"),
-(103, 103, "IF902AIA", "pdf", "Completado", "Teorico"),
-(104, 104, "IF453AIN", "pdf", "Completado", "Teorico"),
-(105, 105, "IF454AIN", "pdf", "Completado", "Teorico"),
-(106, 106, "IF611AIN", "pdf", "Completado", "Teorico"),
-(107, 107, "IF902AAO", "pdf", "Completado", "Teorico"),
-(108, 108, "IF902AEI", "pdf", "Completado", "Teorico"),
-(109, 109, "IF064AIN", "pdf", "Completado", "Teorico"),
-(110, 110, "IF613AIN", "pdf", "Completado", "Teorico"),
-(111, 111, "IF619AIN", "pdf", "Completado", "Teorico"),
-(112, 112, "IF902AMD", "pdf", "Completado", "Teorico"),
--- (113, 113, "IF902AMD", "pdf", "Completado", "Teorico"), --repetido -- registro eliminado
-(114, 114, "IF451BIN", "pdf", "Completado", "Teorico"),
-(115, 115, "IF613BIN", "pdf", "Completado", "Teorico"),
-(116, 116, "IF613CIN", "pdf", "Completado", "Teorico"),
-(117, 117, "IF902ACI", "pdf", "Completado", "Teorico"),
-(118, 118, "IF902AQI", "pdf", "Completado", "Teorico"),
-(119, 119, "IF459AIN", "pdf", "Completado", "Teorico"),
-(120, 120, "IF466AIN", "pdf", "Completado", "Teorico"),
-(121, 121, "IF618AIN", "pdf", "Completado", "Teorico"),
-(122, 122, "IF902AEU", "pdf", "Completado", "Teorico"),
-(123, 123, "IF902DEU", "pdf", "Completado", "Teorico"),
-(124, 124, "IF611BIN", "pdf", "Completado", "Teorico"),
-(125, 125, "IF902AEO", "pdf", "Completado", "Teorico"),
-(126, 126, "IF614BIN", "pdf", "Completado", "Teorico"),
-(127, 127, "IF902ALI", "pdf", "Completado", "Teorico"),
-(128, 128, "IF902AAT", "pdf", "Completado", "Teorico"),
-(129, 129, "IF467AIN", "pdf", "Completado", "Teorico"),
-(130, 130, "IF651AIN", "pdf", "Completado", "Teorico"),
-(131, 131, "IF652AIN", "pdf", "Completado", "Teorico"),
-(132, 132, "IF656AIN", "pdf", "Completado", "Teorico"),
-(133, 133, "IF902AAN", "pdf", "Completado", "Teorico"),
-(134, 134, "IF902AAE", "pdf", "Completado", "Teorico"),
-(135, 135, "IF902BAE", "pdf", "Completado", "Teorico"),
-(136, 136, "IF902AEN", "pdf", "Completado", "Teorico"),
-(137, 137, "IF902AMI", "pdf", "Completado", "Teorico"),
-(138, 138, "IF391AMI", "pdf", "Completado", "Teorico"),
-(139, 139, "IF614AIN", "pdf", "Completado", "Teorico"),
-(140, 140, "IF612AIN", "pdf", "Completado", "Teorico"),
-(141, 141, "IF617AIN", "pdf", "Completado", "Teorico"),
-(142, 142, "IF619BIN", "pdf", "Completado", "Teorico"),
-(143, 143, "IF455BIN", "pdf", "Completado", "Teorico"),
-(144, 144, "IF107ALI", "pdf", "Completado", "Teorico"), ---
-(145, 145, "IF550AIN", "pdf", "Completado", "Teorico"),
-(146, 146, "IF553AIN", "pdf", "Completado", "Teorico"),
-(148, 148, "IF758ACI", "pdf", "Completado", "Teorico"),
-(149, 149, "IF902DEU", "pdf", "Completado", "Teorico"),
-(150, 150, "IF902AEI", "pdf", "Completado", "Teorico"),
-(151, 151, "IF902ALI", "pdf", "Completado", "Teorico"),
-(152, 152, "IF902ATU", "pdf", "Completado", "Teorico"),
-(153, 153, "IF063BIN", "pdf", "Completado", "Teorico"),
-(154, 154, "IF902AAT", "pdf", "Completado", "Teorico"),
-(155, 155, "IF902ACO", "pdf", "Completado", "Teorico"),
-(156, 156, "IF902CEU", "pdf", "Completado", "Teorico"),
-(157, 157, "IF902AIA", "pdf", "Completado", "Teorico"),
-(158, 158, "IF902AGI", "pdf", "Completado", "Teorico"),
-(159, 159, "IF467AEI", "pdf", "Completado", "Teorico"),
-(160, 160, "IF902ADR", "pdf", "Completado", "Teorico"),
-(161, 161, "IF902AHI", "pdf", "Completado", "Teorico"),
-(162, 162, "IF902AFO", "pdf", "Completado", "Teorico"),
-(163, 163, "IF060AIN", "pdf", "Completado", "Teorico"),
-(164, 164, "IF902AAQ", "pdf", "Completado", "Teorico"),
-(165, 165, "IF902AAE", "pdf", "Completado", "Teorico"),
-(166, 166, "IF902AEE", "pdf", "Completado", "Teorico"),
-(167, 167, "IF063AIN", "pdf", "Completado", "Teorico"),
-(168, 168, "IF456AIN", "pdf", "Completado", "Teorico"),
-(169, 169, "IF614AIN", "pdf", "Completado", "Teorico"),
-(170, 170, "IF902BEU", "pdf", "Completado", "Teorico"),
-(171, 171, "IF902BEN", "pdf", "Completado", "Teorico"),
-(172, 172, "IF902AMT", "pdf", "Completado", "Teorico"),
-(173, 173, "IF483BIN", "pdf", "Completado", "Teorico"),
-(174, 174, "IF470AME", "pdf", "Completado", "Teorico"),
-(175, 175, "IF656AIN", "pdf", "Completado", "Teorico"),
-(176, 176, "IF902AAO", "pdf", "Completado", "Teorico"),
-(177, 177, "IF902AEI", "pdf", "Completado", "Teorico"),
-(178, 178, "IF471AME", "pdf", "Completado", "Teorico"),
-(179, 179, "IF556AIN", "pdf", "Completado", "Teorico"),
-(180, 180, "IF902AIA", "pdf", "Completado", "Teorico"),
-(181, 181, "IF902AMT", "pdf", "Completado", "Teorico");
+(1,1, "IF650AIN", "pdf", "Completado", "Teorico"),
+(2,2, "IF456BIN", "pdf", "Completado", "Teorico"),
+(3,3, "IF653AIN", "pdf", "Completado", "Teorico"),
+(4,4, "IF664AIN", "pdf", "Completado", "Teorico"),
+(5,5, "IF450BIN", "pdf", "Completado", "Teorico"),
+(6,6, "IF468AIN", "pdf", "Completado", "Teorico"),
+(7,7, "IF450AIN", "pdf", "Completado", "Teorico"),
+(8,8, "IF651AIN", "pdf", "Completado", "Teorico"),
+(9,9, "IF652AIN", "pdf", "Completado", "Teorico"),
+(10,10, "IF652BIN", "pdf", "Completado", "Teorico"),
+(11,11, "IF550AIN", "pdf", "Completado", "Teorico"),
+(12,12, "IF551AIN", "pdf", "Completado", "Teorico"),
+(13,13, "IF483AIN", "pdf", "Completado", "Teorico"),
+(14,14, "IF553AIN", "pdf", "Completado", "Teorico"),
+(15,15, "IF902ATU", "pdf", "Completado", "Teorico"),
+(16,16, "IF401BMI", "pdf", "Completado", "Teorico"),
+(17,17, "IF457AIN", "pdf", "Completado", "Teorico"),
+(18,18, "IF758BCI", "pdf", "Completado", "Teorico"),
+(19,19, "IF391AMI", "pdf", "Completado", "Teorico"),
+(20,20, "IF480AIN", "pdf", "Completado", "Teorico"),
+(21,21, "IF610AIN", "pdf", "Completado", "Teorico"),
+(22,22, "IF459BIN", "pdf", "Completado", "Teorico"),
+(23,23, "IF552BIN", "pdf", "Completado", "Teorico"),
+(24,24, "IF467AEI", "pdf", "Completado", "Teorico"),
+(25,25, "IF612AIN", "pdf", "Completado", "Teorico"),
+(26,26, "IF710AIN", "pdf", "Completado", "Teorico"),
+(27,27, "IF711BIN", "pdf", "Completado", "Teorico"),
+(28,28, "IF902AFO", "pdf", "Completado", "Teorico"),
+(29,29, "IF484AIN", "pdf", "Completado", "Teorico"),
+(30,30, "IF902AAE", "pdf", "Completado", "Teorico"),
+(31,31, "IF902AEU", "pdf", "Completado", "Teorico"),
+(32,32, "IF902CEU", "pdf", "Completado", "Teorico"),
+(33,33, "IF902AFL", "pdf", "Completado", "Teorico"),
+(34,34, "IF902ACI", "pdf", "Completado", "Teorico"),
+(35,35, "IF657AIN", "pdf", "Completado", "Teorico"),
+(36,36, "IF662AIN", "pdf", "Completado", "Teorico"),
+(37,37, "IF669AIN", "pdf", "Completado", "Teorico"),
+(38,38, "IF658AIN", "pdf", "Completado", "Teorico"),
+(39,39, "IF452AIN", "pdf", "Completado", "Teorico"),
+(40,40, "IF656AIN", "pdf", "Completado", "Teorico"),
+(41,41, "IF167AFI", "pdf", "Completado", "Teorico"),
+(42,42, "IF468BIN", "pdf", "Completado", "Teorico"),
+(43,43, "IF452BIN", "pdf", "Completado", "Teorico"),
+(44,44, "IF612BIN", "pdf", "Completado", "Teorico"),
+(45,45, "IF481AIN", "pdf", "Completado", "Teorico"),
+(46,46, "IF482AIN", "pdf", "Completado", "Teorico"),
+(47,47, "IF902AAN", "pdf", "Completado", "Teorico"),
+(48,48, "IF482BIN", "pdf", "Completado", "Teorico"),
+(49,49, "IF551BIN", "pdf", "Completado", "Teorico"),
+(50,50, "IF902AQI", "pdf", "Completado", "Teorico"),
+(51,51, "IF458AIN", "pdf", "Completado", "Teorico"),
+(52,52, "IF654AIN", "pdf", "Completado", "Teorico"),
+(53,53, "IF457AIN", "pdf", "Completado", "Teorico"),
+(54,54, "IF758ACI", "pdf", "Completado", "Teorico"),
+(55,55, "IF902ACC", "pdf", "Completado", "Teorico"),
+(56,56, "IF902AEO", "pdf", "Completado", "Teorico"),
+(57,57, "IF902ACI", "pdf", "Completado", "Teorico"),
+(58,58, "IF470AME", "pdf", "Completado", "Teorico"),
+(59,59, "IF902BCO", "pdf", "Completado", "Teorico"),
+(60,60, "IF902BEU", "pdf", "Completado", "Teorico"),
+(61,61, "IF616AIN", "pdf", "Completado", "Teorico"),
+(62,62, "IF617AIN", "pdf", "Completado", "Teorico"),
+(63,63, "IF902AAQ", "pdf", "Completado", "Teorico"),
+(64,64, "IF710BIN", "pdf", "Completado", "Teorico"),
+(65,65, "IF212AEI", "pdf", "Completado", "Teorico"),
+(66,66, "IF471AME", "pdf", "Completado", "Teorico"),
+(67,67, "IF902ABI", "pdf", "Completado", "Teorico"),
+(68,68, "IF902BBI", "pdf", "Completado", "Teorico"),
+(69,69, "IF902AMI", "pdf", "Completado", "Teorico"),
+(70,70, "IF451AIN", "pdf", "Completado", "Teorico"),
+(71,71, "IF552AIN", "pdf", "Completado", "Teorico"),
+(72,72, "IF902AFI", "pdf", "Completado", "Teorico"),
+(73,73, "IF480BIN", "pdf", "Completado", "Teorico"),
+(74,74, "IF481AIN", "pdf", "Completado", "Teorico"),
+(75,75, "IF902BBI", "pdf", "Completado", "Teorico"),
+(76,76, "IF902AGI", "pdf", "Completado", "Teorico"),
+(77,77, "IF459BIN", "pdf", "Completado", "Teorico"),
+(78,78, "IF902ACO", "pdf", "Completado", "Teorico"),
+(79,79, "IF902DEU", "pdf", "Completado", "Teorico"),
+(80,80, "IF902AEN", "pdf", "Completado", "Teorico"),
+(81,81, "IF902AFI", "pdf", "Completado", "Teorico"),
+(82,82, "IF556AIN", "pdf", "Completado", "Teorico"),
+(83,83, "IF902BAE", "pdf", "Completado", "Teorico"),
+(84,84, "IF902BEN", "pdf", "Completado", "Teorico"),
+(85,85, "IF453CIN", "pdf", "Completado", "Teorico"),
+(86,86, "IF466AIN", "pdf", "Completado", "Teorico"),
+(87,87, "IF650BIN", "pdf", "Completado", "Teorico"),
+(88,88, "IF651BIN", "pdf", "Completado", "Teorico"),
+(89,89, "IF401AMI", "pdf", "Completado", "Teorico"),
+(90,90, "IF669BIN", "pdf", "Completado", "Teorico"),
+(91,91, "IF902ABI", "pdf", "Completado", "Teorico"),
+(92,92, "IF902AEE", "pdf", "Completado", "Teorico"),
+(93,93, "IF902AHI", "pdf", "Completado", "Teorico"),
+(94,94, "IF453BIN", "pdf", "Completado", "Teorico"),
+(95,95, "IF455AIN", "pdf", "Completado", "Teorico"),
+(96,96, "IF467BIN", "pdf", "Completado", "Teorico"),
+(97,97, "IF902AAO", "pdf", "Completado", "Teorico"),
+(98,98, "IF902ADR", "pdf", "Completado", "Teorico"),
+(99,99, "IF109ALI", "pdf", "Completado", "Teorico"),
+(100,100, "IF619BIN", "pdf", "Completado", "Teorico"),
+(101,101, "IF711BIN", "pdf", "Completado", "Teorico"),
+(102,102, "IF902ACO", "pdf", "Completado", "Teorico"),
+(103,103, "IF902ADR", "pdf", "Completado", "Teorico"),
+(104,104, "IF902AIA", "pdf", "Completado", "Teorico"),
+(105,105, "IF453AIN", "pdf", "Completado", "Teorico"),
+(106,106, "IF454AIN", "pdf", "Completado", "Teorico"),
+(107,107, "IF611AIN", "pdf", "Completado", "Teorico"),
+(108,108, "IF902AAO", "pdf", "Completado", "Teorico"),
+(109,109, "IF902AEI", "pdf", "Completado", "Teorico"),
+(110,110, "IF064AIN", "pdf", "Completado", "Teorico"),
+(111,111, "IF613AIN", "pdf", "Completado", "Teorico"),
+(112,112, "IF619AIN", "pdf", "Completado", "Teorico"),
+(113,113, "IF902AMD", "pdf", "Completado", "Teorico"),
+(114,114, "IF451BIN", "pdf", "Completado", "Teorico"),
+(115,115, "IF613BIN", "pdf", "Completado", "Teorico"),
+(116,116, "IF613CIN", "pdf", "Completado", "Teorico"),
+(117,117, "IF902ACI", "pdf", "Completado", "Teorico"),
+(118,118, "IF902AQI", "pdf", "Completado", "Teorico"),
+(119,119, "IF459AIN", "pdf", "Completado", "Teorico"),
+(120,120, "IF466AIN", "pdf", "Completado", "Teorico"),
+(121,121, "IF618AIN", "pdf", "Completado", "Teorico"),
+(122,122, "IF902AEU", "pdf", "Completado", "Teorico"),
+(123,123, "IF902DEU", "pdf", "Completado", "Teorico"),
+(124,124, "IF611BIN", "pdf", "Completado", "Teorico"),
+(125,125, "IF902AEO", "pdf", "Completado", "Teorico"),
+(126,126, "IF614BIN", "pdf", "Completado", "Teorico"),
+(127,127, "IF902ALI", "pdf", "Completado", "Teorico"),
+(128,128, "IF902AAT", "pdf", "Completado", "Teorico"),
+(129,129, "IF467AIN", "pdf", "Completado", "Teorico"),
+(130,130, "IF651AIN", "pdf", "Completado", "Teorico"),
+(131,131, "IF652AIN", "pdf", "Completado", "Teorico"),
+(132,132, "IF656AIN", "pdf", "Completado", "Teorico"),
+(133,133, "IF902AAN", "pdf", "Completado", "Teorico"),
+(134,134, "IF902AAE", "pdf", "Completado", "Teorico"),
+(135,135, "IF902BAE", "pdf", "Completado", "Teorico"),
+(136,136, "IF902AEN", "pdf", "Completado", "Teorico"),
+(137,137, "IF902AMI", "pdf", "Completado", "Teorico"),
+(138,138, "IF391AMI", "pdf", "Completado", "Teorico"),
+(139,139, "IF614AIN", "pdf", "Completado", "Teorico"),
+(140,140, "IF612AIN", "pdf", "Completado", "Teorico"),
+(141,141, "IF617AIN", "pdf", "Completado", "Teorico"),
+(142,142, "IF619BIN", "pdf", "Completado", "Teorico"),
+(143,143, "IF455BIN", "pdf", "Completado", "Teorico"),
+(144,144, "IF107ALI", "pdf", "Completado", "Teorico"),
+(145,145, "IF550AIN", "pdf", "Completado", "Teorico"),
+(146,146, "IF553AIN", "pdf", "Completado", "Teorico"),
+(147,147, "IF758ACI", "pdf", "Completado", "Teorico"),
+(148,148, "IF902DEU", "pdf", "Completado", "Teorico"),
+(149,149, "IF902AEI", "pdf", "Completado", "Teorico"),
+(150,150, "IF902ALI", "pdf", "Completado", "Teorico"),
+(151,151, "IF902ATU", "pdf", "Completado", "Teorico"),
+(152,152, "IF063BIN", "pdf", "Completado", "Teorico"),
+(153,153, "IF902AAT", "pdf", "Completado", "Teorico"),
+(154,154, "IF902ACO", "pdf", "Completado", "Teorico"),
+(155,155, "IF902CEU", "pdf", "Completado", "Teorico"),
+(156,156, "IF902AIA", "pdf", "Completado", "Teorico"),
+(157,157, "IF902AGI", "pdf", "Completado", "Teorico"),
+(158,158, "IF467AEI", "pdf", "Completado", "Teorico"),
+(159,159, "IF902ADR", "pdf", "Completado", "Teorico"),
+(160,160, "IF902AHI", "pdf", "Completado", "Teorico"),
+(161,161, "IF902AFO", "pdf", "Completado", "Teorico"),
+(162,162, "IF060AIN", "pdf", "Completado", "Teorico"),
+(163,163, "IF902AAQ", "pdf", "Completado", "Teorico"),
+(164,164, "IF902AAE", "pdf", "Completado", "Teorico"),
+(165,165, "IF902AEE", "pdf", "Completado", "Teorico"),
+(166,166, "IF063AIN", "pdf", "Completado", "Teorico"),
+(167,167, "IF456AIN", "pdf", "Completado", "Teorico"),
+(168,168, "IF614AIN", "pdf", "Completado", "Teorico"),
+(169,169, "IF902BEU", "pdf", "Completado", "Teorico"),
+(170,170, "IF902BEN", "pdf", "Completado", "Teorico"),
+(171,171, "IF902AMT", "pdf", "Completado", "Teorico"),
+(172,172, "IF483BIN", "pdf", "Completado", "Teorico"),
+(173,173, "IF470AME", "pdf", "Completado", "Teorico"),
+(174,174, "IF656AIN", "pdf", "Completado", "Teorico"),
+(175,175, "IF902AAO", "pdf", "Completado", "Teorico"),
+(176,176, "IF902AEI", "pdf", "Completado", "Teorico"),
+(177,177, "IF471AME", "pdf", "Completado", "Teorico"),
+(178,178, "IF556AIN", "pdf", "Completado", "Teorico"),
+(179,179, "IF902AIA", "pdf", "Completado", "Teorico"),
+(180,180, "IF902AMT", "pdf", "Completado", "Teorico");
 
-INSERT INTO EVALUACION_Teorico VALUES
+
+INSERT INTO EVALUACION_Teorico 
+(
+    id_revisor_usuario, 
+    id_docente_usuario, 
+    id_portafolio_curso, 
+    caratula, 
+    carga_academica, 
+    filosofia, 
+    cv, 
+    silabo, 
+    avance_por_sesiones, 
+    registro_entrega_silabo, 
+    asistencia_alumnos, 
+    evidencia_actividades_ensenianza, 
+    relacion_estudiantes, 
+    evaluacion_entrada, 
+    informe_resultado_evaluacion_entrada, 
+    resolucion_evaluacion_entrada, 
+    resolucion_primera_parcial, 
+    resolucion_segunda_parcial, 
+    resolucion_tercera_parcial, 
+    resolucion_sustitutorio, 
+    enunciados_primera_parcial, 
+    enunciados_segunda_parcial, 
+    enunciados_tercera_parcial, 
+    enunciados_sustitutorio, 
+    asistencia_resolucion_primera_parcial, 
+    asistencia_resolucion_segunda_parcial, 
+    asistencia_resolucion_tercera_parcial, 
+    registro_ingreso_notas_primera_parcial, 
+    registro_ingreso_notas_segunda_parcial, 
+    registro_ingreso_notas_tercera_parcial, 
+    registro_ingreso_notas_sustiturio, 
+    min_max_mean_notas_primera_parcial, 
+    min_max_mean_notas_segunda_parcial, 
+    min_max_mean_notas_tercera_parcial, 
+    rubrica_proyecto, 
+    asignacion_proyectos_individuales_o_grupales, 
+    informe_entrega_final_proyectos, 
+    otras_evaluaciones, 
+    cierre_portafolio, 
+    fecha_de_revision
+)
+VALUES
 (2, 1, 1, "2", "2", "2", "2", "2", "2", "2", "2", "0", "2", "2", "0","2", "2", "2", "2", "0", "2", "2", "2", "0", "2", "2", "0", "2", "2", "2", "0", "0", "0", "0", "0", "0", "0", "0", "2", "2022-02-18"),
 (1, 1, 2, "2", "2", "2", "2", "2", "2", "2", "2", "0", "2", "0", "0","0", "2", "2", "2", "0", "2", "2", "2", "0", "2", "2", "2", "2", "2", "0", "0", "0", "0", "0", "0", "0", "0", "0", "2", "2022-02-16"),
 (1, 2, 3, "2", "2", "2", "2", "2", "2", "2", "2", "0", "2", "2", "0","2", "2", "0", "0", "0", "2", "0", "0", "0", "2", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "2022-02-19"),
@@ -1357,7 +1399,24 @@ INSERT INTO EVALUACION_Teorico VALUES
 (16, 55, 172, "2", "2", "2", "2", "2", "2", "2", "2", "0", "2", "2", "1","2", "2", "2", "0", "0", "2", "2", "0", "0", "2", "2", "0", "2", "2", "0", "0", "2", "2", "0", "0", "0", "0", "0", "2", "2022-02-16"),
 (16, 56, 173, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "0", "2","0", "2", "2", "0", "0", "2", "2", "0", "0", "2", "2", "0", "2", "2", "0", "0", "2", "2", "0", "0", "0", "0", "0", "2", "2022-02-19");
 
-INSERT INTO EVALUACION_Practico VALUES
+INSERT INTO EVALUACION_Practico (
+    id_revisor_usuario, 
+    id_docente_usuario, 
+    id_portafolio_curso, 
+    caratula, 
+    carga_academica, 
+    filosofia, 
+    cv, 
+    plan_sesiones, 
+    asistencia_alumnos, 
+    evidencia_actividades_ensenianza, 
+    relacion_estudiantes, 
+    registro_notas_practicas_primera_parcial, 
+    registro_notas_practicas_segunda_parcial, 
+    proyecto_individual_grupal, 
+    fecha_de_revision
+)
+VALUES
 (2, 9, 19, "2", "2", "2", "2", "2", "2", "2", "2", "0", "0", "0", "2022-02-17"),
 (3, 12, 28, "2", "2", "2", "2", "0", "0", "2", "2", "0", "0", "0", "2022-02-19"),
 (4, 14, 34, "2", "2", "2", "2", "0", "2", "0", "2", "2", "2", "0", "2022-02-18"),
@@ -1425,5 +1484,4 @@ INSERT INTO EVALUACION_Practico VALUES
 (17, 57, 177, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "0", "2022-02-19"),
 (17, 58, 178, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "0", "2022-02-18"),
 (17, 58, 179, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "0", "2022-02-19"),
-(17, 58, 180, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "0", "2022-02-16"),
-(17, 58, 181, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "0", "2022-02-17");
+(17, 58, 180, "2", "2", "2", "2", "2", "2", "2", "2", "2", "2", "0", "2022-02-16");
