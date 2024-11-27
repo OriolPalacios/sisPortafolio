@@ -5,7 +5,8 @@ namespace App\Models;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasMany; 
+use Illuminate\Database\Eloquent\Relations\BelongsToMany; 
 use Illuminate\Notifications\Notifiable;
 
 
@@ -45,9 +46,14 @@ class Usuario extends Authenticatable
         'contrasena'
     ];
 
-    public function roles(): HasMany
+    public function roles(): BelongsToMany
     {
-        return $this->hasMany(UsuarioRol::class, 'id_usuario');
+        return $this->belongsToMany(Rol::class, 'USUARIO_ROL', 'id_usuario', 'id_rol');
+    }
+
+    public function getRoleAttribute()
+    {
+        return $this->roles()->pluck('nombre_rol');
     }
 
     public function asignacionesComoAdministrador(): HasMany
