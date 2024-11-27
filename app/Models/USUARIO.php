@@ -11,7 +11,7 @@ use Illuminate\Notifications\Notifiable;
 
 class Usuario extends Authenticatable
 {
-    use HasFactory, Notifiable;
+    use Notifiable;
 
     protected $table = 'USUARIO';
     public $timestamps = false;
@@ -65,7 +65,7 @@ class Usuario extends Authenticatable
         return $this->hasMany(AsignacionRevision::class, 'id_docente_usuario');
     }
 
-    public function getAuthPassword(): string
+    public function getAuthPassword()
     {
         return $this->contrasena;
     }

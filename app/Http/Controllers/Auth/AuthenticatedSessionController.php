@@ -16,6 +16,7 @@ class AuthenticatedSessionController extends Controller
      */
     public function create(): View
     {
+        \Log::info('Is this alive? ' );
         return view('auth.login');
     }
 
@@ -24,12 +25,13 @@ class AuthenticatedSessionController extends Controller
      */
     public function store(LoginRequest $request): RedirectResponse
     {
-
+        \Log::info('ddd');
+        \Log::info('Login attempt for ' . $request->correo);
         $request->authenticate();
 
         $request->session()->regenerate();
 
-        return redirect()->intended(route('dashboard', absolute: false));
+        return redirect('dashboard');
     }
 
     /**
