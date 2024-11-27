@@ -2,13 +2,16 @@
 
 namespace App\Models;
 
+use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Notifications\Notifiable;
 
-class Usuario extends Model
+
+class Usuario extends Authenticatable
 {
-    use HasFactory;
+    use HasFactory, Notifiable;
 
     protected $table = 'USUARIO';
     public $timestamps = false;
@@ -60,5 +63,10 @@ class Usuario extends Model
     public function asignacionesComoDocente(): HasMany
     {
         return $this->hasMany(AsignacionRevision::class, 'id_docente_usuario');
+    }
+
+    public function getAuthPassword(): string
+    {
+        return $this->contrasena;
     }
 }
