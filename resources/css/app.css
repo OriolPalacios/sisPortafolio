@@ -2,7 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-/* :root {
-    --bg-primary: #f9f9f9;
-} */
 
+.guest-container-content {
+    width: 100vw;
+    outline: 4px solid red;
+}

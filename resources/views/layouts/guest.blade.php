@@ -16,16 +16,16 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="font-sans text-gray-900 antialiased">
-    <div class="min-h-screen flex items-center justify-center pt-6 sm:pt-0 bg-gray-100 dark:bg-gray-900">
+<body class="font-sans antialiased">
+    <div class="min-h-screen flex items-center justify-center pt-6 sm:pt-0 bg-gray-100">
         <div class="max-w-full w-full mx-auto ">
             <div class="flex flex-row sm:flex-row justify-between items-center" >
                 <div class="h-screen overflow-hidden" style="height: 100vh;">
                     <img src="{{ asset('image/Rectangle.png') }}" alt="Logo" class="h-full object-cover" />
                 </div>
-                <div class="flex justify-center w-1/2 h-full" style="width: 50%">
+                <div class="flex justify-center w-1/2 h-full" style="width: 50%">   
                     <div
-                        class="w-1 sm:mt-0 px-6 py-4 bg-white dark:bg-gray-800 shadow-md sm:rounded-lg" style="width: 80%; margin-right:150px;">
+                        class="w-1 sm:mt-0 px-6 py-4 bg-white shadow-md sm:rounded-lg" style="width: 80%; margin-right:150px;">
                         {{ $slot }}
                     </div>
                 </div>
