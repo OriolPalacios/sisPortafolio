@@ -16,7 +16,6 @@ class AuthenticatedSessionController extends Controller
      */
     public function create(): View
     {
-        \Log::info('AuthenticatedSessionController:create');
         return view('auth.login');
     }
 
@@ -25,7 +24,6 @@ class AuthenticatedSessionController extends Controller
      */
     public function store(LoginRequest $request): RedirectResponse
     {
-        \Log::info('AuthenticatedSessionController:store:correo: '.$request->role);
         $request->authenticate();
         // add role to the session
         $request->session()->put('current_role', $request->role);

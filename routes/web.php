@@ -3,6 +3,8 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
+use App\Http\Middleware\RedirectBasedOnRole;
+use App\Http\Middleware\NotRoleUser;
 
 
 Route::get('/', [AuthenticatedSessionController::class, 'create'])
@@ -10,13 +12,35 @@ Route::get('/', [AuthenticatedSessionController::class, 'create'])
     ->name('login');
 
 Route::get('/main', function () {
+    //current role of the user;
     return view('main');
-})->middleware('auth')->name('main');
+})
+    ->middleware('auth')
+    ->middleware(RedirectBasedOnRole::class . ':Root')
+    ->name('main');
 
-Route::get('/dashboard', function () {
-    \Log::info('ESTE ES EL ROL DEL USUARIO '.Auth::user()->role);
-    return view('dashboard');
-})->middleware('auth')->name('dashboard');
+
+Route::get('/Administrador', function () {
+    return view('administrador.main');
+})
+    ->middleware('auth')
+    ->middleware(NotRoleUser::class . ':Administrador')
+    ->name('Administrador');
+    
+Route::get('/Docente', function () {
+    return view('docente.main');
+})
+    ->middleware('auth')
+    ->middleware(NotRoleUser::class . ':Docente')
+    ->name('Docente');
+
+Route::get('/Revisor', function () {
+    return view('revisor.main');
+})
+    ->middleware('auth')
+    ->middleware(NotRoleUser::class . ':Revisor')
+    ->name('Revisor');
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -25,3 +49,4 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+// require __DIR__.'/roles.php';
