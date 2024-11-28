@@ -16,6 +16,7 @@ class AuthenticatedSessionController extends Controller
      */
     public function create(): View
     {
+        \Log::info('AuthenticatedSessionController:create');
         return view('auth.login');
     }
 

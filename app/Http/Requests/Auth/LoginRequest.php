@@ -40,8 +40,17 @@ class LoginRequest extends FormRequest
     public function authenticate(): void
     {
         $this->ensureIsNotRateLimited();
-        \Log::info('LoginRequest:authenticate:correo: '.$this->string('role'));
-        if (! Auth::attempt(['correo'=>$this->string('correo'), 'password'=>$this->string('contrasena')], $this->boolean('remember'))) {
+        $user = \App\Models\USUARIO::where('correo', $this->string('correo'))->first();
+        $user_roles = $user->roles->pluck('nombre_rol')->toArray();
+        // verify that the user's role match with the passed role
+        if (!in_array($this->string('role'), $user_roles)) {
+            RateLimiter::hit($this->throttleKey());
+            \Log::info('LoginRequest:authenticate:role:failed');
+            throw ValidationException::withMessages([
+                'role' =>  trans('auth.failed'),
+            ]);
+        }
+        if (! Auth::attempt(['correo'=>$this->string('correo'), 'password'=>$this->string('contrasena'), ], $this->boolean('remember'))) {
             RateLimiter::hit($this->throttleKey());
             \Log::info('LoginRequest:authenticate:Auth::attempt:failed');
             throw ValidationException::withMessages([

@@ -30,9 +30,12 @@
             <x-input-label for="role" :value="__('Role')" />
 
             <select name="role" id="role" class="block mt-1 w-full rounded-md border-gray-300 dark:border-gray-700   shadow-sm focus:ring-indigo-500 dark:focus:ring-indigo-600 dark:focus:ring-offset-gray-800">
-                <option value="docente">Docente</option>
-                <option value="revisor">Revisor</option>
-                <option value="admin">Administrador</option>
+                <option value="Docente">Docente</option>
+                <option value="Revisor">Revisor</option>
+                <option value="Administrador">Administrador</option>
+            </select>
+
+           <x-input-error :messages="$errors->get('role')" class="mt-2" />
         </div>
 
 
