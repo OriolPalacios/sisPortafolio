@@ -40,8 +40,7 @@ class LoginRequest extends FormRequest
     public function authenticate(): void
     {
         $this->ensureIsNotRateLimited();
-        \Log::info('LoginRequest:authenticate:correo: '.$this->string('correo'));
-        \Log::info('LoginRequest:authenticate:correo: '.$this->string('contrasena'));
+        \Log::info('LoginRequest:authenticate:correo: '.$this->string('role'));
         if (! Auth::attempt(['correo'=>$this->string('correo'), 'password'=>$this->string('contrasena')], $this->boolean('remember'))) {
             RateLimiter::hit($this->throttleKey());
             \Log::info('LoginRequest:authenticate:Auth::attempt:failed');

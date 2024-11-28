@@ -4,10 +4,15 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('main');
+    return view('auth.login');
 });
 
+Route::get('/main', function () {
+    return view('main');
+})->middleware('auth')->name('main');
+
 Route::get('/dashboard', function () {
+    \Log::info('ESTE ES EL ROL DEL USUARIO '.Auth::user()->role);
     return view('dashboard');
 })->middleware('auth')->name('dashboard');
 
