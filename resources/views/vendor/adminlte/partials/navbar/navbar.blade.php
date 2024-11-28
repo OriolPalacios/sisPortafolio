@@ -28,7 +28,7 @@
         @if(Auth::user())
             <form action="{{route('logout')}}" method="post">
                 @csrf
-                <button type="submit" class="btn btn-primary nav-link">
+                <button type="submit" class="btn btn-warning">
                     {{-- log out --}}
                     {{ __('Log Out') }}
                     <i class="fas fa-fw fa-sign-out-alt"></i>
