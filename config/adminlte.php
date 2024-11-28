@@ -327,9 +327,9 @@ return [
             'label' => 4,
             'label_color' => 'success',
         ],
-        ['header' => 'account_settings'],
+        ['header' => 'USUARIO'],
         [
-            'text' => 'profile',
+            'text' => '{{Auth::user()->name}}',
             'url' => 'admin/settings',
             'icon' => 'fas fa-fw fa-user',
         ],
