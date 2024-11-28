@@ -26,6 +26,14 @@
 
         {{-- User menu link --}}
         @if(Auth::user())
+            <form action="{{route('logout')}}" method="post">
+                @csrf
+                <button type="submit" class="btn btn-primary nav-link">
+                    {{-- log out --}}
+                    {{ __('Log Out') }}
+                    <i class="fas fa-fw fa-sign-out-alt"></i>
+                </button>
+            </form>
             @if(config('adminlte.usermenu_enabled'))
                 @include('adminlte::partials.navbar.menu-item-dropdown-user-menu')
             @else
