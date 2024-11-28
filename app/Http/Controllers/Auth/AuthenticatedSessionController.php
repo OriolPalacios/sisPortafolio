@@ -25,9 +25,10 @@ class AuthenticatedSessionController extends Controller
      */
     public function store(LoginRequest $request): RedirectResponse
     {
-        \Log::info('AuthenticatedSessionController:store:correo: '.$request->correo);
+        \Log::info('AuthenticatedSessionController:store:correo: '.$request->role);
         $request->authenticate();
-
+        // add role to the session
+        $request->session()->put('current_role', $request->role);
         $request->session()->regenerate();
 
         return redirect('main');

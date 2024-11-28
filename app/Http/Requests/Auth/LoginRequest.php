@@ -47,14 +47,14 @@ class LoginRequest extends FormRequest
             RateLimiter::hit($this->throttleKey());
             \Log::info('LoginRequest:authenticate:role:failed');
             throw ValidationException::withMessages([
-                'role' =>  trans('auth.failed'),
+                'role' =>  trans('Este usuario no tiene el rol seleccionado'),
             ]);
         }
         if (! Auth::attempt(['correo'=>$this->string('correo'), 'password'=>$this->string('contrasena'), ], $this->boolean('remember'))) {
             RateLimiter::hit($this->throttleKey());
             \Log::info('LoginRequest:authenticate:Auth::attempt:failed');
             throw ValidationException::withMessages([
-                'correo' => trans('auth.failed'),
+                'correo' => trans('No se pudo autenticar con las credenciales proporcionadas'), 
             ]);
         }
 

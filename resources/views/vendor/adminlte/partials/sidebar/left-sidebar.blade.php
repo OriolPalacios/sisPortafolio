@@ -16,7 +16,11 @@
                 </div>
                 <ul class="list-group list-group-flush  rounded">
                     <li class="list-group-item text-center bg-warning">{{ Auth::user()->nombres . ' ' . Auth::user()->apellido_paterno . ' ' . Auth::user()->apellido_materno }}</li>
-                    <li class="list-group-item text-center bg-secondary">{{ Auth::user()->role}}</li>
+                    @if (session('current_role'))
+                    <li class="list-group-item text-center bg-secondary">
+                            <span>{{ session('current_role') }}</span>
+                        </li>
+                    @endif
                 </ul>
             </div>
             <ul class="nav nav-pills nav-sidebar flex-column {{ config('adminlte.classes_sidebar_nav', '') }}"
