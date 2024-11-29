@@ -30,4 +30,14 @@ class Semestre extends Model
     {
         return $this->hasMany(CursoSemestre::class, 'id_semestre');
     }
+
+    public function portafolioCursos()
+    {
+        return $this->hasManyThrough(
+            PortafolioCurso::class,
+            AsignacionRevision::class,
+            'id_semestre',
+            'id_asignacion_revision'
+        );
+    }
 }
