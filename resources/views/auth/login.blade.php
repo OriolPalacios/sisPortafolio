@@ -7,37 +7,22 @@
 
         <!-- Email Address -->
         <div>
-            <x-input-label for="correo" :value="__('Email')" />
-            <x-text-input id="correo" class="block mt-1 w-full" type="email" name="correo" :value="old('correo')" required autofocus autocomplete="username" />
-            <x-input-error :messages="$errors->get('correo')" class="mt-2" />
+            <x-input-label for="email" :value="__('Email')" />
+            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
+            <x-input-error :messages="$errors->get('email')" class="mt-2" />
         </div>
 
         <!-- Password -->
         <div class="mt-4">
-            <x-input-label for="contrasena" :value="__('Password')" />
+            <x-input-label for="password" :value="__('Password')" />
 
-            <x-text-input id="contrasena" class="block mt-1 w-full"
+            <x-text-input id="password" class="block mt-1 w-full"
                             type="password"
-                            name="contrasena"
+                            name="password"
                             required autocomplete="current-password" />
 
-            <x-input-error :messages="$errors->get('contrasena')" class="mt-2" />
+            <x-input-error :messages="$errors->get('password')" class="mt-2" />
         </div>
-
-        {{-- Role --}}
-
-        <div class="mt-4">
-            <x-input-label for="role" :value="__('Role')" />
-
-            <select name="role" id="role" class="block mt-1 w-full rounded-md border-gray-300 dark:border-gray-700   shadow-sm focus:ring-indigo-500 dark:focus:ring-indigo-600 dark:focus:ring-offset-gray-800">
-                <option value="Docente">Docente</option>
-                <option value="Revisor">Revisor</option>
-                <option value="Administrador">Administrador</option>
-            </select>
-
-           <x-input-error :messages="$errors->get('role')" class="mt-2" />
-        </div>
-
 
         <!-- Remember Me -->
         <div class="block mt-4">

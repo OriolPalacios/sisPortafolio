@@ -27,8 +27,8 @@ class LoginRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'correo' => ['required', 'string', 'email'],
-            'contrasena' => ['required', 'string'],
+            'email' => ['required', 'string', 'email'],
+            'password' => ['required', 'string'],
         ];
     }
 
@@ -40,21 +40,12 @@ class LoginRequest extends FormRequest
     public function authenticate(): void
     {
         $this->ensureIsNotRateLimited();
-        $user = \App\Models\USUARIO::where('correo', $this->string('correo'))->first();
-        $user_roles = $user->roles->pluck('nombre_rol')->toArray();
-        // verify that the user's role match with the passed role
-        if (!in_array($this->string('role'), $user_roles)) {
+
+        if (! Auth::attempt($this->only('email', 'password'), $this->boolean('remember'))) {
             RateLimiter::hit($this->throttleKey());
-            \Log::info('LoginRequest:authenticate:role:failed');
+
             throw ValidationException::withMessages([
-                'role' =>  trans('Este usuario no tiene el rol seleccionado'),
-            ]);
-        }
-        if (! Auth::attempt(['correo'=>$this->string('correo'), 'password'=>$this->string('contrasena'), ], $this->boolean('remember'))) {
-            RateLimiter::hit($this->throttleKey());
-            \Log::info('LoginRequest:authenticate:Auth::attempt:failed');
-            throw ValidationException::withMessages([
-                'correo' => trans('No se pudo autenticar con las credenciales proporcionadas'), 
+                'email' => trans('auth.failed'),
             ]);
         }
 
@@ -77,7 +68,7 @@ class LoginRequest extends FormRequest
         $seconds = RateLimiter::availableIn($this->throttleKey());
 
         throw ValidationException::withMessages([
-            'correo' => trans('auth.throttle', [
+            'email' => trans('auth.throttle', [
                 'seconds' => $seconds,
                 'minutes' => ceil($seconds / 60),
             ]),
@@ -89,6 +80,6 @@ class LoginRequest extends FormRequest
      */
     public function throttleKey(): string
     {
-        return Str::transliterate(Str::lower($this->string('correo')).'|'.$this->ip());
+        return Str::transliterate(Str::lower($this->string('email')).'|'.$this->ip());
     }
 }

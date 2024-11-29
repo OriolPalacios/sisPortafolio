@@ -25,11 +25,10 @@ class AuthenticatedSessionController extends Controller
     public function store(LoginRequest $request): RedirectResponse
     {
         $request->authenticate();
-        // add role to the session
-        $request->session()->put('current_role', $request->role);
+
         $request->session()->regenerate();
 
-        return redirect('main');
+        return redirect()->intended(route('dashboard', absolute: false));
     }
 
     /**
