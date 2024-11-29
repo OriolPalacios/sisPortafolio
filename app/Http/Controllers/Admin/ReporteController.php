@@ -4,16 +4,17 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Semestre;
-use App\Models\Usuario;
-use App\Models\PortafolioCurso;
-use App\Models\AsignacionRevision;
+use App\Models\SEMESTRE;
+use App\Models\USUARIO;
+use App\Models\PORTAFOLIOCURSO;
+use App\Models\ASIGNACIONREVISION;
 use Barryvdh\DomPDF\Facade\Pdf;
 
 class ReporteController extends Controller
 {
     public function reporteGeneral()
     {
+        \Log::info('Usando el modelo asignacionrevision', ['user' => auth()->user()]);
         $semestres = Semestre::with(['portafolioCursos'])
             ->get()
             ->map(function ($semestre) {
@@ -48,7 +49,7 @@ class ReporteController extends Controller
         $docentes = $query->whereHas('roles', function($q) {
             $q->where('nombre_rol', 'Docente');
         })->paginate(10);
-
+        
         foreach ($docentes as $docente) {
             // Datos como revisor
             $asignacionesComoRevisor = AsignacionRevision::where('id_revisor_usuario', $docente->id)->get();

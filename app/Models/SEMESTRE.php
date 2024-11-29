@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\ASIGNACIONREVISION;
+use App\Models\PORTAFOLIOCURSO;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Semestre extends Model
