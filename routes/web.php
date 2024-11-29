@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
+use App\Http\Controllers\AsignacionRevisionController;
 use App\Http\Middleware\RedirectBasedOnRole;
 use App\Http\Middleware\NotRoleUser;
 
@@ -42,9 +43,7 @@ Route::get('/Docente', function () {
     ->middleware(NotRoleUser::class . ':Docente')
     ->name('Docente');
 
-Route::get('/Revisor', function () {
-    return view('revisor.main');
-})
+Route::get('/Revisor', [AsignacionRevisionController::class, 'showRevisorMain'])
     ->middleware('auth')
     ->middleware(NotRoleUser::class . ':Revisor')
     ->name('Revisor');

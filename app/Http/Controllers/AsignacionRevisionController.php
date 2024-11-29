@@ -1,8 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use App\Models\AsignacionRevision;
+use App\Models\Usuario;
+use App\Models\ASIGNACIONREVISION;
 use Illuminate\Http\Request;
 
 class AsignacionRevisionController extends Controller
@@ -65,7 +65,10 @@ class AsignacionRevisionController extends Controller
 
     public function showRevisorMain()
     {
-        $asignaciones = AsignacionRevision::where('revisor_id', auth()->user()->id)->get();
-        return view('revisor.main', compact('asignaciones'));
+        $asignaciones = AsignacionRevision::where('id_revisor_usuario', auth()->user()->id)->get();
+        \Log::info("ASIGNACIONREVISIONCONTROLLER:\n".$asignaciones);
+        $docentes_asginados = $asignaciones->pluck('id_docente_usuario')->unique();
+        $docentes = Usuario::whereIn('id', $docentes_asginados)->get();
+        return view('revisor.main', compact('asignaciones', 'docentes'));
     }
 }

@@ -54,5 +54,4 @@ class AsignacionRevision extends Model
     {
         return $this->hasMany(PortafolioCurso::class, 'id_asignacion_revision');
     }
-
 }
