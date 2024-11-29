@@ -62,4 +62,10 @@ class AsignacionRevisionController extends Controller
     {
         //
     }
+
+    public function showRevisorMain()
+    {
+        $asignaciones = AsignacionRevision::where('revisor_id', auth()->user()->id)->get();
+        return view('revisor.main', compact('asignaciones'));
+    }
 }
