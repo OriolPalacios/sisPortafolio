@@ -7,14 +7,14 @@
 
         <!-- Email Address -->
         <div>
-            <x-input-label for="correo" :value="__('Email')" />
+            <x-input-label for="correo" :value="__('Correo')" />
             <x-text-input id="correo" class="block mt-1 w-full" type="email" name="correo" :value="old('correo')" required autofocus autocomplete="username" />
             <x-input-error :messages="$errors->get('correo')" class="mt-2" />
         </div>
 
         <!-- Password -->
         <div class="mt-4">
-            <x-input-label for="contrasena" :value="__('Password')" />
+            <x-input-label for="contrasena" :value="__('Contraseña')" />
 
             <x-text-input id="contrasena" class="block mt-1 w-full"
                             type="password"
@@ -27,7 +27,7 @@
         {{-- Role --}}
 
         <div class="mt-4">
-            <x-input-label for="role" :value="__('Role')" />
+            <x-input-label for="role" :value="__('Rol')" />
 
             <select name="role" id="role" class="block mt-1 w-full rounded-md border-gray-300 dark:border-gray-700   shadow-sm focus:ring-indigo-500 dark:focus:ring-indigo-600 dark:focus:ring-offset-gray-800">
                 <option value="Docente">Docente</option>

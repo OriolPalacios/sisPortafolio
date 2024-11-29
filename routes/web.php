@@ -7,7 +7,15 @@ use App\Http\Middleware\RedirectBasedOnRole;
 use App\Http\Middleware\NotRoleUser;
 
 
-Route::get('/', [AuthenticatedSessionController::class, 'create'])
+Route::get('/', function () {
+    if (Auth::check()) {
+        return redirect('main');
+    }
+    return redirect('/login');  
+})->middleware('guest');
+
+
+Route::get('/login', [AuthenticatedSessionController::class, 'create'])
     ->middleware('guest')
     ->name('login');
 

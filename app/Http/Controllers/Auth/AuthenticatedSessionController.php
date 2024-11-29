@@ -16,6 +16,15 @@ class AuthenticatedSessionController extends Controller
      */
     public function create(): View
     {
+        if (Auth::check()) {
+            Auth::guard('web')->logout();
+
+            $request->session()->invalidate();
+
+            $request->session()->regenerateToken();
+
+            return redirect('/');
+        }
         return view('auth.login');
     }
 
