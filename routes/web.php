@@ -35,6 +35,19 @@ Route::get('/Administrador', function () {
     ->middleware('auth')
     ->middleware(NotRoleUser::class . ':Administrador')
     ->name('Administrador');
+
+// Agregar las rutas de reportes aquí
+Route::prefix('Administrador')->middleware(['auth', NotRoleUser::class . ':Administrador'])->group(function () {
+    // Rutas de reportes
+    Route::get('/reportes/general', [App\Http\Controllers\Admin\ReporteController::class, 'reporteGeneral'])
+        ->name('Administrador.reportes.general');
+    Route::get('/reportes/general/export', [App\Http\Controllers\Admin\ReporteController::class, 'exportarReporteGeneral'])
+        ->name('Administrador.reportes.general.export');
+    Route::get('/reportes/docente', [App\Http\Controllers\Admin\ReporteController::class, 'reporteDocente'])
+        ->name('Administrador.reportes.docente');
+    Route::get('/reportes/docente/{id}/export', [App\Http\Controllers\Admin\ReporteController::class, 'exportarReporteDocente'])
+        ->name('Administrador.reportes.docente.export');
+});
     
 Route::get('/Docente', function () {
     return view('docente.main');
@@ -57,3 +70,4 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__.'/auth.php';
 // require __DIR__.'/roles.php';
+

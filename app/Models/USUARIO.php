@@ -75,4 +75,10 @@ class Usuario extends Authenticatable
     {
         return $this->contrasena;
     }
+
+    public function hasAnyRole($roles)
+    {
+        return $this->roles()->whereIn('nombre_rol', (array) $roles)->exists();
+    }
+
 }

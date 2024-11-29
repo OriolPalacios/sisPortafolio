@@ -301,37 +301,51 @@ return [
     'menu' => [
         // Navbar items:
         [
-            'type' => 'navbar-search',
-            'text' => 'search',
+            'type'         => 'navbar-search',
+            'text'         => 'search',
             'topnav_right' => true,
         ],
         [
-            'type' => 'fullscreen-widget',
+            'type'         => 'fullscreen-widget',
             'topnav_right' => true,
         ],
 
         // Sidebar items:
-        // [
-        //     'type' => 'sidebar-menu-search',
-        //     'text' => 'search',
-        // ],
-        // [
-        //     'text' => 'blog',
-        //     'url' => 'admin/blog',
-        //     'can' => 'manage-blog',
-        // ],
-        // [
-        //     'text' => 'pages',
-        //     'url' => 'admin/pages',
-        //     'icon' => 'far fa-fw fa-file',
-        //     'label' => 4,
-        //     'label_color' => 'success',
-        // ],
-        // ['header' => 'Operaciones'],
-        // [
-        //     'text' => 'Dashboard',
-        //     'url' => 'admin/settings',
-        // ],
+        [
+            'header' => 'ADMINISTRACIÓN',
+            'can'    => 'Administrador',
+        ],
+        [
+            'text'    => 'Opciones',
+            'icon'    => 'fas fa-chart-bar',
+            'can'     => 'Administrador',
+            'active' => true,
+            'submenu' => [
+                [
+                    'text' => 'Reporte General',
+                    'route'  => 'Administrador.reportes.general', // Cambiado de 'url' a 'route'
+                    'icon' => 'fas fa-file-alt',
+                ],
+            ],
+        ],
+        [
+            'text'    => 'Reportes',
+            'icon'    => 'fas fa-chart-bar',
+            'can'     => 'Administrador',
+            'active' => true,
+            'submenu' => [
+                [
+                    'text' => 'Reporte General',
+                    'route'  => 'Administrador.reportes.general', // Cambiado de 'url' a 'route'
+                    'icon' => 'fas fa-file-alt',
+                ],
+                [
+                    'text' => 'Reporte por Docente',
+                    'route'  => 'Administrador.reportes.docente', // Cambiado de 'url' a 'route'
+                    'icon' => 'fas fa-user',
+                ],
+            ],
+        ],
     ],
 
     /*
