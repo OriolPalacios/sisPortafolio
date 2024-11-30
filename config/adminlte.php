@@ -346,6 +346,39 @@ return [
                 ],
             ],
         ],
+        // sidebar items for revisor
+        [
+            'header' => 'REVISOR',
+            'can'    => 'Revisor',
+        ],
+        [
+            'text'=>'Operaciones',
+            'can' => 'Revisor',
+            'icon' => 'fas fa-cogs',
+            'active' => true,
+            'submenu' => [
+                [
+                    'text' => 'Dashboard',
+                    'route' => 'Revisor',
+                    'icon' => 'fas fa-tachometer-alt',
+                ],
+                [
+                    'text' => 'Portafolios',
+                    'route' => 'Revisor',
+                    'icon' => 'fas fa-copy',
+                ],
+                [
+                    'text' => 'Observaciones',
+                    'route' => 'Revisor',
+                    'icon' => 'fas fa-bell',
+                ],
+            ]
+        ],
+        [
+            'text' => 'Perfil',
+            'icon' => 'fas fa-user',
+            'route' => 'profile.edit',
+        ]
     ],
 
     /*
@@ -366,7 +399,7 @@ return [
         JeroenNoten\LaravelAdminLte\Menu\Filters\SearchFilter::class,
         JeroenNoten\LaravelAdminLte\Menu\Filters\ActiveFilter::class,
         JeroenNoten\LaravelAdminLte\Menu\Filters\ClassesFilter::class,
-        JeroenNoten\LaravelAdminLte\Menu\Filters\LangFilter::class,
+        JeroenNoten\LaravelAdminLte\Menu\Filters\LangFilter::class, 
         JeroenNoten\LaravelAdminLte\Menu\Filters\DataFilter::class,
     ],
 
