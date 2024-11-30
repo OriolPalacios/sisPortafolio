@@ -6,7 +6,8 @@ use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\AsignacionRevisionController;
 use App\Http\Middleware\RedirectBasedOnRole;
 use App\Http\Middleware\NotRoleUser;
-
+use App\Http\Controllers\EvaluacionPracticoController;
+use App\Http\Controllers\EvaluacionTeoricoController;
 
 Route::get('/', function () {
     if (Auth::check()) {
@@ -56,27 +57,31 @@ Route::get('/Docente', function () {
     ->middleware(NotRoleUser::class . ':Docente')
     ->name('Docente');
 
+
+// Rutas para el revisor
 Route::get('/Revisor', [AsignacionRevisionController::class, 'showRevisorMain'])
     ->middleware('auth')
     ->middleware(NotRoleUser::class . ':Revisor')
     ->name('Revisor');
+// Agregar las rutas del reporte de Revisor aquí
+Route::prefix('Revisor')->middleware(['auth', NotRoleUser::class . ':Revisor'])->group(function () {
+    Route::get('/Portafolios', [AsignacionRevisionController::class, 'showRevisorPortafolios'])
+        ->name('Revisor.portafolios');
+    Route::get('/Observaciones', [AsignacionRevisionController::class, 'showRevisorPortafolios'])
+        ->name('Revisor.observaciones');
+    Route::get('/Reportes', [AsignacionRevisionController::class, 'showRevisorPortafolios'])
+        ->name('Revisor.reportes');
+});
 
-Route::get('/Revisor/Portafolios', [AsignacionRevisionController::class, 'showRevisorPortafolios'])
+Route::put('evaluacionPractico/{id}', [EvaluacionPracticoController::class, 'update'])
     ->middleware('auth')
     ->middleware(NotRoleUser::class . ':Revisor')
-    ->name('Revisor.portafolios');
+    ->name('evaluacionPractico.update');
 
-Route::get('/Revisor/Observaciones', [AsignacionRevisionController::class, 'showRevisorPortafolios'])
+Route::put('evaluacionTeorico/{id}', [EvaluacionTeoricoController::class, 'update'])
     ->middleware('auth')
     ->middleware(NotRoleUser::class . ':Revisor')
-    ->name('Revisor.observaciones');
-
-Route::get('/Revisor/Reportes', [AsignacionRevisionController::class, 'showRevisorPortafolios'])
-    ->middleware('auth')
-    ->middleware(NotRoleUser::class . ':Revisor')
-    ->name('Revisor.reportes');
-
-
+    ->name('evaluacionTeorico.update');
 
 
 Route::middleware('auth')->group(function () {
@@ -86,5 +91,4 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
-// require __DIR__.'/roles.php';
 
