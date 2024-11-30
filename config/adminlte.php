@@ -364,13 +364,18 @@ return [
                 ],
                 [
                     'text' => 'Portafolios',
-                    'route' => 'Revisor',
+                    'route' => 'Revisor.portafolios',
                     'icon' => 'fas fa-copy',
                 ],
                 [
                     'text' => 'Observaciones',
-                    'route' => 'Revisor',
+                    'route' => 'Revisor.observaciones',
                     'icon' => 'fas fa-bell',
+                ],
+                [
+                    'text' => 'Reportes',
+                    'route' => 'Revisor.reportes',
+                    'icon' => 'fas fa-chart-line',
                 ],
             ]
         ],

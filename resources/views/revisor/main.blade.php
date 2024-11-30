@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Dashboard')
+@section('title', 'Panel de control')
 
 @section('content_header')
     <h1>Bienvenido {{ Auth::user()->nombres . ", " . Auth::user()->apellido_paterno. " " . Auth::user()->apellido_materno }}</h1>
@@ -12,7 +12,7 @@
         <div class="col-sm">
             <div class="card">
                 <div class="card-body d-flex flex-column align-items-center">
-                    <h5 class="card-title">X%</h5>
+                    <h5 class="card-title">{{$portafolios_revisados}}</h5>
                     <p class="card-text">Portafolios Revisados</p>
                 </div>
             </div>
@@ -20,8 +20,16 @@
         <div class="col-sm">
             <div class="card">
                 <div class="card-body d-flex flex-column align-items-center">
-                    <h5 class="card-title">Y%</h5>
-                    <p class="card-text">Subsanaciones sin revisar</p>
+                    <h5 class="card-title">{{$portafolios_observados}}</h5>
+                    <p class="card-text">Portafolios Observados</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm">
+            <div class="card">
+                <div class="card-body d-flex flex-column align-items-center">
+                    <h5 class="card-title">{{$portafolios_pendientes}}</h5>
+                    <p class="card-text">Portafolios Pendientes</p>
                 </div>
             </div>
         </div>

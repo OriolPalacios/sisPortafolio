@@ -61,6 +61,23 @@ Route::get('/Revisor', [AsignacionRevisionController::class, 'showRevisorMain'])
     ->middleware(NotRoleUser::class . ':Revisor')
     ->name('Revisor');
 
+Route::get('/Revisor/Portafolios', [AsignacionRevisionController::class, 'showRevisorPortafolios'])
+    ->middleware('auth')
+    ->middleware(NotRoleUser::class . ':Revisor')
+    ->name('Revisor.portafolios');
+
+Route::get('/Revisor/Observaciones', [AsignacionRevisionController::class, 'showRevisorPortafolios'])
+    ->middleware('auth')
+    ->middleware(NotRoleUser::class . ':Revisor')
+    ->name('Revisor.observaciones');
+
+Route::get('/Revisor/Reportes', [AsignacionRevisionController::class, 'showRevisorPortafolios'])
+    ->middleware('auth')
+    ->middleware(NotRoleUser::class . ':Revisor')
+    ->name('Revisor.reportes');
+
+
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
