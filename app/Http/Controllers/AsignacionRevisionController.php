@@ -69,20 +69,20 @@ class AsignacionRevisionController extends Controller
     public function showRevisorMain()
     {
         $asignaciones = AsignacionRevision::where('id_revisor_usuario', auth()->user()->id)->get();
-        \Log::info("Length of asignaciones: " . $asignaciones->count());
+        \Log::info("Todas las asignaciones del revisor: " . $asignaciones->pluck('id'));
     
         $portafolios_revisados = PortafolioCurso::whereIn('id_asignacion_revision', $asignaciones->pluck('id'))
             ->where('estado', 'Completado')
             ->count();
+        \Log::info("ASIGNACIONREVISIONCONTROLLER portafolios revisados:\n".$portafolios_revisados);
         $portafolios_observados = PortafolioCurso::whereIn('id_asignacion_revision', $asignaciones->pluck('id'))
-            ->where('estado', 'Observado')
-            ->count();
+        ->where('estado', 'Observado')
+        ->count();
+        \Log::info("ASIGNACIONREVISIONCONTROLLER portafolios revisados:\n".$portafolios_observados);
         $portafolios_pendientes = PortafolioCurso::whereIn('id_asignacion_revision', $asignaciones->pluck('id'))
-            ->where('estado', 'Pendiente')
-            ->count();
-        \Log::info("ASIGNACIONREVISIONCONTROLLER:\n".$portafolios_revisados);
-        \Log::info("ASIGNACIONREVISIONCONTROLLER:\n".$portafolios_observados);
-        \Log::info("ASIGNACIONREVISIONCONTROLLER:\n".$portafolios_pendientes);
+        ->where('estado', 'Pendiente')
+        ->count();
+        \Log::info("ASIGNACIONREVISIONCONTROLLER portafolios revisados:\n".$portafolios_pendientes);
         $docentes_asginados = $asignaciones->pluck('id_docente_usuario')->unique();
         $docentes = Usuario::whereIn('id', $docentes_asginados)->get();
     

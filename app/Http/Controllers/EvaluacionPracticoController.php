@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\EVALUACIONPractico;
+use App\Models\PORTAFOLIOCURSO;
 use Illuminate\Http\Request;
 
 class EvaluacionPracticoController extends Controller
@@ -64,8 +65,24 @@ class EvaluacionPracticoController extends Controller
         $evaluacionPractico->relacion_estudiantes = $request->input('relacion_estudiantes'.$id_portafolio_curso);
         $evaluacionPractico->registro_notas_practicas_primera_parcial = $request->input('registro_notas_practicas_primera_parcial'.$id_portafolio_curso);
         $evaluacionPractico->registro_notas_practicas_segunda_parcial = $request->input('registro_notas_practicas_segunda_parcial'.$id_portafolio_curso);
-        $evaluacionPractico->proyecto_individual_grupal = $request->input('proyecto_individual'.$id_portafolio_curso);
+        $evaluacionPractico->proyecto_individual_grupal = $request->input('proyecto_individual_grupal'.$id_portafolio_curso);
         $evaluacionPractico->save();
+        // cast all the updated values to integers and add them up, then divide by 100. Use a switch data control structure to decide between three options, if the result is greater than 0.8 then the portfolio is complete, if it's greater than 0.5 then it's observed, otherwise it's incomplete
+        $total = intval($evaluacionPractico->caratula) + intval($evaluacionPractico->carga_academica) + intval($evaluacionPractico->filosofia) + intval($evaluacionPractico->cv) + intval($evaluacionPractico->plan_sesiones) + intval($evaluacionPractico->asistencia_alumnos) + intval($evaluacionPractico->evidencia_actividades_ensenianza) + intval($evaluacionPractico->relacion_estudiantes) + intval($evaluacionPractico->registro_notas_practicas_primera_parcial) + intval($evaluacionPractico->registro_notas_practicas_segunda_parcial) + intval($evaluacionPractico->proyecto_individual_grupal);
+        $total = ($total / 22)  * 100;
+        $current_portfolio = PortafolioCurso::find($id_portafolio_curso);
+        \Log::info("EVALUACIONPRACTICOCONTROLLER total calificacion:\n".$total);
+        if ($total > 80) {
+            \Log::info("cayo en 0.9:\n".$total);
+            $current_portfolio->estado = 'Completado';
+        } elseif ($total > 50) {
+            \Log::info("cayo en 0.5:\n");
+            $current_portfolio->estado = 'Observado';
+        } else {
+            \Log::info("cayo en 0.0:\n");
+            $current_portfolio->estado = 'Pendiente';
+        }
+        $current_portfolio->save();
         return redirect('Revisor/Portafolios')->with('Success', 'Evaluación actualizada correctamente');
     }
 

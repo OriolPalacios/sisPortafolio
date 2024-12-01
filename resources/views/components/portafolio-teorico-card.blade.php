@@ -268,6 +268,11 @@
                                                     </tr>
                                                 </tbody>
                                             </table>
+                                                 {{-- add a text box for "observacion" --}}
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" name="observacion" id="observacion" placeholder="Observacion"
+                                                    value="">
+                                            </div>
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary"
@@ -275,6 +280,7 @@
                                             <button type="submit" class="btn btn-primary">Guardar
                                                 cambios</button>
                                         </div>
+                                       
                                     </form>
                                 </div>
                             </div>

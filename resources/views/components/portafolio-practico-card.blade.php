@@ -114,12 +114,6 @@
                                                             name="proyecto_individual_grupal{{ $portafolio_practico->id_portafolio_curso }}"
                                                             value="{{ $portafolio_practico->proyecto_individual_grupal }}" />
                                                     </tr>
-                                                    <tr>
-                                                        <td>Fecha de Revisión</td>
-                                                        <x-radio-input-portafolio
-                                                            name="fecha_de_revision{{ $portafolio_practico->id_portafolio_curso }}"
-                                                            value="{{ $portafolio_practico->fecha_de_revision }}" />
-                                                    </tr>
                                                 </tbody>
                                             </table>
                                         </div>
