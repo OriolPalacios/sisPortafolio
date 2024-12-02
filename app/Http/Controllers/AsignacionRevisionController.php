@@ -158,7 +158,7 @@ class AsignacionRevisionController extends Controller
         //add pagination to reportes
         $reportes = collect($reportes);
         $currentPage = LengthAwarePaginator::resolveCurrentPage();
-        $perPage = 3;
+        $perPage = 1;
         $currentItems = $reportes->slice(($currentPage - 1) * $perPage, $perPage)->all();
         $reportes = new LengthAwarePaginator($currentItems, $reportes->count(), $perPage, $currentPage, [
             'path' => LengthAwarePaginator::resolveCurrentPath()
