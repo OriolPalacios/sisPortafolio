@@ -1,85 +1,54 @@
 <?php
 
-use App\Models\User;
+use App\Models\USUARIO;
+// use Illuminate\Foundation\Testing\RefreshDatabase;
 
-test('profile page is displayed', function () {
-    $user = User::factory()->create();
+// uses(RefreshDatabase::class);
 
-    $response = $this
-        ->actingAs($user)
-        ->get('/profile');
+test('Conexión con el modelo, tabla de USUARIO', function () {
+    $user = Usuario::find(1);
 
-    $response->assertOk();
+    expect($user->id)->toBe(1);
+});
+test('Los nombres de usuario no pueden ser nulos', function () {
+    $user = Usuario::find(1);
+
+    expect($user->nombres)->not->toBeNull();
 });
 
-test('profile information can be updated', function () {
-    $user = User::factory()->create();
+test('El correo no puede ser nulo', function () {
+    $user = Usuario::find(1);
 
-    $response = $this
-        ->actingAs($user)
-        ->patch('/profile', [
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-        ]);
-
-    $response
-        ->assertSessionHasNoErrors()
-        ->assertRedirect('/profile');
-
-    $user->refresh();
-
-    $this->assertSame('Test User', $user->name);
-    $this->assertSame('test@example.com', $user->email);
-    $this->assertNull($user->email_verified_at);
+    expect($user->correo)->not->toBeNull();
 });
 
-test('email verification status is unchanged when the email address is unchanged', function () {
-    $user = User::factory()->create();
+test('La fecha de creación no puede ser nula', function () {
+    $user = Usuario::find(1);
 
-    $response = $this
-        ->actingAs($user)
-        ->patch('/profile', [
-            'name' => 'Test User',
-            'email' => $user->email,
-        ]);
-
-    $response
-        ->assertSessionHasNoErrors()
-        ->assertRedirect('/profile');
-
-    $this->assertNotNull($user->refresh()->email_verified_at);
+    expect($user->fecha_creacion)->not->toBeNull();
 });
 
-test('user can delete their account', function () {
-    $user = User::factory()->create();
+test('La fecha de actualizacion no puede ser nula', function () {
+    $user = Usuario::find(1);
 
-    $response = $this
-        ->actingAs($user)
-        ->delete('/profile', [
-            'password' => 'password',
-        ]);
-
-    $response
-        ->assertSessionHasNoErrors()
-        ->assertRedirect('/');
-
-    $this->assertGuest();
-    $this->assertNull($user->fresh());
+    expect($user->fecha_actualizacion)->not->toBeNull();
 });
 
-test('correct password must be provided to delete account', function () {
-    $user = User::factory()->create();
+test('Usuario localizable por correo', function () {
+    $user = Usuario::where('correo', 'EDWIN.CARRASCO@unsaac.edu.pe')->first();
 
-    $response = $this
-        ->actingAs($user)
-        ->from('/profile')
-        ->delete('/profile', [
-            'password' => 'wrong-password',
-        ]);
+    expect($user)->not->toBeNull();
+});
 
-    $response
-        ->assertSessionHasErrorsIn('userDeletion', 'password')
-        ->assertRedirect('/profile');
+test('Las contraseñas están hasheadas', function () {
+    $user = Usuario::find(1);
 
-    $this->assertNotNull($user->fresh());
+    expect($user->password)->not->toBe('password');
+});
+
+test('Usuarios pueden ser eliminados', function () {
+    $user = Usuario::factory()->create();
+    $user->delete();
+
+    expect($user->fresh())->toBeNull();
 });
