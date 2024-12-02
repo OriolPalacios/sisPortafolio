@@ -372,10 +372,23 @@ return [
                     'route' => 'Revisor.observaciones',
                     'icon' => 'fas fa-bell',
                 ],
+            ]
+        ],
+        [
+            'text' => 'Reportes',
+            'icon' => 'fas fa-chart-line',
+            'can' => 'Revisor',
+            'active' => true,
+            'submenu' => [
                 [
-                    'text' => 'Reportes',
-                    'route' => 'Revisor.reportes',
-                    'icon' => 'fas fa-chart-line',
+                    'text' => 'Evaluación',
+                    'route' => 'Revisor.reportes.evaluacion',
+                    'icon' => 'fas fa-file-alt',
+                ],
+                [
+                    'text' => 'Cumplimiento',
+                    'route' => 'Revisor.reportes.cumplimiento',
+                    'icon' => 'fas fa-check-circle',
                 ],
             ]
         ],

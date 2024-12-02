@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\EVALUACIONTeorico;
 use App\Models\PORTAFOLIOCURSO;
+use App\Models\Observacion;
 use Illuminate\Http\Request;
 
 class EvaluacionTeoricoController extends Controller
@@ -92,6 +93,13 @@ class EvaluacionTeoricoController extends Controller
         $evaluacionTeorico->otras_evaluaciones = $request->input('otras_evaluaciones'.$id_portafolio_curso);
         $evaluacionTeorico->cierre_portafolio = $request->input('cierre_portafolio'.$id_portafolio_curso);
         $evaluacionTeorico->save();
+        \Log::info('Observacion del request '. $request->observacion);
+        if ($request->observacion != null) {
+            $observacion = new Observacion();
+            $observacion->observacion = $request->observacion;
+            $observacion->id_portafolio_curso = $id_portafolio_curso;
+            $observacion->save();
+        }
         // cast all the updated values to integers and add them up, then divide by 100. Use a switch data control structure to decide between three options, if the result is greater than 0.8 then the portfolio is complete, if it's greater than 0.5 then it's observed, otherwise it's incomplete
         $total = intval($evaluacionTeorico->caratula) + intval($evaluacionTeorico->carga_academica) + intval($evaluacionTeorico->filosofia) + intval($evaluacionTeorico->cv) + intval($evaluacionTeorico->silabo) + intval($evaluacionTeorico->avance_por_sesiones) + intval($evaluacionTeorico->registro_entrega_silabo) + intval($evaluacionTeorico->asistencia_alumnos) + intval($evaluacionTeorico->evidencia_actividades_ensenianza) + intval($evaluacionTeorico->relacion_estudiantes) + intval($evaluacionTeorico->evaluacion_entrada) + intval($evaluacionTeorico->informe_resultado_evaluacion_entrada) + intval($evaluacionTeorico->resolucion_evaluacion_entrada) + intval($evaluacionTeorico->resolucion_primera_parcial) + intval($evaluacionTeorico->resolucion_segunda_parcial) + intval($evaluacionTeorico->resolucion_tercera_parcial) + intval($evaluacionTeorico->resolucion_sustitutorio) + intval($evaluacionTeorico->enunciados_primera_parcial) + intval($evaluacionTeorico->enunciados_segunda_parcial) + intval($evaluacionTeorico->enunciados_tercera_parcial) + intval($evaluacionTeorico->enunciados_sustitutorio) + intval($evaluacionTeorico->asistencia_resolucion_primera_parcial) + intval($evaluacionTeorico->asistencia_resolucion_segunda_parcial) + intval($evaluacionTeorico->asistencia_resolucion_tercera_parcial) + intval($evaluacionTeorico->registro_ingreso_notas_primera_parcial) + intval($evaluacionTeorico->registro_ingreso_notas_segunda_parcial) + intval($evaluacionTeorico->registro_ingreso_notas_tercera_parcial) + intval($evaluacionTeorico->registro_ingreso_notas_sustiturio) + intval($evaluacionTeorico->min_max_mean_notas_primera_parcial) + intval($evaluacionTeorico->min_max_mean_notas_segunda_parcial) + intval($evaluacionTeorico->min_max_mean_notas_tercera_parcial) + intval($evaluacionTeorico->rubrica_proyecto) + intval($evaluacionTeorico->asignacion_proyectos_individuales_o_grupales) + intval($evaluacionTeorico->informe_entrega_final_proyectos) + intval($evaluacionTeorico->otras_evaluaciones) + intval($evaluacionTeorico->cierre_portafolio);
         $total = ($total / 72) * 100;

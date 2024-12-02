@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\EVALUACIONPractico;
 use App\Models\PORTAFOLIOCURSO;
+use App\Models\Observacion;
 use Illuminate\Http\Request;
 
 class EvaluacionPracticoController extends Controller
@@ -71,6 +72,12 @@ class EvaluacionPracticoController extends Controller
         $total = intval($evaluacionPractico->caratula) + intval($evaluacionPractico->carga_academica) + intval($evaluacionPractico->filosofia) + intval($evaluacionPractico->cv) + intval($evaluacionPractico->plan_sesiones) + intval($evaluacionPractico->asistencia_alumnos) + intval($evaluacionPractico->evidencia_actividades_ensenianza) + intval($evaluacionPractico->relacion_estudiantes) + intval($evaluacionPractico->registro_notas_practicas_primera_parcial) + intval($evaluacionPractico->registro_notas_practicas_segunda_parcial) + intval($evaluacionPractico->proyecto_individual_grupal);
         $total = ($total / 22)  * 100;
         $current_portfolio = PortafolioCurso::find($id_portafolio_curso);
+        if ($request->observacion != null) {
+            $observacion = new Observacion();
+            $observacion->observacion = $request->observacion;
+            $observacion->id_portafolio_curso = $id_portafolio_curso;
+            $observacion->save();
+        }
         \Log::info("EVALUACIONPRACTICOCONTROLLER total calificacion:\n".$total);
         if ($total > 80) {
             \Log::info("cayo en 0.9:\n".$total);

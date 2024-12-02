@@ -110,62 +110,17 @@ class AsignacionRevisionController extends Controller
         return view('revisor.portafolios', compact('portafolios_practico', 'portafolios_teorico'));
     }   
 
-    public function showRevisorMainTest()
+    public function showReporteEvaluacion()
     {
-        $asignaciones = AsignacionRevision::where('id_revisor_usuario', 6)->get();
-        \Log::info("ASIGNACIONREVISIONCONTROLLER:\n".$asignaciones);
-    
-        $docentes_asginados = $asignaciones->pluck('id_docente_usuario')->unique();
-        $docentes = Usuario::whereIn('id', $docentes_asginados)->get();
-    
-        $asignaciones->each(function ($asignacion) {
-            $id_portafolio_curso = $asignacion->id;
-    
-            $evaluacionPractico = EvaluacionPractico::where('id_portafolio_curso', $id_portafolio_curso)->first();
-            $evaluacionTeorico = EvaluacionTeorico::where('id_portafolio_curso', $id_portafolio_curso)->first();
-    
-            $practicoFields = [
-                "caratula", "carga_academica", "filosofia", "cv", "plan_sesiones", "asistencia_alumnos", 
-                "evidencia_actividades_ensenianza", "relacion_estudiantes", "registro_notas_practicas_primera_parcial", 
-                "registro_notas_practicas_segunda_parcial", "proyecto_individual_grupal", "fecha_de_revision"
-            ];
-    
-            $teoricoFields = [
-                "caratula", "carga_academica", "filosofia", "cv", "silabo", "avance_por_sesiones", 
-                "registro_entrega_silabo", "asistencia_alumnos", "evidencia_actividades_ensenianza", 
-                "relacion_estudiantes", "evaluacion_entrada", "informe_resultado_evaluacion_entrada", 
-                "resolucion_evaluacion_entrada", "resolucion_primera_parcial", "resolucion_segunda_parcial", 
-                "resolucion_tercera_parcial", "resolucion_sustiturio", "enunciados_primera_parcial", 
-                "enunciados_segunda_parcial", "enunciados_tercera_parcial", "enunciados_sustitutorio", 
-                "asistencia_resolucion_primera_parcial", "asistencia_resolucion_segunda_parcial", 
-                "asistencia_resolucion_tercera_parcial", "registro_ingreso_notas_primera_parcial", 
-                "registro_ingreso_notas_segunda_parcial", "min_max_mean_notas_tercera_parcial", 
-                "rubrica_proyecto", "asignacion_proyectos_individuales_o_grupales", 
-                "informe_entrega_final_proyectos", "otras_evaluaciones", "cierre_portafolio", "fecha_de_revision"
-            ];
-            $expectedSum = 0;
-            if ($evaluacionPractico) {
-                $expectedSum = collect($practicoFields)->sum(function ($field) use ($evaluacionPractico) {
-                    return (int) $evaluacionPractico->$field;
-                });
-            }
-            if ($evaluacionTeorico){
-                $expectedSum = collect($teoricoFields)->sum(function ($field) use ($evaluacionTeorico) {
-                    return (int) $evaluacionTeorico->$field;
-                });
-            }
-    
-            $percentage = ($expectedSum / 100) * 100;
-    
-            if ($percentage >= 80) {
-                $asignacion->status = 'complete';
-            } elseif ($percentage > 50 && $percentage < 80) {
-                $asignacion->status = 'pendent';
-            } else {
-                $asignacion->status = 'incomplete';
-            }
-            \Log::info("ASIGNACIONREVISIONCONTROLLER:\n".$asignacion);
-        });    
-        return view('revisor.main', compact('asignaciones', 'docentes'));
+        $reportes = AsignacionRevision::where('id_revisor_usuario', auth()->user()->id)->paginate(10);
+        return view('revisor.reportes.evaluacion', compact('reportes'));
+    }
+    public function showReporteCumplimiento()   
+    {
+        return view('revisor.reportes.cumplimiento',);
+    }
+    public function exportarReporteCumplimiento()
+    {
+        return view('revisor.reportes.pdf.cumplimiento');
     }
 }

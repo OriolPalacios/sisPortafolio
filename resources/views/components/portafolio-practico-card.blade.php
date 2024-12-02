@@ -116,6 +116,10 @@
                                                     </tr>
                                                 </tbody>
                                             </table>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" name="observacion" id="observacion" placeholder="Observacion"
+                                                    value="">
+                                            </div>
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary"

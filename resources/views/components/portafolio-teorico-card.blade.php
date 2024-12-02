@@ -260,12 +260,6 @@
                                                             name="cierre_portafolio{{ $portafolio_teorico->id_portafolio_curso }}"
                                                             value="{{ $portafolio_teorico->cierre_portafolio }}" />
                                                     </tr>
-                                                    <tr>
-                                                        <td>Fecha de Revisión</td>
-                                                        <x-radio-input-portafolio
-                                                            name="fecha_de_revision{{ $portafolio_teorico->id_portafolio_curso }}"
-                                                            value="{{ $portafolio_teorico->fecha_de_revision }}" />
-                                                    </tr>
                                                 </tbody>
                                             </table>
                                                  {{-- add a text box for "observacion" --}}
