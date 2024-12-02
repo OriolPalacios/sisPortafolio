@@ -24,7 +24,7 @@
         </div>
         <div class="mb-3">
             <label for="fecha_nacimiento" class="form-label">Fecha de Nacimiento</label>
-            <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" class="form-control" value="{{ $docente->fecha_nacimiento->format('Y-m-d') }}">
+            <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" class="form-control" value="{{ $docente->fecha_nacimiento ? $docente->fecha_nacimiento->format('Y-m-d') : '' }}">
         </div>
         <div class="mb-3">
             <label for="correo" class="form-label">Correo</label>
@@ -36,12 +36,22 @@
         </div>
         <div class="mb-3">
             <label for="estado" class="form-label">Estado</label>
-            <!-- logica para cambiar el estado -->
+            <select id="estado" name="estado" class="form-control">
+                <option value="1" {{ $docente->activo ? 'selected' : '' }}>Activo</option>
+                <option value="0" {{ !$docente->activo ? 'selected' : '' }}>Inactivo</option>
+            </select>
         </div>
         <div class="mb-3">
             <label for="rol" class="form-label">Rol</label>
-            <!-- logica para cambiar el rol -->
+            <select id="rol" name="rol[]" class="form-control" multiple>
+                @foreach ($roles as $rol)
+                    <option value="{{ $rol->id }}" {{ $docente->roles->contains($rol->id) ? 'selected' : '' }}>
+                        {{ ucfirst($rol->nombre_rol) }}
+                    </option>
+                @endforeach
+            </select>
         </div>
+        
         
         <div class="d-flex justify-content-between">
             <button type="submit" class="btn btn-success">Actualizar</button>

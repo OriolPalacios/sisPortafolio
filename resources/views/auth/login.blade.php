@@ -1,7 +1,10 @@
 <x-guest-layout>
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
-
+    {{-- inset the svg at address asset('image/escuedoEscuela.svg)') --}}
+        <div class="flex justify-center">
+            <img src="{{ asset('image/escudoEscuela.svg') }}" alt="Escudo de la escuela" class="w-40 h-40  bg-gray-200 rounded-full">
+        </div>
     <form method="POST" action="{{ route('login') }}">
         @csrf
 

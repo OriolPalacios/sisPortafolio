@@ -11,7 +11,9 @@
     <div class="custom-card-wrapper">
         <div class="card custom-card">
             <div class="card-body d-flex flex-column align-items-center">
-                <h5 class="card-title">2024-X</h5>
+                <h5 class="card-title">
+                    {{ $semestreActivo ? $semestreActivo->nombre_semestre : 'No hay semestre activo' }}
+                </h5>
                 <p class="card-text">Semestre activo</p>
             </div>
         </div>
@@ -19,7 +21,7 @@
     <div class="custom-card-wrapper">
         <div class="card custom-card">
             <div class="card-body d-flex flex-column align-items-center">
-                <h5 class="card-title">Y</h5>
+                <h5 class="card-title">{{ $usuariosActivos }}</h5>
                 <p class="card-text">Usuarios activos</p>
             </div>
         </div>

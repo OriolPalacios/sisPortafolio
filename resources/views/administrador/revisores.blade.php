@@ -15,7 +15,9 @@
 
     <!-- Barra de búsqueda -->
     <div class="mb-3">
-        <input type="text" class="form-control" placeholder="Buscar por nombre del revisor">
+        <form action="{{ route('admin.revisores') }}" method="GET">
+            <input type="text" name="buscar" class="form-control" placeholder="Buscar por nombre del revisor" value="{{ $buscar ?? '' }}">
+        </form>
     </div>
 
     <!-- Tabla de revisores -->
@@ -28,95 +30,61 @@
             </tr>
         </thead>
         <tbody>
-            <!-- Fila 1 -->
+            @forelse ($revisores as $revisor)
             <tr>
-                <td>Juan Pérez Gómez</td>
+                <td>{{ $revisor->nombres }} {{ $revisor->apellido_paterno }} {{ $revisor->apellido_materno }}</td>
                 <td>
                     <ul>
-                        <li>Docente 1</li>
-                        <li>Docente 2</li>
-                        <li>Docente 3</li>
+                        @php
+                            $docentesUnicos = $revisor->asignacionesComoRevisor->unique('id_docente_usuario');
+                        @endphp
+                        @forelse ($docentesUnicos as $asignacion)
+                            <li>{{ $asignacion->docente->nombres }} {{ $asignacion->docente->apellido_paterno }} {{ $asignacion->docente->apellido_materno }}</li>
+                        @empty
+                            <li>No hay docentes asignados</li>
+                        @endforelse
                     </ul>
                 </td>
                 <td>
-                    <button class="btn btn-primary btn-sm">Modificar Asignación</button>
+                    <a href="{{ route('revisores.editarAsignacion', $revisor->id) }}" class="btn btn-primary btn-sm">
+                        Modificar Asignación
+                    </a>
                 </td>
+                
+                
             </tr>
-            <!-- Fila 2 -->
+            @empty
             <tr>
-                <td>María López Fernández</td>
-                <td>
-                    <ul>
-                        <li>Docente A</li>
-                        <li>Docente B</li>
-                    </ul>
-                </td>
-                <td>
-                    <button class="btn btn-primary btn-sm">Modificar Asignación</button>
-                </td>
+                <td colspan="3" class="text-center">No hay revisores disponibles.</td>
             </tr>
-            <!-- Fila 3 -->
-            <tr>
-                <td>Carlos Torres Ramírez</td>
-                <td>
-                    <ul>
-                        <li>Docente X</li>
-                    </ul>
-                </td>
-                <td>
-                    <button class="btn btn-primary btn-sm">Modificar Asignación</button>
-                </td>
-            </tr>
+            @endforelse
         </tbody>
     </table>
 
-    <!-- Paginación de la tabla -->
-    <div class="d-flex justify-content-center">
+    <!-- Paginación -->
+     <!-- Paginación de la tabla -->
+     <div class="d-flex justify-content-center">
         <nav>
-            <ul class="pagination">
-                <li class="page-item"><a class="page-link" href="#">Anterior</a></li>
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">Siguiente</a></li>
+            <ul class="pagination pagination-sm m-0">
+                <li class="page-item {{ $revisores->onFirstPage() ? 'disabled' : '' }}">
+                    <a class="page-link" href="{{ $revisores->previousPageUrl() }}" aria-label="Anterior">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+    
+                @for ($i = 1; $i <= $revisores->lastPage(); $i++)
+                    <li class="page-item {{ $i == $revisores->currentPage() ? 'active' : '' }}">
+                        <a class="page-link" href="{{ $revisores->url($i) }}">{{ $i }}</a>
+                    </li>
+                @endfor
+    
+                <li class="page-item {{ $revisores->hasMorePages() ? '' : 'disabled' }}">
+                    <a class="page-link" href="{{ $revisores->nextPageUrl() }}" aria-label="Siguiente">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
             </ul>
         </nav>
     </div>
-
-    <!-- Sección para el formulario de edición (oculta inicialmente) -->
-    <div id="form-edicion" class="d-none">
-        <h4>Editar Asignación de Revisor</h4>
-        <form>
-            <div class="mb-3">
-                <label for="nombre_revisor" class="form-label">Nombre del Revisor</label>
-                <input type="text" id="nombre_revisor" class="form-control" placeholder="Nombre del revisor" readonly>
-            </div>
-            <div class="mb-3">
-                <label for="docentes_asignados" class="form-label">Docentes Asignados</label>
-                <textarea id="docentes_asignados" class="form-control" placeholder="Escriba los nombres de los docentes asignados separados por comas"></textarea>
-            </div>
-            <div class="d-flex justify-content-between">
-                <button type="button" class="btn btn-success">Actualizar</button>
-                <button type="button" class="btn btn-secondary">Regresar</button>
-            </div>
-        </form>
-    </div>
 </div>
-
-<script>
-    // Script para alternar entre tabla y formulario
-    document.querySelectorAll('.btn-primary').forEach(button => {
-        button.addEventListener('click', () => {
-            document.querySelector('table').classList.add('d-none');
-            document.getElementById('form-edicion').classList.remove('d-none');
-        });
-    });
-
-    // Regresar a la tabla desde el formulario
-    document.querySelectorAll('.btn-secondary').forEach(button => {
-        button.addEventListener('click', () => {
-            document.querySelector('table').classList.remove('d-none');
-            document.getElementById('form-edicion').classList.add('d-none');
-        });
-    });
-</script>
 @stop

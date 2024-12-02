@@ -30,7 +30,7 @@ return [
     |
     */
 
-    'use_ico_only' => false,
+    'use_ico_only' => true,
     'use_full_favicon' => false,
 
     /*
@@ -301,37 +301,89 @@ return [
     'menu' => [
         // Navbar items:
         [
-            'type' => 'navbar-search',
-            'text' => 'search',
+            'type'         => 'navbar-search',
+            'text'         => 'search',
             'topnav_right' => true,
         ],
         [
-            'type' => 'fullscreen-widget',
+            'type'         => 'fullscreen-widget',
             'topnav_right' => true,
         ],
 
         // Sidebar items:
-        // [
-        //     'type' => 'sidebar-menu-search',
-        //     'text' => 'search',
-        // ],
-        // [
-        //     'text' => 'blog',
-        //     'url' => 'admin/blog',
-        //     'can' => 'manage-blog',
-        // ],
-        // [
-        //     'text' => 'pages',
-        //     'url' => 'admin/pages',
-        //     'icon' => 'far fa-fw fa-file',
-        //     'label' => 4,
-        //     'label_color' => 'success',
-        // ],
-        // ['header' => 'Operaciones'],
-        // [
-        //     'text' => 'Dashboard',
-        //     'url' => 'admin/settings',
-        // ],
+        [
+            'header' => 'ADMINISTRACIÓN',
+            'can'    => 'Administrador',
+        ],
+        [
+            'text'    => 'Opciones',
+            'icon'    => 'fas fa-chart-bar',
+            'can'     => 'Administrador',
+            'active' => true,
+            'submenu' => [
+                [
+                    'text' => 'Reporte General',
+                    'route'  => 'Administrador.reportes.general', // Cambiado de 'url' a 'route'
+                    'icon' => 'fas fa-file-alt',
+                ],
+            ],
+        ],
+        [
+            'text'    => 'Reportes',
+            'icon'    => 'fas fa-chart-bar',
+            'can'     => 'Administrador',
+            'active' => true,
+            'submenu' => [
+                [
+                    'text' => 'Reporte General',
+                    'route'  => 'Administrador.reportes.general', // Cambiado de 'url' a 'route'
+                    'icon' => 'fas fa-file-alt',
+                ],
+                [
+                    'text' => 'Reporte por Docente',
+                    'route'  => 'Administrador.reportes.docente', // Cambiado de 'url' a 'route'
+                    'icon' => 'fas fa-user',
+                ],
+            ],
+        ],
+        // sidebar items for revisor
+        [
+            'header' => 'REVISOR',
+            'can'    => 'Revisor',
+        ],
+        [
+            'text'=>'Operaciones',
+            'can' => 'Revisor',
+            'icon' => 'fas fa-cogs',
+            'active' => true,
+            'submenu' => [
+                [
+                    'text' => 'Dashboard',
+                    'route' => 'Revisor',
+                    'icon' => 'fas fa-tachometer-alt',
+                ],
+                [
+                    'text' => 'Portafolios',
+                    'route' => 'Revisor.portafolios',
+                    'icon' => 'fas fa-copy',
+                ],
+                [
+                    'text' => 'Observaciones',
+                    'route' => 'Revisor.observaciones',
+                    'icon' => 'fas fa-bell',
+                ],
+                [
+                    'text' => 'Reportes',
+                    'route' => 'Revisor.reportes',
+                    'icon' => 'fas fa-chart-line',
+                ],
+            ]
+        ],
+        [
+            'text' => 'Perfil',
+            'icon' => 'fas fa-user',
+            'route' => 'profile.edit',
+        ]
     ],
 
     /*
@@ -352,7 +404,7 @@ return [
         JeroenNoten\LaravelAdminLte\Menu\Filters\SearchFilter::class,
         JeroenNoten\LaravelAdminLte\Menu\Filters\ActiveFilter::class,
         JeroenNoten\LaravelAdminLte\Menu\Filters\ClassesFilter::class,
-        JeroenNoten\LaravelAdminLte\Menu\Filters\LangFilter::class,
+        JeroenNoten\LaravelAdminLte\Menu\Filters\LangFilter::class, 
         JeroenNoten\LaravelAdminLte\Menu\Filters\DataFilter::class,
     ],
 

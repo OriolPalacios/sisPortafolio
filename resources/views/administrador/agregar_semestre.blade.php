@@ -23,17 +23,9 @@
                 <label for="fecha_fin">Fecha de fin</label>
                 <input type="date" name="fecha_fin" class="form-control" required>
             </div>
-            <div class="form-group">
-                <label for="estado">Estado</label>
-                <div class="form-check form-switch">
-                    <input class="form-check-input" type="checkbox" id="estado" name="estado" value="Activo">
-                    <label class="form-check-label" for="estado">Activo/Inactivo</label>
-                </div>
-            </div>
             <button type="submit" class="btn btn-success">Guardar</button>
             <a href="{{ route('admin.semestre') }}" class="btn btn-secondary">Regresar</a>
         </form>
     </div>
 </div>
 @stop
-
