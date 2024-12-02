@@ -8,6 +8,7 @@ use App\Models\EVALUACIONTeorico;
 use App\Models\PORTAFOLIOCURSO;
 use App\Models\Observacion;
 use Illuminate\Http\Request;
+use Illuminate\Pagination\LengthAwarePaginator;
 
 class AsignacionRevisionController extends Controller
 {
@@ -155,6 +156,14 @@ class AsignacionRevisionController extends Controller
         });
         
         //add pagination to reportes
+        $reportes = collect($reportes);
+        $currentPage = LengthAwarePaginator::resolveCurrentPage();
+        $perPage = 3;
+        $currentItems = $reportes->slice(($currentPage - 1) * $perPage, $perPage)->all();
+        $reportes = new LengthAwarePaginator($currentItems, $reportes->count(), $perPage, $currentPage, [
+            'path' => LengthAwarePaginator::resolveCurrentPath()
+        ]);
+        
         return view('revisor.reportes.evaluacion', compact('reportes'));
     }
     public function showReporteCumplimiento()   
