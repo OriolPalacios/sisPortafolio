@@ -6,6 +6,7 @@ use App\Models\ASIGNACIONREVISION;
 use App\Models\EVALUACIONPractico;
 use App\Models\EVALUACIONTeorico;
 use App\Models\PORTAFOLIOCURSO;
+use App\Models\Observacion;
 use Illuminate\Http\Request;
 
 class AsignacionRevisionController extends Controller
@@ -112,7 +113,48 @@ class AsignacionRevisionController extends Controller
 
     public function showReporteEvaluacion()
     {
-        $reportes = AsignacionRevision::where('id_revisor_usuario', auth()->user()->id)->paginate(10);
+        $docentes = AsignacionRevision::where('id_revisor_usuario', auth()->user()->id);
+        $reportesPractico = EvaluacionPractico::join('PORTAFOLIO_CURSO', 'EVALUACION_Practico.id_portafolio_curso', '=', 'PORTAFOLIO_CURSO.id')
+            ->where('EVALUACION_Practico.id_revisor_usuario', auth()->user()->id)
+            ->whereIn('EVALUACION_Practico.id_docente_usuario', $docentes->pluck('id_docente_usuario'))
+            ->select('EVALUACION_Practico.id_docente_usuario', 'EVALUACION_Practico.id_portafolio_curso');
+
+        $reportesTeorico = EvaluacionTeorico::join('PORTAFOLIO_CURSO', 'EVALUACION_Teorico.id_portafolio_curso', '=', 'PORTAFOLIO_CURSO.id')
+            ->where('EVALUACION_Teorico.id_revisor_usuario', auth()->user()->id)
+            ->whereIn('EVALUACION_Teorico.id_docente_usuario', $docentes->pluck('id_docente_usuario'))
+            ->select('EVALUACION_Teorico.id_docente_usuario', 'EVALUACION_Teorico.id_portafolio_curso');
+        $reportes = $reportesPractico->union($reportesTeorico)
+            ->get()
+            ->groupBy('id_docente_usuario');
+        $reportes = $reportes->map(function ($portafolios, $docenteId) {
+            $docente = Usuario::find($docenteId);
+            $docenteNombre = $docente->nombres . ' ' . $docente->apellido_paterno . ' ' . $docente->apellido_materno;
+            $completados = 0;
+            $pendientes = 0;
+            $observados = 0;
+            $observaciones = collect([]);
+            foreach ($portafolios as $portafolio) {
+                $curso = PortafolioCurso::find($portafolio->id_portafolio_curso);
+                if ($curso->estado == 'Completado') {
+                    $completados++;
+                } elseif ($curso->estado == 'Pendiente') {
+                    $pendientes++;
+                } elseif ($curso->estado == 'Observado') {
+                    $observados++;
+                }
+                $observaciones = $observaciones->merge(Observacion::where('id_portafolio_curso', $curso->id)->pluck('observacion'));
+                \Log::info("Observacion: " . Observacion::where('id_portafolio_curso', $curso->id)->get()->pluck('observacion'));
+            }
+            return [
+            'docente' => $docenteNombre,
+            'completados' => $completados,
+            'pendientes' => $pendientes,
+            'observados' => $observados,
+            'observaciones' => $observaciones
+            ];
+        });
+        
+        //add pagination to reportes
         return view('revisor.reportes.evaluacion', compact('reportes'));
     }
     public function showReporteCumplimiento()   

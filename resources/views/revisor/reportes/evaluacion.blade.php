@@ -23,36 +23,48 @@
         </form>
 
         <!-- Report Table -->
-        <table class="table table-bordered">
-            <thead>
-                <tr>
-                    <th>Nombre del docente</th>
-                    <th>Número de formatos cumplidos</th>
-                    <th>Número de formatos observados</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Example Static Row -->
-                <tr>
-                    <td>Docente 1</td>
-                    <td>5</td>
-                    <td>2</td>
-                </tr>
-                <!-- Dynamic Rows -->
-                {{-- @foreach ($reportes as $reporte)
-                <tr>
-                    <td>{{ $reporte->nombre }}</td>
-                    <td>{{ $reporte->formatos_cumplidos }}</td>
-                    <td>{{ $reporte->formatos_observados }}</td>
-                </tr>
-                @endforeach --}}
-            </tbody>
-        </table>
+        @foreach($reportes as $reporte)
+        <div class="car">
 
-        <!-- Pagination -->
-        <div class="d-flex justify-content-center">
-            {{ $reportes->links() }}
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th colspan="4">{{$reporte['docente']}}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Número de formatos cumplidos</th>
+                        <th>Número de formatos observados</th>
+                        <th>Número de formatos pendientes</th>
+                    </tr>
+                    <tr>
+                        <td>{{$reporte['completados']}}</td>
+                        <td>{{$reporte['observados']}}</td>
+                        <td>{{$reporte['pendientes']}}</td>
+                    </tr>
+                    <tr>
+                        <th colspan="3">Observaciones hechas al docente</th>
+                    </tr>
+                    @if (count($reporte['observaciones']) == 0)
+                        <tr>
+                            <td colspan="3">No hay observaciones</td>
+                        </tr>
+                    @else
+                        @foreach($reporte['observaciones'] as $observacion)
+                            <tr>
+                                <td colspan="3">{{$observacion}}</td>
+                            </tr>
+                        @endforeach
+                    @endif
+                </tbody>
+            </table>
         </div>
+        @endforeach
+        <!-- Pagination -->
+        {{-- <div class="d-flex justify-content-center">
+            {{ $reportes->links() }}
+        </div> --}}
     </div>
     <div class="card-footer">
         <a href="{{ route('Revisor.reportes.cumplimiento.export') }}" class="btn btn-success">Exportar PDF</a>

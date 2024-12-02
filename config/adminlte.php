@@ -367,11 +367,6 @@ return [
                     'route' => 'Revisor.portafolios',
                     'icon' => 'fas fa-copy',
                 ],
-                [
-                    'text' => 'Observaciones',
-                    'route' => 'Revisor.observaciones',
-                    'icon' => 'fas fa-bell',
-                ],
             ]
         ],
         [
