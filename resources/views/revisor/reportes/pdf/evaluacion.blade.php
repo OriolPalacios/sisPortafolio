@@ -60,16 +60,6 @@
         <h1>Reporte de Evaluación</h1>
     </div>
 
-    <div class="info-section">
-        <h2>Barra de filtrado por nombre docente</h2>
-        <table>
-            <tr>
-                <th>Nombre del Docente</th>
-                <td>{{ request('filter') }}</td>
-            </tr>
-        </table>
-    </div>
-
     @foreach ($reportes as $reporte)
         <div class="section-title">{{ $reporte['docente'] }}</div>
         <table>
