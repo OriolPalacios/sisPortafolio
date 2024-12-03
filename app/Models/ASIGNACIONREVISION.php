@@ -47,11 +47,11 @@ class AsignacionRevision extends Model
 
     public function semestre(): BelongsTo
     {
-        return $this->belongsTo(Semestre::class, 'id_semestre');
+        return $this->belongsTo(SEMESTRE::class, 'id_semestre');
     }
 
     public function portafoliosCurso(): HasMany
     {
-        return $this->hasMany(PortafolioCurso::class, 'id_asignacion_revision');
+        return $this->hasMany(PORTAFOLIOCURSO::class, 'id_asignacion_revision');
     }
 }

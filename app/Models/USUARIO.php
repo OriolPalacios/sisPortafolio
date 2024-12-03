@@ -58,17 +58,17 @@ class Usuario extends Authenticatable
 
     public function asignacionesComoAdministrador(): HasMany
     {
-        return $this->hasMany(AsignacionRevision::class, 'id_administrador_usuario');
+        return $this->hasMany(ASIGNACIONREVISION::class, 'id_administrador_usuario');
     }
 
     public function asignacionesComoRevisor(): HasMany
     {
-        return $this->hasMany(AsignacionRevision::class, 'id_revisor_usuario');
+        return $this->hasMany(ASIGNACIONREVISION::class, 'id_revisor_usuario');
     }
 
     public function asignacionesComoDocente(): HasMany
     {
-        return $this->hasMany(AsignacionRevision::class, 'id_docente_usuario');
+        return $this->hasMany(ASIGNACIONREVISION::class, 'id_docente_usuario');
     }
 
     public function getAuthPassword()
