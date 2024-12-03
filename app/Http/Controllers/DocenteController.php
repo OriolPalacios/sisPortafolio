@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\ASIGNACIONREVISION;
 use App\Models\CURSO;
 use App\Models\PORTAFOLIOCURSO;
+use App\Models\EVALUACIONTeorico;
+use App\Models\EVALUACIONPractico;
 class DocenteController extends Controller
 {
     public function index(Request $request)
@@ -70,55 +72,73 @@ class DocenteController extends Controller
     }
 
     public function store(Request $request)
-    {
-        $request->validate([
-            'nombres' => 'required|string|max:255',
-            'apellido_paterno' => 'required|string|max:255',
-            'correo' => 'required|email|unique:USUARIO,correo',
-            'curso' => 'required|exists:CURSO,id', // Validar el curso seleccionado
-        ]);
+{
+    $request->validate([
+        'nombres' => 'required|string|max:255',
+        'apellido_paterno' => 'required|string|max:255',
+        'correo' => 'required|email|unique:USUARIO,correo',
+        'curso' => 'required|exists:CURSO,id', // Validar el curso seleccionado
+    ]);
 
-        // Crear el docente
-        $docente = Usuario::create([
-            'nombres' => $request->nombres,
-            'apellido_paterno' => $request->apellido_paterno,
-            'apellido_materno' => $request->apellido_materno,
-            'fecha_nacimiento' => $request->fecha_nacimiento,
-            'sexo' => $request->sexo,
-            'correo' => $request->correo,
-            'telefono' => $request->telefono,
-            'contrasena' => bcrypt('password'), // Contraseña predeterminada
-            'departamento' => $request->departamento,
-            'especialidad' => $request->especialidad,
-            'activo' => true, // Por defecto activo
-        ]);
+    // Crear el docente
+    $docente = Usuario::create([
+        'nombres' => $request->nombres,
+        'apellido_paterno' => $request->apellido_paterno,
+        'apellido_materno' => $request->apellido_materno,
+        'fecha_nacimiento' => $request->fecha_nacimiento,
+        'sexo' => $request->sexo,
+        'correo' => $request->correo,
+        'telefono' => $request->telefono,
+        'contrasena' => bcrypt('password'), // Contraseña predeterminada
+        'departamento' => $request->departamento,
+        'especialidad' => $request->especialidad,
+        'activo' => true, // Por defecto activo
+    ]);
 
-        // Asignar rol de docente
-        $docente->roles()->attach(2, ['fecha_asignacion' => now()]);
+    // Asignar rol de docente
+    $docente->roles()->attach(2, ['fecha_asignacion' => now()]);
 
-        // Crear registro en ASIGNACION_REVISION con id_revisor_usuario NULL y id_semestre en 1
-        $asignacionRevision = AsignacionRevision::create([
-            'id_administrador_usuario' => auth()->id(),
-            'id_revisor_usuario' => null,
-            'id_docente_usuario' => $docente->id,
-            'id_semestre' => 1, // Por defecto el semestre inicial
-            'fecha_asignacion' => now(),
-            'activo' => false, // Por defecto inactivo hasta asignar un revisor
-        ]);
+    // Obtener el curso seleccionado por el administrador
+    $curso = Curso::find($request->curso);
 
-        // Crear registro en PORTAFOLIO_CURSO
-        $curso = Curso::find($request->curso);
-        PortafolioCurso::create([
-            'id_asignacion_revision' => $asignacionRevision->id, // Relacionar con la asignación creada
-            'id_curso_semestre' => $curso->id,
-            'codigo_curso_semestre' => $curso->codigo_curso,
-            'formato' => 'pdf', // Formato predeterminado
-            'estado' => 'Completado', // Estado predeterminado
-            'tipo' => $curso->tipo,
-        ]);
+    // Crear registro en ASIGNACION_REVISION
+    $asignacionRevision = AsignacionRevision::create([
+        'id_administrador_usuario' => auth()->id(),
+        'id_revisor_usuario' => null,
+        'id_docente_usuario' => $docente->id,
+        'id_semestre' => 1, 
+        'fecha_asignacion' => now(),
+        'activo' => false, 
+    ]);
+    
+    // Crear registro en PORTAFOLIO_CURSO con el id_asignacion_revision correcto
+    $curso = Curso::find($request->curso);
+    PortafolioCurso::create([
+        'id_asignacion_revision' => $asignacionRevision->id, // Relacionar con el id de AsignacionRevision creado
+        'id_curso_semestre' => $curso->id,
+        'codigo_curso_semestre' => $curso->codigo_curso,
+        'formato' => 'pdf', // Formato predeterminado
+        'estado' => 'Completado', // Estado predeterminado
+        'tipo' => $curso->tipo,
+    ]);
 
-        return redirect()->route('admin.docentes')->with('success', 'Docente agregado correctamente.');
-    }
+    // Crear los registros en las tablas EVALUACION_Teorico y EVALUACION_Practico con el id_revisor_usuario como NULL
+    // Los evaluadores se asignarán más tarde, pero debemos insertar las filas vacías para los cursos asignados.
+    EvaluacionTeorico::create([
+        'id_revisor_usuario' => null,
+        'id_docente_usuario' => $docente->id,
+        'id_portafolio_curso' => $portafolioCurso->id,
+    ]);
+
+    EvaluacionPractico::create([
+        'id_revisor_usuario' => null,
+        'id_docente_usuario' => $docente->id,
+        'id_portafolio_curso' => $portafolioCurso->id,
+    ]);
+
+    return redirect()->route('admin.docentes')->with('success', 'Docente agregado correctamente');
+}
+
 
 
 
@@ -158,7 +178,9 @@ class DocenteController extends Controller
             })
             ->get()
             ->map(function ($docente) use ($docentesConRevisores, $docentesAsignadosRevisor, $revisor) {
-                $docente->bloqueado = in_array($docente->id, $docentesConRevisores) && !in_array($docente->id, $docentesAsignadosRevisor);
+                $docente->bloqueado = !is_null(AsignacionRevision::where('id_docente_usuario', $docente->id)->value('id_revisor_usuario')) && 
+    !in_array($docente->id, $docentesAsignadosRevisor);
+
                 $docente->asignado = in_array($docente->id, $docentesAsignadosRevisor);
                 $docente->esRevisorActual = $docente->id === $revisor->id; 
                 return $docente;
@@ -174,31 +196,49 @@ class DocenteController extends Controller
     {
         $docentesSeleccionados = $request->input('docentes', []);
         $revisor = Usuario::findOrFail($id);
-        $docentesAsignadosRevisor = $revisor->asignacionesComoRevisor->pluck('id_docente_usuario')->toArray();
+
+        // Obtener los docentes actualmente asignados al revisor
+        $docentesAsignadosRevisor = AsignacionRevision::where('id_revisor_usuario', $revisor->id)
+            ->pluck('id_docente_usuario')
+            ->toArray();
+
+        // Determinar los docentes a desasignar (pasar id_revisor_usuario a NULL)
         $docentesAEliminar = array_diff($docentesAsignadosRevisor, $docentesSeleccionados);
-        $docentesNuevos = array_diff($docentesSeleccionados, $docentesAsignadosRevisor);
         AsignacionRevision::where('id_revisor_usuario', $revisor->id)
             ->whereIn('id_docente_usuario', $docentesAEliminar)
-            ->delete();
+            ->update(['id_revisor_usuario' => null]);
 
-        foreach ($docentesNuevos as $docenteId) {
-            $revisor->asignacionesComoRevisor()->create([
-                'id_docente_usuario' => $docenteId,
-                'id_revisor_usuario' => $revisor->id,
-                'id_administrador_usuario' => auth()->user()->id, 
-                'fecha_asignacion' => now(),
-                'activo' => false,
-            ]);
-        }
+        // También debemos actualizar el id_revisor_usuario en EVALUACION_Teorico y EVALUACION_Practico
+        // Desasignar los docentes eliminados de las evaluaciones
+        EvaluacionTeorico::whereIn('id_docente_usuario', $docentesAEliminar)
+            ->where('id_revisor_usuario', $revisor->id)
+            ->update(['id_revisor_usuario' => null]);
+
+        EvaluacionPractico::whereIn('id_docente_usuario', $docentesAEliminar)
+            ->where('id_revisor_usuario', $revisor->id)
+            ->update(['id_revisor_usuario' => null]);
+
+        // Determinar los nuevos docentes a asignar al revisor
+        $docentesNuevos = array_diff($docentesSeleccionados, $docentesAsignadosRevisor);
+        AsignacionRevision::whereIn('id_docente_usuario', $docentesNuevos)
+            ->update(['id_revisor_usuario' => $revisor->id]);
+
+        // Asignar el nuevo revisor en EVALUACION_Teorico y EVALUACION_Practico para los nuevos docentes
+        EvaluacionTeorico::whereIn('id_docente_usuario', $docentesNuevos)
+            ->update(['id_revisor_usuario' => $revisor->id]);
+
+        EvaluacionPractico::whereIn('id_docente_usuario', $docentesNuevos)
+            ->update(['id_revisor_usuario' => $revisor->id]);
 
         return redirect()->route('admin.revisores')->with('success', 'Asignaciones actualizadas correctamente.');
     }
+
 
     public function indexRevisores(Request $request)
     {
         $buscar = $request->input('buscar');
 
-        $revisores = Usuario::where('activo', true) 
+        $revisores = Usuario::where('activo', false) 
             ->whereHas('roles', function ($query) {
                 $query->where('nombre_rol', 'revisor');
             })
@@ -208,7 +248,7 @@ class DocenteController extends Controller
                     ->orWhere('apellido_materno', 'like', "%{$buscar}%");
             })
             ->with(['asignacionesComoRevisor' => function ($query) {
-                $query->with('docente')->where('activo', true); 
+                $query->with('docente')->where('activo', false); 
             }])
             ->paginate(10);
 

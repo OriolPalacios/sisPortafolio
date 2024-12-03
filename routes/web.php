@@ -62,13 +62,6 @@ Route::get('/Administrador/semestre/{id}/edit', [SemestreController::class, 'edi
 Route::put('/Administrador/semestre/{id}', [SemestreController::class, 'update'])->name('admin.semestre.update');
 
 
-Route::get('/Administrador/reportegeneral', function () {
-    return view('administrador.reportegeneral');
-})->name('admin.reportegeneral');
-
-Route::get('/Administrador/reportehistorico', function () {
-    return view('administrador.reportehistorico');
-})->name('admin.reportehistorico');
 
 // Agregar las rutas de reportes aquí
 Route::prefix('Administrador')->middleware(['auth', NotRoleUser::class . ':Administrador'])->group(function () {

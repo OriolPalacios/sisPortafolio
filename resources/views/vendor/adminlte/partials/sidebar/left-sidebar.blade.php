@@ -55,77 +55,7 @@
                 </ul>
             </div>
 
-            <div class="card">
-                <ul class="list-group list-group-flush rounded administrador-options">
-                    @if (session('current_role') == 'Administrador')
-                        <li class="list-group-item p-0 text-center {{ request()->is('Administrador') ? 'bg-primary' : 'bg-white' }}">
-                            <a href="{{route('Administrador')}}" class="nav-link">
-                                <span>Dashboard</span>
-                            </a>
-                        </li>
             
-                        <!-- Gestión de Docentes -->
-                        <li class="list-group-item p-0 text-center bg-white">
-                            <a href="#" class="nav-link d-flex justify-content-between align-items-center"
-                            onclick="toggleMenu('docentes-menu')"
-                            data-menu="{{ request()->is('Administrador/docentes', 'Administrador/revisores') ? 'open' : 'closed' }}">
-                                <span>Gestión de Docentes</span>
-                                <span class="triangle">&#9660;</span>
-                            </a>
-                            <ul id="docentes-menu" class="list-group list-group-flush text-start {{ request()->is('Administrador/docentes', 'Administrador/revisores') ? '' : 'd-none' }}">
-                                <!-- Opción Docentes -->
-                                <li class="list-group-item p-0 text-center {{ request()->is('Administrador/docentes') ? 'bg-primary' : 'bg-gray' }}">
-                                    <a href="{{ route('admin.docentes') }}" class="nav-link">
-                                        <span>Docentes</span>
-                                    </a>
-                                </li>
-                                <!-- Opción Revisores -->
-                                <li class="list-group-item p-0 text-center {{ request()->is('Administrador/revisores') ? 'bg-primary' : 'bg-gray' }}">
-                                    <a href="{{ route('admin.revisores') }}" class="nav-link">
-                                        <span>Revisores</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-
-            
-                        <!-- Gestión Semestre -->
-                        <li class="list-group-item p-0 text-center {{ request()->is('Administrador/semestre') ? 'bg-primary' : 'bg-white' }}">
-                            <a href="{{ route('admin.semestre') }}" class="nav-link">
-                                <span>Gestión Semestre</span>
-                            </a>
-                        </li>
-            
-                        <!-- Reportes Portafolios -->
-                        <li class="list-group-item p-0 text-center bg-white">
-                            <a href="#" class="nav-link d-flex justify-content-between align-items-center" onclick="toggleMenu('reportes-menu')"
-                            data-menu="{{ request()->is('Administrador/reportegeneral', 'Administrador/reportehistorico') ? 'open' : 'closed' }}">
-                                <span>Reportes Portafolios</span>
-                                <span class="triangle">&#9660;</span>
-                            </a>
-                            <ul id="reportes-menu" class="list-group list-group-flush text-start {{ request()->is('Administrador/reportegeneral', 'Administrador/reportehistorico') ? '' : 'd-none' }}">
-                                <li class="list-group-item p-0 text-center {{ request()->is('Administrador/reportegeneral') ? 'bg-primary' : 'bg-gray' }}">
-                                    <a href="{{ route('admin.reportegeneral') }}" class="nav-link">
-                                        <span>Reporte general de revisión</span>
-                                    </a>
-                                </li>
-                                <li class="list-group-item p-0 text-center {{ request()->is('Administrador/reportehistorico') ? 'bg-primary' : 'bg-gray' }}">
-                                    <a href="{{ route('admin.reportehistorico') }}" class="nav-link">
-                                        <span>Reporte de desempeño histórico de un docente</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-            
-                        <!-- Perfil -->
-                        <li class="list-group-item p-0 text-center bg-white">
-                            <a href="{{route('profile.edit')}}" class="nav-link">
-                                <span>Perfil</span>
-                            </a>
-                        </li>
-                    @endif
-                </ul>
-            </div>
             
             <script>
                 // Función para mostrar/ocultar submenús
