@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Semestre;
+use App\Models\SEMESTRE;
 use Illuminate\Http\Request;
 
 class SemestreController extends Controller

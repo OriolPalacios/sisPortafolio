@@ -1,8 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Semestre;
-use App\Models\Usuario;
+use App\Models\SEMESTRE;
+use App\Models\USUARIO;
 use Illuminate\Http\Request;
 
 class DashboardAdminController extends Controller

@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Usuario;
+use App\Models\USUARIO;
 use Illuminate\Http\Request;
 use App\Models\ASIGNACIONREVISION;
 use App\Models\CURSO;
