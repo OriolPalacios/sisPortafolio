@@ -9,6 +9,7 @@ use App\Models\PORTAFOLIOCURSO;
 use App\Models\Observacion;
 use Illuminate\Http\Request;
 use Illuminate\Pagination\LengthAwarePaginator;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class AsignacionRevisionController extends Controller
 {
@@ -217,7 +218,8 @@ class AsignacionRevisionController extends Controller
             ];
         });
         
-        return view('revisor.reportes.pdf.evaluacion', compact('reportes'));
+        $pdf = Pdf::loadView('revisor.reportes.pdf.evaluacion', compact('reportes'));
+        return $pdf->stream('reporte-evaluacion-' . now()->format('Y-m-d') . '.pdf');
     }
 
     public function showReporteCumplimiento()   
@@ -337,6 +339,8 @@ class AsignacionRevisionController extends Controller
             'observaciones' => $observaciones
             ];
         });
-        return view('revisor.reportes.pdf.cumplimiento', compact('revisor_nombre', 'revisor_correo', 'docentes_asignados', 'portafolios_revisados', 'portafolios_observados', 'portafolios_pendientes', 'reportes'));
+        
+        $pdf = Pdf::loadView('revisor.reportes.pdf.cumplimiento', compact('revisor_nombre', 'revisor_correo', 'docentes_asignados', 'portafolios_revisados', 'portafolios_observados', 'portafolios_pendientes', 'reportes'));
+        return $pdf->stream('reporte-cumplimiento-' . now()->format('Y-m-d') . '.pdf');
     }
 }

@@ -56,7 +56,7 @@
 </head>
 <body>
     <div class="header">
-        <img src="{{ asset('/image/escudoEscuela.svg') }}" class="logo">
+        <img src="{{ public_path('vendor/adminlte/dist/img/o4e_hzo3-small.png') }}" class="logo">
         <h1>Reporte de Cumplimiento</h1>
     </div>
 
