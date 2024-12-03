@@ -112,7 +112,7 @@ class AsignacionRevisionController extends Controller
         return view('revisor.portafolios', compact('portafolios_practico', 'portafolios_teorico'));
     }   
 
-    public function showReporteEvaluacion()
+    public function showReporteEvaluacion(Request $request)
     {
         $docentes = AsignacionRevision::where('id_revisor_usuario', auth()->user()->id);
         $reportesPractico = EvaluacionPractico::join('PORTAFOLIO_CURSO', 'EVALUACION_Practico.id_portafolio_curso', '=', 'PORTAFOLIO_CURSO.id')
@@ -154,8 +154,16 @@ class AsignacionRevisionController extends Controller
             'observaciones' => $observaciones
             ];
         });
+
+        // Filter by docenteNombre if search order is present
+        if ($request->has('filter')) {
+            $search = $request->input('filter');
+            $reportes = $reportes->filter(function ($reporte) use ($search) {
+                return stripos($reporte['docente'], $search) !== false;
+            });
+        }
         
-        //add pagination to reportes
+        // Add pagination to reportes
         $reportes = collect($reportes);
         $currentPage = LengthAwarePaginator::resolveCurrentPage();
         $perPage = 1;
@@ -166,6 +174,7 @@ class AsignacionRevisionController extends Controller
         
         return view('revisor.reportes.evaluacion', compact('reportes'));
     }
+
     public function showReporteCumplimiento()   
     {
         return view('revisor.reportes.cumplimiento',);

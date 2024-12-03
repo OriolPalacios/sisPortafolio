@@ -63,8 +63,8 @@
             {{ $reportes->links('pagination::bootstrap-4') }}
         </div>
     </div>
-    <div class="card-footer">
+    {{-- <div class="card-footer">
         <a href="{{ route('Revisor.reportes.cumplimiento.export') }}" class="btn btn-success">Exportar PDF</a>
-    </div>
+    </div> --}}
 </div>
 @stop
