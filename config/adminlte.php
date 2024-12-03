@@ -380,11 +380,11 @@ return [
                     'route' => 'Revisor.reportes.evaluacion',
                     'icon' => 'fas fa-file-alt',
                 ],
-                // [
-                //     'text' => 'Cumplimiento',
-                //     'route' => 'Revisor.reportes.cumplimiento',
-                //     'icon' => 'fas fa-check-circle',
-                // ],
+                [
+                    'text' => 'Cumplimiento',
+                    'route' => 'Revisor.reportes.cumplimiento',
+                    'icon' => 'fas fa-check-circle',
+                ],
             ]
         ],
         [
