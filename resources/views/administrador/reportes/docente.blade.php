@@ -65,7 +65,7 @@
                     @endforeach
 
                     <div class="d-flex justify-content-center">
-                        {{ $docentes->links() }}
+                        {{ $docentes->links('pagination::bootstrap-4') }}
                     </div>
                 </div>
             </div>
