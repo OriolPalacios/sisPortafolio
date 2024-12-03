@@ -73,6 +73,8 @@ Route::prefix('Revisor')->middleware(['auth', NotRoleUser::class . ':Revisor'])-
         ->name('Revisor.reportes.evaluacion');
     Route::get('/Reportes/Cumplimiento/export', [AsignacionRevisionController::class, 'exportarReporteCumplimiento'])
         ->name('Revisor.reportes.cumplimiento.export');
+    Route::get('/Reportes/Evaluacion/export', [AsignacionRevisionController::class, 'exportarReporteEvaluacion'])
+        ->name('Revisor.reportes.evaluacion.export');
     Route::get('/Reportes/Cumplimiento', [AsignacionRevisionController::class, 'showReporteCumplimiento'])
         ->name('Revisor.reportes.cumplimiento');
         

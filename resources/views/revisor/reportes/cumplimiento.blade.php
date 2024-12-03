@@ -3,7 +3,12 @@
 @section('title', 'Reporte de Cumplimiento')
 
 @section('content_header')
-    <h1>Reporte de Cumplimiento</h1>
+    <div class="row d-flex justify-content-between">
+        <h1>Reporte de Cumplimiento</h1>
+        <a href="{{ route('Revisor.reportes.cumplimiento.export') }}" class="btn btn-success" target="_blank">
+            <i class="fas fa-file-pdf"></i> Exportar PDF
+        </a>
+    </div>
     <div class="container mt-3">
         <div class="card">
             <div class="card-header text-center">
@@ -76,7 +81,8 @@
                                 <td>{{ $reporte['pendientes'] }}</td>
                                 <td>{{ $reporte['observados'] }}</td>
                                 <td>{{ $reporte['completados'] }}</td>
-                                <td class="table-warning">{{ $reporte['pendientes'] + $reporte['observados'] + $reporte['completados'] }}
+                                <td class="table-warning">
+                                    {{ $reporte['pendientes'] + $reporte['observados'] + $reporte['completados'] }}
                                 </td>
                             </tr>
                         @endforeach
