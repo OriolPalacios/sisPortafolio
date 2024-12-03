@@ -23,38 +23,6 @@
                     @endif
                 </ul>
             </div>
-            <div class="card">
-                <ul class="list-group list-group-flush rounded revisor-options">
-                    @if (session('current_role') == 'Revisor')
-                        <li class="list-group-item p-0 text-center {{ request()->is('Revisor') ? 'bg-primary' : 'bg-white' }}">
-                            <a href="{{route('Revisor')}}" class="nav-link">
-                                <span>Dashboard</span>
-                            </a>
-                        </li>
-                        <li class="list-group-item p-0 text-center bg-white">
-                            <a href="#" class="nav-link">
-                                <span>Gestion de Portafolios</span>
-                            </a>
-                        </li>
-                        <li class="list-group-item p-0 text-center bg-white">
-                            <a href="#" class="nav-link">
-                                <span>Observaciones</span>
-                            </a>
-                        </li>
-                        <li class="list-group-item p-0 text-center bg-white">
-                            <a href="#" class="nav-link">
-                                <span>Reportes</span>
-                            </a>
-                        </li>
-                        <li class="list-group-item p-0 text-center bg-white">
-                            <a href="{{route('profile.edit')}}" class="nav-link">
-                                <span>Perfil</span>
-                            </a>
-                        </li>
-                    @endif
-                </ul>
-            </div>
-
             
             
             <script>
