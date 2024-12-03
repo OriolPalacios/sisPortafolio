@@ -312,40 +312,61 @@ return [
 
         // Sidebar items:
         [
-            'header' => 'ADMINISTRACIÓN',
+            'header' => 'ADMINISTRADOR',
             'can'    => 'Administrador',
         ],
         [
-            'text'    => 'Opciones',
-            'icon'    => 'fas fa-chart-bar',
+            'text'    => 'Dashboard',
+            'route'   => 'Administrador',
+            'icon'    => 'fas fa-tachometer-alt',
+            'active'  => request()->is('Administrador'),
+        ],
+        [
+            'text'    => 'Gestión de Docentes',
+            'icon'    => 'fas fa-users-cog',
             'can'     => 'Administrador',
-            'active' => true,
             'submenu' => [
                 [
-                    'text' => 'Reporte General',
-                    'route'  => 'Administrador.reportes.general', // Cambiado de 'url' a 'route'
-                    'icon' => 'fas fa-file-alt',
+                    'text' => 'Docentes',
+                    'route' => 'admin.docentes',
+                    'icon'  => 'fas fa-user',
+                    'active' => request()->is('Administrador/docentes'),
+                ],
+                [
+                    'text' => 'Revisores',
+                    'route' => 'admin.revisores',
+                    'icon'  => 'fas fa-user-check',
+                    'active' => request()->is('Administrador/revisores'),
                 ],
             ],
         ],
         [
-            'text'    => 'Reportes',
+            'text'    => 'Gestión Semestre',
+            'route'   => 'admin.semestre',
+            'icon'    => 'fas fa-calendar-alt',
+            'active'  => request()->is('Administrador/semestre'),
+            'can'     => 'Administrador',
+        ],
+        [
+            'text'    => 'Reportes Portafolios',
             'icon'    => 'fas fa-chart-bar',
             'can'     => 'Administrador',
-            'active' => true,
             'submenu' => [
                 [
                     'text' => 'Reporte General',
-                    'route'  => 'Administrador.reportes.general', // Cambiado de 'url' a 'route'
-                    'icon' => 'fas fa-file-alt',
+                    'route' => 'Administrador.reportes.general',
+                    'icon'  => 'fas fa-file-alt',
+                    'active' => request()->is('Administrador/reportes/general'),
                 ],
                 [
-                    'text' => 'Reporte por Docente',
-                    'route'  => 'Administrador.reportes.docente', // Cambiado de 'url' a 'route'
-                    'icon' => 'fas fa-user',
+                    'text' => 'Reporte Histórico',
+                    'route' => 'Administrador.reportes.docente',
+                    'icon'  => 'fas fa-history',
+                    'active' => request()->is('Administrador/reportes/docente'),
                 ],
             ],
         ],
+        
         // sidebar items for revisor
         [
             'header' => 'REVISOR',

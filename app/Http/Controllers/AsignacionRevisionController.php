@@ -111,7 +111,10 @@ class AsignacionRevisionController extends Controller
         }
     
         return view('revisor.portafolios', compact('portafolios_practico', 'portafolios_teorico'));
-    }   
+    }  
+
+
+    
 
     public function showReporteEvaluacion(Request $request)
     {
